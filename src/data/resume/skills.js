@@ -3,134 +3,199 @@
 
 const skills = [
   {
+    title: 'Java',
+    competency: 4,
+    category: ['Languages'],
+  },
+  {
     title: 'Javascript',
     competency: 4,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'Node.JS',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'React',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Bash',
-    competency: 2,
-    category: ['Tools', 'Languages'],
-  },
-  {
-    title: 'Amazon Web Services',
-    competency: 4,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'Heroku',
-    competency: 2,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'MongoDB',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL',
-    competency: 4,
-    category: ['Web Development', 'Databases', 'Languages'],
-  },
-  {
-    title: 'Redis',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['Data Science'],
-  },
-  {
-    title: 'Express.JS',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'D3',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Flask',
-    competency: 2,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'Git/Mercurial',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 2,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'Google Cloud Compute',
-    competency: 2,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Numpy',
-    competency: 3,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Numba',
-    competency: 2,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Tensorflow + Keras',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Jupyter',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Typescript',
-    competency: 2,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'HTML + SASS/SCSS/CSS',
-    competency: 3,
     category: ['Web Development', 'Languages'],
   },
   {
     title: 'Python',
+    competency: 4,
+    category: ['Languages'],
+  },
+  {
+    title: 'Typescript',
+    competency: 1,
+    category: ['Web Development', 'Languages'],
+  },
+  {
+    title: 'NodeJS',
+    competency: 2,
+    category: ['Web Development'],
+  },
+  {
+    title: 'React',
+    competency: 1,
+    category: ['Web Development'],
+  },
+  {
+    title: 'Ionic',
+    competency: 2,
+    category: ['Web Development'],
+  },
+  {
+    title: 'AngularJS',
+    competency: 2,
+    category: ['Web Development'],
+  },
+  {
+    title: 'SAP UI5',
+    competency: 1,
+    category: ['Web Development'],
+  },
+  {
+    title: 'Golang',
+    competency: 2,
+    category: ['Cloud Development', 'Languages'],
+  },
+  {
+    title: 'ElasticSearch',
+    competency: 2,
+    category: ['Monitoring', 'Databases'],
+  },
+  {
+    title: 'PostgreSQL',
+    competency: 4,
+    category: ['Databases', 'Languages'],
+  },
+  {
+    title: 'SAP HANA SQL',
+    competency: 3,
+    category: ['Databases'],
+  },
+  {
+    title: 'DynamoDB',
+    competency: 2,
+    category: ['Databases'],
+  },
+  {
+    title: 'Redis',
+    competency: 1,
+    category: ['Databases'],
+  },
+  {
+    title: 'Loki',
+    competency: 1,
+    category: ['Monitoring', 'Databases'],
+  },
+  {
+    title: 'Amazon Web Services',
+    competency: 4,
+    category: ['Cloud Development'],
+  },
+  {
+    title: 'Google Cloud Platform',
+    competency: 2,
+    category: ['Cloud Development'],
+  },
+  {
+    title: 'Microsoft Azure',
+    competency: 1,
+    category: ['Cloud Development'],
+  },
+  {
+    title: 'Cloud Foundry',
+    competency: 3,
+    category: ['Cloud Development'],
+  },
+  {
+    title: 'Docker',
     competency: 5,
-    category: ['Languages', 'Python'],
+    category: ['Cloud Development'],
   },
   {
-    title: 'C++',
-    competency: 2,
-    category: ['Languages'],
+    title: 'Kubernetes',
+    competency: 5,
+    category: ['Cloud Development'],
   },
   {
-    title: 'Julia',
+    title: 'Helm',
+    competency: 4,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'Operator Pattern',
+    competency: 3,
+    category: ['Cloud Development'],
+  },
+  {
+    title: 'Prometheus',
+    competency: 5,
+    category: ['Monitoring', 'Cloud Development'],
+  },
+  {
+    title: 'Grafana',
+    competency: 4,
+    category: ['Monitoring', 'Cloud Development'],
+  },
+  {
+    title: 'Terraform',
+    competency: 3,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'Vault',
+    competency: 3,
+    category: ['Tools'],
+  },
+  {
+    title: 'Dynatrace',
     competency: 2,
-    category: ['Languages'],
+    category: ['Monitoring'],
+  },
+  {
+    title: 'Git',
+    competency: 4,
+    category: ['Tools'],
+  },
+  {
+    title: 'Bash',
+    competency: 3,
+    category: ['Tools', 'Languages'],
+  },
+  {
+    title: 'Jira Software',
+    competency: 3,
+    category: ['Software'],
+  },
+  {
+    title: 'Chrome Dev Tools',
+    competency: 3,
+    category: ['Tools'],
+  },
+  {
+    title: 'Postman',
+    competency: 3,
+    category: ['Software'],
+  },
+  {
+    title: 'macOS',
+    competency: 4,
+    category: ['Software'],
+  },
+  {
+    title: 'Linux',
+    competency: 3,
+    category: ['Software'],
+  },
+  {
+    title: 'Windows',
+    competency: 4,
+    category: ['Software'],
+  },
+  {
+    title: 'IntelliJ',
+    competency: 3,
+    category: ['Software'],
+  },
+  {
+    title: 'HTML + CSS',
+    competency: 3,
+    category: ['Web Development', 'Languages'],
   },
   {
     title: 'MATLAB',
@@ -138,59 +203,54 @@ const skills = [
     category: ['Languages'],
   },
   {
-    title: 'R',
+    title: 'JUnit',
     competency: 2,
-    category: ['Languages'],
+    category: ['Testing'],
   },
   {
-    title: 'Data Visualization',
+    title: 'Jasmine',
+    competency: 2,
+    category: ['Testing'],
+  },
+  {
+    title: 'pytest',
+    competency: 1,
+    category: ['Testing'],
+  },
+  {
+    title: 'SRE',
     competency: 3,
-    category: ['Data Science', 'Javascript'],
+    category: ['Methodologies'],
   },
   {
-    title: 'GraphQL',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Pandas',
+    title: 'DevOps',
     competency: 5,
-    category: ['Data Engineering', 'Data Science', 'Python'],
+    category: ['Methodologies'],
   },
   {
-    title: 'Matplotlib',
-    competency: 3,
-    category: ['Data Engineering', 'Data Science', 'Python'],
+    title: 'CI/CD',
+    competency: 2,
+    category: ['Methodologies'],
   },
   {
-    title: 'Scikit-Learn',
+    title: 'GitOps',
+    competency: 2,
+    category: ['Methodologies'],
+  },
+  {
+    title: 'Agile/Scrum',
     competency: 4,
-    category: ['Data Engineering', 'Data Science', 'Python'],
+    category: ['Methodologies'],
   },
   {
-    title: 'Hadoop',
-    competency: 2,
-    category: ['Data Engineering', 'Data Science'],
-  },
-  {
-    title: 'Spark',
-    competency: 2,
-    category: ['Data Engineering', 'Data Science'],
-  },
-  {
-    title: 'Dagster',
-    competency: 2,
-    category: ['Data Engineering', 'Python'],
-  },
-  {
-    title: 'Mypy',
+    title: 'Jenkins',
     competency: 3,
-    category: ['Python'],
+    category: ['Software', 'Cloud Development'],
   },
   {
-    title: 'Pylint',
-    competency: 4,
-    category: ['Data Engineering', 'Python'],
+    title: 'PagerDuty',
+    competency: 2,
+    category: ['Software'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
@@ -206,8 +266,8 @@ const colors = [
   '#3896e2',
   '#c3423f',
   '#d75858',
-  '#747fff',
-  '#64cb7b',
+  // '#747fff',
+  // '#64cb7b',
 ];
 
 const categories = [
