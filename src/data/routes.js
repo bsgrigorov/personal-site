@@ -17,13 +17,13 @@ const routes = [
     path: '/certifications',
   },
   {
+    label: 'Projects',
+    path: '/projects',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },
-  // {
-  //   label: 'Projects',
-  //   path: '/projects',
-  // },
   // {
   //   label: 'Stats',
   //   path: '/stats',

@@ -27,6 +27,7 @@ const App = () => (
         <Route path="/stats" component={Stats} />
         <Route path="/contact" component={Contact} />
         <Route path="/certifications" component={Certifications} />
+        <Route path="/projects" component={Projects} />
         <Route path="/resume" component={Resume} />
         <Route component={NotFound} status={404} />
       </Switch>

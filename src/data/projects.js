@@ -1,47 +1,47 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
+    title: 'Zsh Environment Config',
+    subtitle: 'Environment configuration for zsh shell',
+    image: '/images/projects/zsh.png',
+    date: '2022-02-01',
+    link: 'https://github.com/bsgrigorov/zsh-env',
     desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+      'Generated a reproducible zsh environment with shell optimizations, aliasing, autocompletion, and custom functions for increasing terminal productivity.',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    title: 'encrypt-decrypt.me',
+    subtitle: 'Website for OpenSSL AES256 encryption of data using passwords',
+    image: '/images/projects/encrypt.png',
+    date: '2021-09-01',
+    link: 'https://encrypt-decrypt.me',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      'Created a client-side secure password encryption website that implements OpenSSL aes256 standard. Used JavaScript, OpenSSL and encryption algorithms.',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    title: 'Pingdom Python Config',
+    subtitle: 'Pingdom declarative configuration with Python',
+    image: '/images/projects/pingdom.png',
+    date: '2021-07-01',
+    link: 'https://github.com/bsgrigorov/pingdom-python-config',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
+      'Built a python application that configures Pingdom using Pingdom API 3.1. The application uses a declarative approach to check creation.',
   },
   {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
+    title: 'Read Easy',
+    subtitle: 'Application for teaching english',
+    image: '/images/projects/readeasy.jpeg',
+    date: '2017-11-20',
     desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'Created a cross platform mobile application using Ionic, AngularJS and NodeJS that teaches users English by suggesting texts based on their proficiency. Used personalized word models from thesis project for selecting texts.',
+  },
+  {
+    title: 'Language Learning',
+    subtitle: 'Honours dissertation on an application for learning languages',
+    image: '/images/projects/language-learning.jpeg',
+    date: '2016-04-20',
+    desc:
+      'Constructed language learning desktop application that estimates the level of proficiency of users and recommends suitable articles to read. Utilized Python, NLP, JavaFX, data analysis, data modelling and statistics. Wrote honours dissertation on it.',
   },
 ];
 
