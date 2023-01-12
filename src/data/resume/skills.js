@@ -49,7 +49,7 @@ const skills = [
   },
   {
     title: 'Golang',
-    competency: 2,
+    competency: 3,
     category: ['Cloud Development', 'Languages'],
   },
   {
@@ -251,6 +251,11 @@ const skills = [
     title: 'PagerDuty',
     competency: 2,
     category: ['Software'],
+  },
+  {
+    title: 'Jsonnet',
+    competency: 3,
+    category: ['Languages'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

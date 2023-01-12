@@ -51,8 +51,16 @@ Make a commit to `main` and push your changes. That's it.
 
 To statically export the site without deploying to github pages, delete or disable `.github/workflows/github-pages.yml` and run `npm run predeploy`. This generates a static export of the website as `personal-site/build/`. Copy this and self-host or deploy to a CDN.
 
+### Manual deploy
+```bash
+nvm use 14.18.1
+npm run predeploy
+npm run deploy
+```
+
 ## Acknowledgements
 
 * Template based on [Future Imperfect](https://html5up.net/future-imperfect) by [@ajlkn](https://github.com/ajlkn) for [HTML5 UP](html5up.net).
 * Special thanks to [@typpo](https://github.com/typpo) for tirelessly answering all of my node.js and react questions.
 * [@notrueblood](https://github.com/notrueblood)[<sup>[1]</sup>](https://github.com/mldangelo/personal-site/pull/218) and [@sjhsieh](https://github.com/sjhsieh)[<sup>[2]</sup>](https://github.com/mldangelo/personal-site/issues/168) for keeping my ego in check.
+

@@ -1,16 +1,29 @@
 const positions = [
   {
+    company: 'Coinbase',
+    position: 'Senior Blockchain Engineer',
+    link: 'https://www.coinbase.com/',
+    daterange: 'June 2022 - Present',
+    points: [
+      'Supported Web3 by building world class Blockchain infrastructure as part of Coinbase Cloud.',
+      'Developed, upgraded and monitored blockchain nodes and validators for Bitcoin, Dogecoin, Zcash, Cosmos, Avalanche, Helium and Flow in Kubernetes.',
+      'Onboarded new blockchains Aptos and Sui to the Coinbase Cloud platform.',
+      'Participated in on-call rotation support and handled multiple large scale production incidents.',
+    ],
+  },
+  {
     company: 'SAP LLC',
     position: 'Senior Software Engineer',
     link: 'https://www.linkedin.com/company/eurekabysaps4hana/',
-    daterange: 'August 2020 - Present',
+    daterange: 'August 2020 - June 2022',
     points: [
-      'Worked on SAP Eureka an incubation unit part of SAP S/4HANA designed to bring world-class cloud-native architecture to ERP cloud solutions.',
+      'Worked on SAP Eureka an incubation unit part of SAP S/4HANA designed to bring world-class cloud-native architecture to ERP.',
       'Designed and implemented applications on K8s in GKE and EKS.',
-      'Produced applications on CICD, observability, issue tracking and malware scanning.',
+      'Led and designed CICD, observability and malware scanning features.',
       'Configured K8s and database monitoring and alerting using Prometheus and Grafana.',
-      'Deployed applications using the operator pattern in K8s in Golang.',
-      'Architected and delivered a Jira Data Center on Kubernetes that is reproducible and reconfigurable.',
+      'Built applications using the k8s operator pattern in Golang and Helm.',
+      'Architected, delivered, and maintained Jira Data Center on k8s for 2000+ users.',
+      'Conducted interviews, wrote technical docs, and interfaced cross-team.',
     ],
   },
   {
