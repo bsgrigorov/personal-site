@@ -114,7 +114,7 @@ const skills = [
   },
   {
     title: 'Helm',
-    competency: 4,
+    competency: 5,
     category: ['Tools', 'Cloud Development'],
   },
   {
@@ -134,6 +134,11 @@ const skills = [
   },
   {
     title: 'Terraform',
+    competency: 4,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'Ansible',
     competency: 3,
     category: ['Tools', 'Cloud Development'],
   },
@@ -256,6 +261,16 @@ const skills = [
     title: 'Jsonnet',
     competency: 3,
     category: ['Languages'],
+  },
+  {
+    title: 'Teleport',
+    competency: 3,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'Github Actions',
+    competency: 3,
+    category: ['Cloud Development'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
