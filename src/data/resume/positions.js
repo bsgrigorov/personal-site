@@ -1,9 +1,22 @@
 const positions = [
   {
+    company: 'Protochain Research',
+    position: 'Staff DevOps Engineer',
+    link: 'https://jobs.ashbyhq.com/protochain',
+    daterange: 'Feb 2023 - Present',
+    points: [
+      'Worked for a 15-person web3 startup supporting apps for Synapse Protocol.',
+      'Designed and deployed web3 infrastructure with Terraform Cloud in GCP.',
+      'Managed GKE kube clusters, deployed workloads with Helm, Teleport and Github Actions.',
+      'Deployed and maintained blockchain rpc nodes for several EVM chains.',
+      'Was the go-to person for any DevOps tasks, integrations and troubleshooting.',
+    ],
+  },
+  {
     company: 'Coinbase',
     position: 'Senior Blockchain Engineer',
     link: 'https://www.coinbase.com/',
-    daterange: 'June 2022 - Present',
+    daterange: 'June 2022 - Feb 2023',
     points: [
       'Supported Web3 by building world class Blockchain infrastructure as part of Coinbase Cloud.',
       'Developed, upgraded and monitored blockchain nodes and validators for Bitcoin, Dogecoin, Zcash, Cosmos, Avalanche, Helium and Flow in Kubernetes.',
