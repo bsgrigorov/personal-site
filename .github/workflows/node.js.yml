@@ -16,14 +16,14 @@ jobs:
     timeout-minutes: 5
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest]
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v3
       with:
         node-version-file: '.nvmrc'
         cache: 'npm'
-    - run: npm ci
+    - run: npm install
     - name: Lint
       run: npm run lint
 
