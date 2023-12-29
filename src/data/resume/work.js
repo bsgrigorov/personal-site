@@ -1,6 +1,19 @@
-const positions = [
+/**
+ * @typedef {Object} Position
+ * Conforms to https://jsonresume.org/schema/
+ *
+ * @property {string} name - Name of the company
+ * @property {string} position - Position title
+ * @property {string} url - Company website
+ * @property {string} startDate - Start date of the position in YYYY-MM-DD format
+ * @property {string|undefined} endDate - End date of the position in YYYY-MM-DD format.
+ * If undefined, the position is still active.
+ * @property {string|undefined} summary - html/markdown summary of the position
+ * @property {string[]} highlights - plain text highlights of the position (bulleted list)
+ */
+const work = [
   {
-    company: 'Protochain Research',
+    name: 'Protochain Research',
     position: 'Staff DevOps Engineer',
     url: 'https://jobs.ashbyhq.com/protochain',
     startDate: '2023-02-01',
@@ -13,7 +26,7 @@ const positions = [
     ],
   },
   {
-    company: 'Coinbase',
+    name: 'Coinbase',
     position: 'Senior Blockchain Engineer',
     url: 'https://www.coinbase.com/',
     startDate: '2022-06-01',
@@ -26,7 +39,7 @@ const positions = [
     ],
   },
   {
-    company: 'SAP LLC',
+    name: 'SAP LLC',
     position: 'Senior Software Engineer',
     url: 'https://www.linkedin.com/company/eurekabysaps4hana/',
     startDate: '2020-08-01',
@@ -42,7 +55,7 @@ const positions = [
     ],
   },
   {
-    company: 'SAP Canada Inc',
+    name: 'SAP Canada Inc',
     position: 'Senior Software Developer',
     url: 'https://www.sap.com/canada/index.html',
     startDate: '2019-04-01',
@@ -55,7 +68,7 @@ const positions = [
     ],
   },
   {
-    company: 'SAP Canada Inc',
+    name: 'SAP Canada Inc',
     position: 'Software Developer',
     url: 'https://www.sap.com/canada/index.html',
     startDate: '2016-07-01',
@@ -67,7 +80,7 @@ const positions = [
     ],
   },
   {
-    company: 'Tetracom Interactive Solutions',
+    name: 'Tetracom Interactive Solutions',
     position: 'Software Developer',
     url: 'https://www.tetracom.com/',
     startDate: '2014-05-01',
@@ -81,4 +94,4 @@ const positions = [
   },
 ];
 
-export default positions;
+export default work;
