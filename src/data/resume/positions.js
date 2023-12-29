@@ -2,9 +2,9 @@ const positions = [
   {
     company: 'Protochain Research',
     position: 'Staff DevOps Engineer',
-    link: 'https://jobs.ashbyhq.com/protochain',
-    daterange: 'Feb 2023 - Present',
-    points: [
+    url: 'https://jobs.ashbyhq.com/protochain',
+    startDate: '2023-02-01',
+    highlights: [
       'Worked for a 15-person web3 startup supporting apps for Synapse Protocol.',
       'Designed and deployed web3 infrastructure with Terraform Cloud in GCP.',
       'Managed GKE kube clusters, deployed workloads with Helm, Teleport and Github Actions.',
@@ -15,9 +15,10 @@ const positions = [
   {
     company: 'Coinbase',
     position: 'Senior Blockchain Engineer',
-    link: 'https://www.coinbase.com/',
-    daterange: 'June 2022 - Feb 2023',
-    points: [
+    url: 'https://www.coinbase.com/',
+    startDate: '2022-06-01',
+    endDate: '2023-02-01',
+    highlights: [
       'Supported Web3 by building world class Blockchain infrastructure as part of Coinbase Cloud.',
       'Developed, upgraded and monitored blockchain nodes and validators for Bitcoin, Dogecoin, Zcash, Cosmos, Avalanche, Helium and Flow in Kubernetes.',
       'Onboarded new blockchains Aptos and Sui to the Coinbase Cloud platform.',
@@ -27,9 +28,10 @@ const positions = [
   {
     company: 'SAP LLC',
     position: 'Senior Software Engineer',
-    link: 'https://www.linkedin.com/company/eurekabysaps4hana/',
-    daterange: 'August 2020 - June 2022',
-    points: [
+    url: 'https://www.linkedin.com/company/eurekabysaps4hana/',
+    startDate: '2020-08-01',
+    endDate: '2022-06-01',
+    highlights: [
       'Worked on SAP Eureka an incubation unit part of SAP S/4HANA designed to bring world-class cloud-native architecture to ERP.',
       'Designed and implemented applications on K8s in GKE and EKS.',
       'Led and designed CICD, observability and malware scanning features.',
@@ -42,9 +44,10 @@ const positions = [
   {
     company: 'SAP Canada Inc',
     position: 'Senior Software Developer',
-    link: 'https://www.sap.com/canada/index.html',
-    daterange: 'April 2019 - July 2020',
-    points: [
+    url: 'https://www.sap.com/canada/index.html',
+    startDate: '2019-04-01',
+    endDate: '2020-07-01',
+    highlights: [
       'Developed enterprise software with focus on design, implementation and testing in an Agile team.',
       'Delivered monitoring, usage tracking, infrastructure, quality and Frontend features for SAP Analytics Cloud.',
       'Implemented features on Java microservices, frontend with SAP UI5, backend in XSJS, python data extraction scripts, HANA SQL data modelling, Jenkins job deployments, CI/CD, RabbitMQ, Cloud Foundry.',
@@ -54,9 +57,10 @@ const positions = [
   {
     company: 'SAP Canada Inc',
     position: 'Software Developer',
-    link: 'https://www.sap.com/canada/index.html',
-    daterange: 'July 2016 - March 2019',
-    points: [
+    url: 'https://www.sap.com/canada/index.html',
+    startDate: '2016-07-01',
+    endDate: '2019-03-01',
+    highlights: [
       'Worked on SAP Analytics Cloud a best-in-class SaaS solution for Analytics, Planning, Predictive and BI.',
       'Designed customer facing data modelling features, integrations features and UI with SAP UI5.',
       'Produced high quality code in a fast-paced work environment with 2-week release cycles.',
@@ -65,9 +69,10 @@ const positions = [
   {
     company: 'Tetracom Interactive Solutions',
     position: 'Software Developer',
-    link: 'https://www.tetracom.com/',
-    daterange: 'May 2014 - September 2014',
-    points: [
+    url: 'https://www.tetracom.com/',
+    startDate: '2014-05-01',
+    endDate: '2014-09-01',
+    highlights: [
       'Developed text shortening software using UIMA Ruta language for text analysis and annotation.',
       'Programmed in Java and PostgreSQL.',
       'Developed NLP tools for noun phrase detection, entity recognition, text summarization and keyword extraction.',

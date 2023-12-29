@@ -7,17 +7,17 @@ const skills = [
   {
     title: 'Javascript',
     competency: 4,
-    category: ['Web Development', 'Languages', 'Javascript'],
+    category: ['Web Development', 'Languages'],
   },
   {
     title: 'Node.JS',
     competency: 2,
-    category: ['Web Development', 'Javascript'],
+    category: ['Web Development'],
   },
   {
     title: 'React',
     competency: 2,
-    category: ['Web Development', 'Javascript'],
+    category: ['Web Development'],
   },
   {
     title: 'Python',
@@ -27,7 +27,7 @@ const skills = [
   {
     title: 'Typescript',
     competency: 1,
-    category: ['Web Development', 'Languages', 'Javascript'],
+    category: ['Web Development', 'Languages'],
   },
   {
     title: 'Golang',
