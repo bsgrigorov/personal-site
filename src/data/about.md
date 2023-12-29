@@ -12,7 +12,8 @@ I currently work for Coinbase in Newport Beach, CA. We are supporting Web3 by bu
 - In grade 8 I was terrified to take my first Physics class, but 10 minutes into the class I realized I absolutely loved it.
 - When applying for universities I ended up getting rejected for Physics and only accepted for CS degrees (which were my backup choices). I had to accept an offer for CS and transfer to Physics later on. However CS was quite enjoyable so I did both and now work entirely in the CS industry.
 - I didn't expect to spend 5 years at SAP, but I have constantly found new opportunities and challenges and enjoyed my work.
-- Moving to Coinbase was a calculated risk during a down market for Crypto, so let's hope it pans out.
+- Moving to Coinbase was a calculated risk during a down market for Crypto, but so far it has panned out.
+- After joining Synapse I was the only DevOps engineer and got to setup our blockchain infrastructure the way I saw fit and learned a lot.
 
 Ask me in person for other stories that I'm afraid to share with the internet.
 
@@ -26,5 +27,35 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 # Travel / Geography
 
-- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich and Los Angeles.
-- I've been to ~ 19 countries - Bulgaria, Greece, Turkey, Austria, Germany, Italy, Netherlands, Switzerland, Belgium, France, Spain, Canada, USA, Costa Rica, Belize, Guatemala, Peru, Cuba, Mexico.
+- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
+- I've been to ~ 27 countries 
+  - Europe
+    - Albania
+    - Austria
+    - Belgium
+    - Bosnia and Herzegovina
+    - Bulgaria
+    - Croatia
+    - England
+    - France
+    - Germany
+    - Greece
+    - Italy
+    - Macedonia
+    - Montenegro
+    - Netherlands
+    - Norway
+    - Serbia
+    - Spain
+    - Switzerland
+    - Turkey
+  - North America
+    - USA
+    - Canada
+    - Mexico
+    - Costa Rica
+    - Cuba
+    - Belize
+    - Guatemala
+  - South America
+    - Peru

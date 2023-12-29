@@ -13,7 +13,7 @@
  */
 const work = [
   {
-    name: 'Protochain Research',
+    name: 'Synapse Protocol',
     position: 'Staff DevOps Engineer',
     url: 'https://jobs.ashbyhq.com/protochain',
     startDate: '2023-02-01',

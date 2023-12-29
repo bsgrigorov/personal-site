@@ -20,7 +20,7 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>Hi, I&apos;m Bobby. I am a passionate and curious person.
-        I studied CS and Physics at <a href="https://www.ubc.ca/">UBC</a>. I presently work at <a href="https://www.coinbase.com/">Coinbase</a> as a blockchain engineer and live in Newport Beach, CA.
+        I studied CS and Physics at <a href="https://www.ubc.ca/">UBC</a>. I presently work at <a href="https://www.synapseprotocol.com/">Synapse</a> as a DevOps Engineer and live in Newport Beach, CA.
       </p>
       <ul className="actions">
         <li>
