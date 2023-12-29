@@ -8,7 +8,7 @@ My personal website. An [MIT](https://github.com/bsgrigorov/personal-site/blob/m
 - Automated workflows via [GitHub Actions](https://github.com/features/actions).
 - And more!
 
-## 🛠 Adapting this Project 
+## 🛠 Adapting this Project  
 
 Want to create your own personal website based on this project? You can set it up in as little as 30 minutes! Follow the setup instructions below and check out the **[detailed guide and checklist](./docs/adapting-guide.md)** on adapting this project to your needs. If you encounter any challenges, don't hesitate to contact me through an issue or email at [help@mldangelo.com](mailto:help@mldangelo.com).
 
