@@ -1,6 +1,3 @@
-// TODO: Add Athletic Skills, Office Skills,
-// Data Engineering, Data Science, ML Engineering, ... ?
-
 const skills = [
   {
     title: 'Java',
@@ -10,7 +7,17 @@ const skills = [
   {
     title: 'Javascript',
     competency: 4,
-    category: ['Web Development', 'Languages'],
+    category: ['Web Development', 'Languages', 'Javascript'],
+  },
+  {
+    title: 'Node.JS',
+    competency: 2,
+    category: ['Web Development', 'Javascript'],
+  },
+  {
+    title: 'React',
+    competency: 2,
+    category: ['Web Development', 'Javascript'],
   },
   {
     title: 'Python',
@@ -20,32 +27,7 @@ const skills = [
   {
     title: 'Typescript',
     competency: 1,
-    category: ['Web Development', 'Languages'],
-  },
-  {
-    title: 'NodeJS',
-    competency: 2,
-    category: ['Web Development'],
-  },
-  {
-    title: 'React',
-    competency: 1,
-    category: ['Web Development'],
-  },
-  {
-    title: 'Ionic',
-    competency: 2,
-    category: ['Web Development'],
-  },
-  {
-    title: 'AngularJS',
-    competency: 2,
-    category: ['Web Development'],
-  },
-  {
-    title: 'SAP UI5',
-    competency: 1,
-    category: ['Web Development'],
+    category: ['Web Development', 'Languages', 'Javascript'],
   },
   {
     title: 'Golang',
@@ -60,7 +42,17 @@ const skills = [
   {
     title: 'PostgreSQL',
     competency: 4,
-    category: ['Databases', 'Languages'],
+    category: ['Databases'],
+  },
+  {
+    title: 'MySQL',
+    competency: 3,
+    category: ['Databases'],
+  },
+  {
+    title: 'Clickhouse',
+    competency: 3,
+    category: ['Databases'],
   },
   {
     title: 'SAP HANA SQL',
@@ -274,7 +266,7 @@ const skills = [
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
-// this is a list of colors that I like. The length should be == to the
+// this is a list of colors that I like. The length should be === to the
 // number of categories. Re-arrange this list until you find a pattern you like.
 const colors = [
   '#6968b3',
@@ -291,12 +283,10 @@ const colors = [
 ];
 
 const categories = [
-  ...new Set(skills.reduce((acc, { category }) => acc.concat(category), [])),
-]
-  .sort()
-  .map((category, index) => ({
-    name: category,
-    color: colors[index],
-  }));
+  ...new Set(skills.flatMap(({ category }) => category)),
+].sort().map((category, index) => ({
+  name: category,
+  color: colors[index],
+}));
 
 export { categories, skills };
