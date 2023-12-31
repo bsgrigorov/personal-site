@@ -40,7 +40,7 @@ const data = [
     icon: faTwitter,
   },
   {
-    link: 'mailto:bsgrigorov@gmail.com',
+    link: 'mailto:bsgrigorov+personal-website@gmail.com',
     label: 'Email',
     icon: faEnvelope,
   },

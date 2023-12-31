@@ -1,6 +1,15 @@
 // TODO Add a couple lines about each project
 const data = [
   {
+    title: 'SynKube - Kubernetes on GCP',
+    subtitle: 'IaC for Kubernetes, Application Deployment and CICD on GCP',
+    image: '/images/projects/synkube.png',
+    date: '2023-11-01',
+    link: 'https://github.com/synkube',
+    desc:
+      'Created a Kubernetes platform on GCP with Terraform, Helm, Teleport, Github Actions and Golang. The platform is used for deploying applications and CICD.',
+  },
+  {
     title: 'Zsh Environment Config',
     subtitle: 'Environment configuration for zsh shell',
     image: '/images/projects/zsh.png',

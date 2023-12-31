@@ -31,7 +31,7 @@ const skills = [
   },
   {
     title: 'Golang',
-    competency: 3,
+    competency: 4,
     category: ['Cloud Development', 'Languages'],
   },
   {
@@ -81,17 +81,12 @@ const skills = [
   },
   {
     title: 'Google Cloud Platform',
-    competency: 2,
+    competency: 5,
     category: ['Cloud Development'],
   },
   {
     title: 'Microsoft Azure',
     competency: 1,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Cloud Foundry',
-    competency: 3,
     category: ['Cloud Development'],
   },
   {
@@ -110,23 +105,18 @@ const skills = [
     category: ['Tools', 'Cloud Development'],
   },
   {
-    title: 'Operator Pattern',
-    competency: 3,
-    category: ['Cloud Development'],
-  },
-  {
     title: 'Prometheus',
     competency: 5,
     category: ['Monitoring', 'Cloud Development'],
   },
   {
     title: 'Grafana',
-    competency: 4,
+    competency: 5,
     category: ['Monitoring', 'Cloud Development'],
   },
   {
     title: 'Terraform',
-    competency: 4,
+    competency: 5,
     category: ['Tools', 'Cloud Development'],
   },
   {
@@ -181,7 +171,7 @@ const skills = [
   },
   {
     title: 'Windows',
-    competency: 4,
+    competency: 3,
     category: ['Software'],
   },
   {
@@ -226,12 +216,17 @@ const skills = [
   },
   {
     title: 'CI/CD',
-    competency: 2,
+    competency: 5,
     category: ['Methodologies'],
   },
   {
     title: 'GitOps',
-    competency: 2,
+    competency: 5,
+    category: ['Methodologies'],
+  },
+  {
+    title: 'Platform Engineering',
+    competency: 5,
     category: ['Methodologies'],
   },
   {
@@ -246,7 +241,7 @@ const skills = [
   },
   {
     title: 'PagerDuty',
-    competency: 2,
+    competency: 4,
     category: ['Software'],
   },
   {
@@ -256,12 +251,12 @@ const skills = [
   },
   {
     title: 'Teleport',
-    competency: 3,
+    competency: 5,
     category: ['Tools', 'Cloud Development'],
   },
   {
     title: 'Github Actions',
-    competency: 3,
+    competency: 4,
     category: ['Cloud Development'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));

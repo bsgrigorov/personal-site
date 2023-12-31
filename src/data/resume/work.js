@@ -14,14 +14,15 @@
 const work = [
   {
     name: 'Synapse Protocol',
-    position: 'Staff DevOps Engineer',
+    position: 'Senior DevOps Engineer',
     url: 'https://jobs.ashbyhq.com/protochain',
     startDate: '2023-02-01',
     highlights: [
-      'Worked for a 15-person web3 startup supporting apps for Synapse Protocol.',
+      'Worked for a 10-person web3 startup supporting apps for Synapse Protocol.',
       'Designed and deployed web3 infrastructure with Terraform Cloud in GCP.',
       'Managed GKE kube clusters, deployed workloads with Helm, Teleport and Github Actions.',
       'Deployed and maintained blockchain rpc nodes for several EVM chains.',
+      'Handled security, monitoring, alerting, backups, upgrades and scaling of infrastructure.',
       'Was the go-to person for any DevOps tasks, integrations and troubleshooting.',
     ],
   },
