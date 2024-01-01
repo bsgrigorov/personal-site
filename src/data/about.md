@@ -28,7 +28,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 # Travel / Geography
 
 - I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
-- I've been to ~ 27 countries 
+- I've been to ~ 28 countries 
   - Europe
     - Albania
     - Austria
@@ -45,6 +45,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
     - Montenegro
     - Netherlands
     - Norway
+    - Portugal
     - Serbia
     - Spain
     - Switzerland
