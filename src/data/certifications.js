@@ -1,5 +1,11 @@
 const data = [
   {
+    label: 'GCP: Associate Cloud Engineer',
+    link: 'https://google.accredible.com/0a77ad7b-ccb5-4ded-b328-911dba60940c',
+    image: '/images/certifications/gcp-cloud-engineer.png',
+    date: '2024-01-01',
+  },
+  {
     label: 'CKAD: Certified Kubernetes Application Developer',
     link: 'https://www.credly.com/badges/7f3c1b1a-4bf8-4361-9f61-168f6c1b5ff2/public_url',
     image: '/images/certifications/ckad-certified-kubernetes-application-developer.png',
