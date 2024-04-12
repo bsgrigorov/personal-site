@@ -1,7 +1,7 @@
 const data = [
   {
     label: 'GCP: Associate Cloud Engineer',
-    link: 'https://google.accredible.com/0a77ad7b-ccb5-4ded-b328-911dba60940c',
+    link: 'https://www.credly.com/earner/earned/badge/31ebdc9a-9e25-4937-b1e8-4d23c02f40c8',
     image: '/images/certifications/gcp-cloud-engineer.png',
     date: '2024-01-01',
   },
