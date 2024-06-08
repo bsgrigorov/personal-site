@@ -12,8 +12,9 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-const Projects = lazy(() => import('./pages/Projects'));
 const Resume = lazy(() => import('./pages/Resume'));
+const Certifications = lazy(() => import('./pages/Certifications'));
+const Projects = lazy(() => import('./pages/Projects'));
 const Stats = lazy(() => import('./pages/Stats'));
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
         <Route path="/projects" element={<Projects />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/certifications" element={<Certifications />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
