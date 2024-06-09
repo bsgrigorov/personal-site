@@ -14,12 +14,13 @@ I currently work for the team behind Synapse Protocol in Newport Beach, CA. We a
 - I didn't expect to spend 5 years at SAP, but I have constantly found new opportunities and challenges and enjoyed my work.
 - Moving to Coinbase was a calculated risk during a down market for Crypto, but so far it has panned out.
 - After joining Synapse I was the only DevOps engineer and got to setup our blockchain infrastructure the way I saw fit and learned a lot doing it.
+- Two months after meeting my girlfriend, we went backpacking in Southeast Asia for 3 months. It was a great experience and we are still together.
 
 Ask me in person for other stories that I'm afraid to share with the internet.
 
 # I like
 - Hiking, Climbing, Skiing
-- Basketball, Volleyball, Surfing, Frisbee, Swimming, Running
+- Basketball, Volleyball, Surfing, Frisbee, Swimming, Running, Freediving
 - Travelling, Politics, Economics, Investing
 - Science, Physics, Chemistry
 - Drum and Bass, EDM, Dubstep
@@ -28,7 +29,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 # Travel / Geography
 
 - I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
-- I've been to ~ 28 countries 
+- I've been to ~ 33 countries 
   - Europe
     - Albania
     - Austria
@@ -60,3 +61,32 @@ Ask me in person for other stories that I'm afraid to share with the internet.
     - Guatemala
   - South America
     - Peru
+  - Asia
+    - Indonesia
+    - Japan
+    - Philippines
+    - Thailand
+    - Singapore
+- I really want to visit
+  - Australia
+  - New Zealand
+  - Vanuatu
+  - Vietnam
+  - Malaysia
+  - China
+  - Bhutan
+  - Nepal
+  - Mongolia
+  - Jordan
+  - Madagascar
+  - Kenya
+  - Tanzania
+  - Egypt
+  - Morocco
+  - Namibia
+  - Chile
+  - Argentina
+  - Bolivia
+  - Equador
+  - Colombia
+  - Nicaragua
