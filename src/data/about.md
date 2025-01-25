@@ -28,65 +28,41 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 # Travel / Geography
 
-- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
-- I've been to ~ 33 countries 
-  - Europe
-    - Albania
-    - Austria
-    - Belgium
-    - Bosnia and Herzegovina
-    - Bulgaria
-    - Croatia
-    - England
-    - France
-    - Germany
-    - Greece
-    - Italy
-    - Macedonia
-    - Montenegro
-    - Netherlands
-    - Norway
-    - Portugal
-    - Serbia
-    - Spain
-    - Switzerland
-    - Turkey
-  - North America
-    - USA
-    - Canada
-    - Mexico
-    - Costa Rica
-    - Cuba
-    - Belize
-    - Guatemala
-  - South America
-    - Peru
-  - Asia
-    - Indonesia
-    - Japan
-    - Philippines
-    - Thailand
-    - Singapore
-- I really want to visit
-  - Australia
-  - New Zealand
-  - Vanuatu
-  - Vietnam
-  - Malaysia
-  - China
-  - Bhutan
-  - Nepal
-  - Mongolia
-  - Jordan
-  - Madagascar
-  - Kenya
-  - Tanzania
-  - Egypt
-  - Morocco
-  - Namibia
-  - Chile
-  - Argentina
-  - Bolivia
-  - Equador
-  - Colombia
-  - Nicaragua
+- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles. 
+
+# Countries I've Been To (~33)
+
+| Europe                 | North America | South America | Asia        |
+| ---------------------- | ------------- | ------------- | ----------- |
+| Albania                | USA           | Peru          | Indonesia   |
+| Austria                | Canada        |               | Japan       |
+| Belgium                | Mexico        |               | Philippines |
+| Bosnia and Herzegovina | Costa Rica    |               | Thailand    |
+| Bulgaria               | Cuba          |               | Singapore   |
+| Croatia                | Belize        |               |             |
+| England                | Guatemala     |               |             |
+| France                 |               |               |             |
+| Germany                |               |               |             |
+| Greece                 |               |               |             |
+| Italy                  |               |               |             |
+| Macedonia              |               |               |             |
+| Montenegro             |               |               |             |
+| Netherlands            |               |               |             |
+| Norway                 |               |               |             |
+| Portugal               |               |               |             |
+| Serbia                 |               |               |             |
+| Spain                  |               |               |             |
+| Switzerland            |               |               |             |
+| Turkey                 |               |               |             |
+
+# Countries I Want to Visit
+
+| Australia & Oceania | Asia     | Africa     | South America |
+| ------------------- | -------- | ---------- | ------------- |
+| Australia           | Vietnam  | Madagascar | Chile         |
+| New Zealand         | Malaysia | Kenya      | Argentina     |
+| Vanuatu             | China    | Tanzania   | Bolivia       |
+|                     | Bhutan   | Egypt      | Ecuador       |
+|                     | Nepal    | Morocco    | Colombia      |
+|                     | Mongolia | Namibia    | Nicaragua     |
+|                     | Jordan   |            |               |
