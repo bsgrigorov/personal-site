@@ -13,10 +13,25 @@
  */
 const work = [
   {
+    name: 'Consensys (MetaMask)',
+    position: 'Sr DevSecOps Engineer',
+    url: 'https://metamask.io/',
+    startDate: '2024-08-01',
+    highlights: [
+      'Worked on MetaMask tooling team with focus on infra, SDLC, and security.',
+      'Designed, built and managed AWS infra using Terraform and Atlantis in Github.',
+      'Utilized EKS, ECS, RDS, S3, SecretsManager, IAM across teams and projects.',
+      'Deployed ETH wallet management Node.js apps with AWS SAM and Lambda.',
+      'Created reusable CI/CD pipelines for building, testing and packaging Golang and Node.js apps.',
+      'Automated helm deploys to EKS with ArgoCD.',
+    ],
+  },
+  {
     name: 'Synapse Protocol',
     position: 'Senior DevOps Engineer',
     url: 'https://jobs.ashbyhq.com/protochain',
     startDate: '2023-02-01',
+    endDate: '2024-03-01',
     highlights: [
       'Worked for a 10-person web3 startup supporting apps for Synapse Protocol.',
       'Designed and deployed web3 infrastructure with Terraform Cloud in GCP.',

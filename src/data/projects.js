@@ -1,13 +1,31 @@
 // TODO Add a couple lines about each project
 const data = [
   {
+    title: 'ICP Tokens',
+    subtitle: 'Website for trade analysis of tokens on ICP blockchain',
+    image: '/images/projects/icptokens.png',
+    date: '2023-11-01',
+    link: 'https://icptokens.net',
+    desc:
+      'Website for trade analysis of tokens on ICP blockchain. Deployed kubernetes infra on DigitalOcean including TimescaleDB and Node.js apps.',
+  },
+  {
+    title: 'EVM Blockchain Indexer',
+    subtitle: 'Concurrent blockchain indexer in Golang',
+    image: '/images/projects/evm-indexer.png',
+    date: '2023-11-01',
+    link: 'https://github.com/synkube/app',
+    desc:
+      'Developed a concurrent blockchain indexer (EVM) in Golang. Used Postgres and Clickhouse for storage and GraphQL to expose the data. Packaged with goreleaser.',
+  },
+  {
     title: 'SynKube - Kubernetes on GCP',
-    subtitle: 'IaC for Kubernetes, Application Deployment and CICD on GCP',
+    subtitle: 'IaC for Kubernetes, Application Deployment and CICD on GCP and DigitalOcean',
     image: '/images/projects/synkube.png',
     date: '2023-11-01',
     link: 'https://github.com/synkube',
     desc:
-      'Created a Kubernetes platform on GCP with Terraform, Helm, Teleport, Github Actions and Golang. The platform is used for deploying applications and CICD.',
+      'Created a complete k8s platform on GCP and DigitalOcean with Terraform, helmfile, Teleport, and GH Actions. Developed starter repos and pipelines that build, test, dockerize and deploy Golang, Node.js and Python apps.',
   },
   {
     title: 'Zsh Environment Config',

@@ -4,7 +4,7 @@ I am a software engineer with a focus on infrastructure and blockchain and a lov
 
 # Currently
 
-I currently work for the team behind Synapse Protocol in Newport Beach, CA. We are a 10-person startup that builds and maintains blockchain infrastructure for one of the largest crypto bridges with over $43B in volume. We support 20 EVM and non-EVM chains. My expertise is in building infrastructure using Kubernetes for large workloads like blockchains and ERP.
+I currently work for Consensys on the team behind the popular wallet MetaMask. MetaMask has 30 million monthly active users and the infrastructure requirements are quite high. I work on the DevSecOps team and support internal tooling, infra, security and monitoring. My expertise is in building infrastructure using Kubernetes for large workloads like blockchains and ERP.
 
 # Some history
 

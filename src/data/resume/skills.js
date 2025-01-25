@@ -1,7 +1,7 @@
 const skills = [
   {
     title: 'Java',
-    competency: 4,
+    competency: 3,
     category: ['Languages'],
   },
   {
@@ -11,12 +11,17 @@ const skills = [
   },
   {
     title: 'Node.JS',
-    competency: 2,
-    category: ['Web Development'],
+    competency: 4,
+    category: ['Web Development', 'Languages'],
   },
   {
     title: 'React',
     competency: 2,
+    category: ['Web Development'],
+  },
+  {
+    title: 'Next.js',
+    competency: 3,
     category: ['Web Development'],
   },
   {
@@ -26,18 +31,23 @@ const skills = [
   },
   {
     title: 'Typescript',
-    competency: 1,
+    competency: 3,
     category: ['Web Development', 'Languages'],
   },
   {
     title: 'Golang',
-    competency: 4,
+    competency: 5,
     category: ['Cloud Development', 'Languages'],
   },
   {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Monitoring', 'Databases'],
+    title: 'Solidity',
+    competency: 1,
+    category: ['Languages'],
+  },
+  {
+    title: 'Blockchain',
+    competency: 3,
+    category: ['Languages'],
   },
   {
     title: 'PostgreSQL',
@@ -76,7 +86,7 @@ const skills = [
   },
   {
     title: 'Amazon Web Services',
-    competency: 4,
+    competency: 5,
     category: ['Cloud Development'],
   },
   {
@@ -105,18 +115,33 @@ const skills = [
     category: ['Tools', 'Cloud Development'],
   },
   {
+    title: 'helmfile',
+    competency: 4,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'ArgoCD',
+    competency: 3,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
     title: 'Prometheus',
-    competency: 5,
+    competency: 4,
     category: ['Monitoring', 'Cloud Development'],
   },
   {
     title: 'Grafana',
-    competency: 5,
+    competency: 4,
     category: ['Monitoring', 'Cloud Development'],
   },
   {
     title: 'Terraform',
     competency: 5,
+    category: ['Tools', 'Cloud Development'],
+  },
+  {
+    title: 'Atlantis',
+    competency: 3,
     category: ['Tools', 'Cloud Development'],
   },
   {
@@ -128,6 +153,11 @@ const skills = [
     title: 'Vault',
     competency: 3,
     category: ['Tools'],
+  },
+  {
+    title: 'Vercel',
+    competency: 3,
+    category: ['Web Development'],
   },
   {
     title: 'Dynatrace',
@@ -190,21 +220,6 @@ const skills = [
     category: ['Languages'],
   },
   {
-    title: 'JUnit',
-    competency: 2,
-    category: ['Testing'],
-  },
-  {
-    title: 'Jasmine',
-    competency: 2,
-    category: ['Testing'],
-  },
-  {
-    title: 'pytest',
-    competency: 1,
-    category: ['Testing'],
-  },
-  {
     title: 'SRE',
     competency: 3,
     category: ['Methodologies'],
@@ -221,7 +236,7 @@ const skills = [
   },
   {
     title: 'GitOps',
-    competency: 5,
+    competency: 4,
     category: ['Methodologies'],
   },
   {
@@ -235,14 +250,19 @@ const skills = [
     category: ['Methodologies'],
   },
   {
-    title: 'Jenkins',
-    competency: 3,
-    category: ['Software', 'Cloud Development'],
-  },
-  {
     title: 'PagerDuty',
     competency: 4,
     category: ['Software'],
+  },
+  {
+    title: 'Cloudflare',
+    competency: 3,
+    category: ['Web Development'],
+  },
+  {
+    title: 'env0',
+    competency: 2,
+    category: ['Cloud Development'],
   },
   {
     title: 'Jsonnet',
@@ -251,13 +271,23 @@ const skills = [
   },
   {
     title: 'Teleport',
-    competency: 5,
+    competency: 4,
     category: ['Tools', 'Cloud Development'],
   },
   {
     title: 'Github Actions',
-    competency: 4,
+    competency: 5,
     category: ['Cloud Development'],
+  },
+  {
+    title: 'pnpm',
+    competency: 4,
+    category: ['Web Development'],
+  },
+  {
+    title: 'turbo',
+    competency: 4,
+    category: ['Web Development'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
