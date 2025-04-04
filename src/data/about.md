@@ -30,7 +30,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 - I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles. 
 
-# Countries I've Been To (~33)
+# Countries I've Been To (~34)
 
 | Europe                 | North America | South America | Asia        |
 | ---------------------- | ------------- | ------------- | ----------- |
@@ -39,7 +39,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 | Belgium                | Mexico        |               | Philippines |
 | Bosnia and Herzegovina | Costa Rica    |               | Thailand    |
 | Bulgaria               | Cuba          |               | Singapore   |
-| Croatia                | Belize        |               |             |
+| Croatia                | Belize        |               | Malaysia    |
 | England                | Guatemala     |               |             |
 | France                 |               |               |             |
 | Germany                |               |               |             |
@@ -62,7 +62,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 | Australia           | Vietnam  | Madagascar | Chile         |
 | New Zealand         | Malaysia | Kenya      | Argentina     |
 | Vanuatu             | China    | Tanzania   | Bolivia       |
-|                     | Bhutan   | Egypt      | Ecuador       |
+| Bora Bora           | Bhutan   | Egypt      | Ecuador       |
 |                     | Nepal    | Morocco    | Colombia      |
 |                     | Mongolia | Namibia    | Nicaragua     |
 |                     | Jordan   |            |               |
