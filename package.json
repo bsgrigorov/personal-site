@@ -1,6 +1,8 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
+  "private": true,
+  "description": "Borislav Grigorov's personal website and resume",
   "homepage": "https://bgrigorov.com/",
   "license": "MIT",
   "repository": {
@@ -8,15 +10,17 @@
     "url": "https://github.com/bsgrigorov/personal-site.git"
   },
   "engines": {
-    "node": ">=16.x"
+    "node": ">=22"
   },
+  "packageManager": "pnpm@10.26.1",
   "scripts": {
-    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
+    "analyze": "pnpm build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
-    "predeploy": "npm run build && react-snap",
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "predeploy": "pnpm run build && react-snap",
     "start": "react-scripts start",
-    "test": "npx jest"
+    "test": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

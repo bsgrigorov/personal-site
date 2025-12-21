@@ -3,7 +3,7 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 // import { faAngellist } from '@fortawesome/free-brands-svg-icons/faAngellist';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons/faXTwitter';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 // See https://fontawesome.com/icons?d=gallery&s=brands,regular&m=free
 // to add other icons.
@@ -35,9 +35,9 @@ const data = [
   //   icon: faAngellist,
   // },
   {
-    link: 'https://twitter.com/bsgrigorov',
-    label: 'Twitter',
-    icon: faTwitter,
+    link: 'https://x.com/bsgrigorov',
+    label: 'X',
+    icon: faXTwitter,
   },
   {
     link: 'mailto:bsgrigorov+personal-website@gmail.com',
