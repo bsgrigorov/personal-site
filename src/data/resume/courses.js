@@ -54,7 +54,7 @@ const courses = [
     university: 'UBC',
   },
   {
-    title: 'Exprerimental Physics',
+    title: 'Experimental Physics',
     number: '',
     link: '',
     university: 'UBC',
@@ -84,7 +84,7 @@ const courses = [
     university: 'UBC',
   },
   {
-    title: 'Special and Genaral Relativity',
+    title: 'Special and General Relativity',
     number: '',
     link: '',
     university: 'UBC',

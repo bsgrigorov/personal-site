@@ -7,12 +7,12 @@ const skills = [
   {
     title: 'Javascript',
     competency: 4,
-    category: ['Web Development', 'Languages'],
+    category: ['Web Development', 'Languages', 'Web3'],
   },
   {
     title: 'Node.JS',
     competency: 4,
-    category: ['Web Development', 'Languages'],
+    category: ['Web Development', 'Languages', 'Web3'],
   },
   {
     title: 'React',
@@ -32,7 +32,7 @@ const skills = [
   {
     title: 'Typescript',
     competency: 3,
-    category: ['Web Development', 'Languages'],
+    category: ['Web Development', 'Languages', 'Web3'],
   },
   {
     title: 'Golang',
@@ -40,14 +40,9 @@ const skills = [
     category: ['Cloud Development', 'Languages'],
   },
   {
-    title: 'Solidity',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
     title: 'Blockchain',
     competency: 3,
-    category: ['Languages'],
+    category: ['Web3'],
   },
   {
     title: 'PostgreSQL',
@@ -85,12 +80,12 @@ const skills = [
     category: ['Monitoring', 'Databases'],
   },
   {
-    title: 'Amazon Web Services',
+    title: 'Amazon Web Services (AWS)',
     competency: 5,
     category: ['Cloud Development'],
   },
   {
-    title: 'Google Cloud Platform',
+    title: 'Google Cloud Platform (GCP)',
     competency: 5,
     category: ['Cloud Development'],
   },
@@ -121,7 +116,7 @@ const skills = [
   },
   {
     title: 'ArgoCD',
-    competency: 3,
+    competency: 4,
     category: ['Tools', 'Cloud Development'],
   },
   {
@@ -132,6 +127,11 @@ const skills = [
   {
     title: 'Grafana',
     competency: 4,
+    category: ['Monitoring', 'Cloud Development'],
+  },
+  {
+    title: 'OpenTelemetry',
+    competency: 3,
     category: ['Monitoring', 'Cloud Development'],
   },
   {
@@ -158,11 +158,6 @@ const skills = [
     title: 'Vercel',
     competency: 3,
     category: ['Web Development'],
-  },
-  {
-    title: 'Dynatrace',
-    competency: 2,
-    category: ['Monitoring'],
   },
   {
     title: 'Git',
@@ -205,8 +200,8 @@ const skills = [
     category: ['Software'],
   },
   {
-    title: 'IntelliJ',
-    competency: 3,
+    title: 'Cursor',
+    competency: 4,
     category: ['Software'],
   },
   {
@@ -245,11 +240,6 @@ const skills = [
     category: ['Methodologies'],
   },
   {
-    title: 'Agile/Scrum',
-    competency: 4,
-    category: ['Methodologies'],
-  },
-  {
     title: 'PagerDuty',
     competency: 4,
     category: ['Software'],
@@ -263,11 +253,6 @@ const skills = [
     title: 'env0',
     competency: 2,
     category: ['Cloud Development'],
-  },
-  {
-    title: 'Jsonnet',
-    competency: 3,
-    category: ['Languages'],
   },
   {
     title: 'Teleport',

@@ -25,7 +25,7 @@ const data = [
     date: '2023-11-01',
     link: 'https://github.com/synkube',
     desc:
-      'Created a complete k8s platform on GCP and DigitalOcean with Terraform, helmfile, Teleport, and GH Actions. Developed starter repos and pipelines that build, test, dockerize and deploy Golang, Node.js and Python apps.',
+      'Created a complete k8s platform on GCP and DigitalOcean with Terraform, ArgoCD, helmfile, Teleport, and GH Actions. Developed starter repos and pipelines that build, test, dockerize and deploy Golang, Node.js and Python apps.',
   },
   {
     title: 'Zsh Environment Config',

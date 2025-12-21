@@ -1,7 +1,7 @@
 const degrees = [
   {
     school: 'University of British Columbia',
-    degree: 'B.Sc. of Science',
+    degree: 'BSc',
     specialization: 'Honours Computer Science & Physics',
     location: 'Vancouver, BC',
     link: 'https://ubc.ca',

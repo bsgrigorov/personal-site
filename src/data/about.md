@@ -12,7 +12,7 @@ I currently work for Consensys on the team behind the popular wallet MetaMask. M
 - In grade 8 I was terrified to take my first Physics class, but 10 minutes into the class I realized I absolutely loved it.
 - When applying for universities I ended up getting rejected for Physics and only accepted for CS degrees (which were my backup choices). I had to accept an offer for CS and transfer to Physics later on. However CS was quite enjoyable so I did both and now work entirely in the CS industry.
 - I didn't expect to spend 5 years at SAP, but I have constantly found new opportunities and challenges and enjoyed my work.
-- Moving to Coinbase was a calculated risk during a down market for Crypto, but so far it has panned out.
+- Moving to Coinbase was a calculated risk during a down market for Crypto, but it turned out alright.
 - After joining Synapse I was the only DevOps engineer and got to setup our blockchain infrastructure the way I saw fit and learned a lot doing it.
 - Two months after meeting my girlfriend, we went backpacking in Southeast Asia for 3 months. It was a great experience and we are still together.
 
@@ -28,7 +28,7 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 # Travel / Geography
 
-- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles. 
+- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
 
 # Countries I've Been To (~34)
 
@@ -60,9 +60,9 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 | Australia & Oceania | Asia     | Africa     | South America |
 | ------------------- | -------- | ---------- | ------------- |
 | Australia           | Vietnam  | Madagascar | Chile         |
-| New Zealand         | Malaysia | Kenya      | Argentina     |
+| New Zealand         | Jordan   | Kenya      | Argentina     |
 | Vanuatu             | China    | Tanzania   | Bolivia       |
 | Bora Bora           | Bhutan   | Egypt      | Ecuador       |
 |                     | Nepal    | Morocco    | Colombia      |
 |                     | Mongolia | Namibia    | Nicaragua     |
-|                     | Jordan   |            |               |
+|                     |          |            |               |
