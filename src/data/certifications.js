@@ -1,7 +1,19 @@
 const data = [
   {
+    label: 'AWS Certified DevOps Engineer - Professional',
+    link: 'https://www.credly.com/badges/c07fcd6a-4933-4dc1-af59-365d24bf4099/public_url',
+    image: '/images/certifications/aws-certified-devops-engineer-professional.png',
+    date: '2025-12-19',
+  },
+  {
+    label: 'AWS Certified Developer - Associate',
+    link: 'https://www.credly.com/badges/77676f58-06ee-4c5a-ab58-b630ee64757f',
+    image: '/images/certifications/aws-certified-developer-associate.png',
+    date: '2025-02-13',
+  },
+  {
     label: 'GCP: Associate Cloud Engineer',
-    link: 'https://www.credly.com/earner/earned/badge/31ebdc9a-9e25-4937-b1e8-4d23c02f40c8',
+    link: 'https://www.credly.com/badges/31ebdc9a-9e25-4937-b1e8-4d23c02f40c8',
     image: '/images/certifications/gcp-cloud-engineer.png',
     date: '2024-01-01',
   },
@@ -12,16 +24,10 @@ const data = [
     date: '2022-02-01',
   },
   {
-    label: 'AWS Certified Solutions Architect – Associate',
+    label: 'AWS Certified Solutions Architect - Associate',
     link: 'https://www.credly.com/badges/9ce217a7-ebd6-4b3c-bee9-9894c52e02b9/public_url',
     image: '/images/certifications/aws-certified-solutions-architect-associate.png',
     date: '2021-07-12',
-  },
-  {
-    label: 'AWS Certified Developer – Associate',
-    link: 'https://www.credly.com/badges/6985045c-154f-41d4-bff4-b6102999516a/public_url',
-    image: '/images/certifications/aws-certified-developer-associate.png',
-    date: '2021-06-06',
   },
   {
     label: 'Microsoft Certified: Azure Fundamentals',
