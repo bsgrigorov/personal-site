@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 
 import SkillsComponent from '../components/Resume/Skills';
-import { skills, categories } from '../data/resume/skills';
+import { skills, categoryColors } from '../data/resume/skills';
 
 const Skills = () => (
   <Main
@@ -17,7 +17,7 @@ const Skills = () => (
           <h2><Link to="/skills">Skills</Link></h2>
         </div>
       </header>
-      <SkillsComponent skills={skills} categories={categories} />
+      <SkillsComponent skills={skills} colors={categoryColors} />
     </article>
   </Main>
 );

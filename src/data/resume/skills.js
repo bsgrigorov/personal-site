@@ -1,280 +1,79 @@
-const skills = [
-  {
-    title: 'Java',
-    competency: 3,
-    category: ['Languages'],
-  },
-  {
-    title: 'Javascript',
-    competency: 4,
-    category: ['Web Development', 'Languages', 'Web3'],
-  },
-  {
-    title: 'Node.JS',
-    competency: 4,
-    category: ['Web Development', 'Languages', 'Web3'],
-  },
-  {
-    title: 'React',
-    competency: 2,
-    category: ['Web Development'],
-  },
-  {
-    title: 'Next.js',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  {
-    title: 'Python',
-    competency: 4,
-    category: ['Languages'],
-  },
-  {
-    title: 'Typescript',
-    competency: 3,
-    category: ['Web Development', 'Languages', 'Web3'],
-  },
-  {
-    title: 'Golang',
-    competency: 5,
-    category: ['Cloud Development', 'Languages'],
-  },
-  {
-    title: 'Blockchain',
-    competency: 3,
-    category: ['Web3'],
-  },
-  {
-    title: 'PostgreSQL',
-    competency: 4,
-    category: ['Databases'],
-  },
-  {
-    title: 'MySQL',
-    competency: 3,
-    category: ['Databases'],
-  },
-  {
-    title: 'Clickhouse',
-    competency: 3,
-    category: ['Databases'],
-  },
-  {
-    title: 'SAP HANA SQL',
-    competency: 3,
-    category: ['Databases'],
-  },
-  {
-    title: 'DynamoDB',
-    competency: 2,
-    category: ['Databases'],
-  },
-  {
-    title: 'Redis',
-    competency: 1,
-    category: ['Databases'],
-  },
-  {
-    title: 'Loki',
-    competency: 1,
-    category: ['Monitoring', 'Databases'],
-  },
-  {
-    title: 'Amazon Web Services (AWS)',
-    competency: 5,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Google Cloud Platform (GCP)',
-    competency: 5,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Microsoft Azure',
-    competency: 1,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Docker',
-    competency: 5,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 5,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Helm',
-    competency: 5,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'helmfile',
-    competency: 4,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'ArgoCD',
-    competency: 4,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'Prometheus',
-    competency: 4,
-    category: ['Monitoring', 'Cloud Development'],
-  },
-  {
-    title: 'Grafana',
-    competency: 4,
-    category: ['Monitoring', 'Cloud Development'],
-  },
-  {
-    title: 'OpenTelemetry',
-    competency: 3,
-    category: ['Monitoring', 'Cloud Development'],
-  },
-  {
-    title: 'Terraform',
-    competency: 5,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'Atlantis',
-    competency: 3,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'Ansible',
-    competency: 3,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'Vault',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Vercel',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  {
-    title: 'Git',
-    competency: 4,
-    category: ['Tools'],
-  },
-  {
-    title: 'Bash',
-    competency: 3,
-    category: ['Tools', 'Languages'],
-  },
-  {
-    title: 'Jira Software',
-    competency: 3,
-    category: ['Software'],
-  },
-  {
-    title: 'Chrome Dev Tools',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Postman',
-    competency: 3,
-    category: ['Software'],
-  },
-  {
-    title: 'macOS',
-    competency: 4,
-    category: ['Software'],
-  },
-  {
-    title: 'Linux',
-    competency: 3,
-    category: ['Software'],
-  },
-  {
-    title: 'Windows',
-    competency: 3,
-    category: ['Software'],
-  },
-  {
-    title: 'Cursor',
-    competency: 4,
-    category: ['Software'],
-  },
-  {
-    title: 'HTML + CSS',
-    competency: 3,
-    category: ['Web Development', 'Languages'],
-  },
-  {
-    title: 'MATLAB',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'SRE',
-    competency: 3,
-    category: ['Methodologies'],
-  },
-  {
-    title: 'DevOps',
-    competency: 5,
-    category: ['Methodologies'],
-  },
-  {
-    title: 'CI/CD',
-    competency: 5,
-    category: ['Methodologies'],
-  },
-  {
-    title: 'GitOps',
-    competency: 4,
-    category: ['Methodologies'],
-  },
-  {
-    title: 'Platform Engineering',
-    competency: 5,
-    category: ['Methodologies'],
-  },
-  {
-    title: 'PagerDuty',
-    competency: 4,
-    category: ['Software'],
-  },
-  {
-    title: 'Cloudflare',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  {
-    title: 'env0',
-    competency: 2,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'Teleport',
-    competency: 4,
-    category: ['Tools', 'Cloud Development'],
-  },
-  {
-    title: 'Github Actions',
-    competency: 5,
-    category: ['Cloud Development'],
-  },
-  {
-    title: 'pnpm',
-    competency: 4,
-    category: ['Web Development'],
-  },
-  {
-    title: 'turbo',
-    competency: 4,
-    category: ['Web Development'],
-  },
-].map((skill) => ({ ...skill, category: skill.category.sort() }));
+const skills = {
+  Languages: [
+    { title: 'Golang', competency: 5 },
+    { title: 'Python', competency: 4 },
+    { title: 'Javascript', competency: 4 },
+    { title: 'Typescript', competency: 4 },
+    { title: 'Node.js', competency: 4 },
+    { title: 'Next.js', competency: 3 },
+    { title: 'Java', competency: 3 },
+    { title: 'Bash', competency: 3 },
+    { title: 'HTML/CSS', competency: 3 },
+    { title: 'React', competency: 2 },
+    { title: 'MATLAB', competency: 2 },
+  ],
+  Databases: [
+    { title: 'PostgreSQL', competency: 4 },
+    { title: 'MySQL', competency: 3 },
+    { title: 'Redis', competency: 3 },
+    { title: 'Clickhouse', competency: 3 },
+    { title: 'SAP HANA SQL', competency: 3 },
+    { title: 'DynamoDB', competency: 2 },
+  ],
+  Methodologies: [
+    { title: 'DevOps', competency: 5 },
+    { title: 'CI/CD', competency: 5 },
+    { title: 'Platform Engineering', competency: 5 },
+    { title: 'GitOps', competency: 4 },
+    { title: 'SRE', competency: 3 },
+  ],
+  Monitoring: [
+    { title: 'Prometheus', competency: 4 },
+    { title: 'Grafana', competency: 4 },
+    { title: 'OpenTelemetry', competency: 3 },
+    { title: 'Loki', competency: 1 },
+  ],
+  'Cloud Providers': [
+    { title: 'Amazon Web Services (AWS)', competency: 5 },
+    { title: 'Google Cloud Platform (GCP)', competency: 5 },
+    { title: 'Cloudflare', competency: 5 },
+    { title: 'Vercel', competency: 5 },
+    { title: 'Microsoft Azure', competency: 1 },
+  ],
+  'Cloud Technologies': [
+    { title: 'Kubernetes', competency: 5 },
+    { title: 'Docker', competency: 5 },
+    { title: 'Terraform', competency: 5 },
+    { title: 'Helm', competency: 5 },
+    { title: 'Github Actions', competency: 5 },
+    { title: 'ArgoCD', competency: 4 },
+    { title: 'Teleport', competency: 4 },
+    { title: 'Atlantis', competency: 3 },
+    { title: 'Ansible', competency: 3 },
+  ],
+  Web3: [
+    { title: 'Blockchain RPCs', competency: 4 },
+    { title: 'Cubist', competency: 4 },
+    { title: 'Solidity', competency: 1 },
+  ],
+  Tools: [
+    { title: 'Git', competency: 4 },
+    { title: 'Chrome Dev Tools', competency: 3 },
+    { title: 'pnpm', competency: 4 },
+    { title: 'turbo', competency: 4 },
+  ],
+  Software: [
+    { title: 'Cursor', competency: 4 },
+    { title: 'PagerDuty', competency: 4 },
+    { title: 'macOS', competency: 4 },
+    { title: 'Jira', competency: 3 },
+    { title: 'Postman', competency: 3 },
+    { title: 'Linux', competency: 3 },
+    { title: 'Windows', competency: 3 },
+    { title: 'Vault', competency: 3 },
+    { title: 'env0', competency: 2 },
+  ],
+};
 
 // this is a list of colors that I like. The length should be === to the
 // number of categories. Re-arrange this list until you find a pattern you like.
@@ -282,21 +81,19 @@ const colors = [
   '#6968b3',
   '#37b1f5',
   '#40494e',
-  '#515dd4',
   '#e47272',
+  '#515dd4',
   '#cc7b94',
   '#3896e2',
   '#c3423f',
-  '#d75858',
-  // '#747fff',
-  // '#64cb7b',
+  '#d15dd4',
+  '#747fff',
+  '#64cb7b',
 ];
 
-const categories = [
-  ...new Set(skills.flatMap(({ category }) => category)),
-].sort().map((category, index) => ({
-  name: category,
-  color: colors[index],
-}));
+// Map colors to categories in object order
+const categoryColors = Object.fromEntries(
+  Object.keys(skills).map((category, index) => [category, colors[index]]),
+);
 
-export { categories, skills };
+export { skills, categoryColors };
