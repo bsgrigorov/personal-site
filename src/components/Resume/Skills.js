@@ -60,8 +60,7 @@ const Skills = ({ skills, categories }) => {
     <div className="skills">
       <div className="link-to" id="skills" />
       <div className="title">
-        <h3>Skills</h3>
-        <p>Note: Take these with a grain of salt.
+        <p><b>Note:</b> Take these with a grain of salt.
           Here is a *mostly* honest overview of my skills.
         </p>
       </div>

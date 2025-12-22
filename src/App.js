@@ -13,6 +13,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Resume = lazy(() => import('./pages/Resume'));
+const Skills = lazy(() => import('./pages/Skills'));
 const Certifications = lazy(() => import('./pages/Certifications'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Stats = lazy(() => import('./pages/Stats'));
@@ -28,6 +29,7 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
