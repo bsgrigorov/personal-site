@@ -91,6 +91,7 @@ const colors = [
   '#64cb7b',
 ];
 
+
 // Map colors to categories in object order
 const categoryColors = Object.fromEntries(
   Object.keys(skills).map((category, index) => [category, colors[index]]),
