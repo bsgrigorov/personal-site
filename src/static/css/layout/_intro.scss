@@ -11,13 +11,21 @@
 			border-bottom: 0;
 			display: inline-block;
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			overflow: hidden;
+			overflow: visible;
 			position: relative;
+			padding: 4px;
 
 			img {
 				width: 10em;
 				border-radius: 50%;
 				display: block;
+				@include vendor('transition', 'transform #{_duration(transition)} ease-out');
+			}
+
+			&:hover {
+				img {
+					@include vendor('transform', 'scale(1.15)');
+				}
 			}
 		}
 

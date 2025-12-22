@@ -17,12 +17,14 @@ const Certifications = () => (
           <h2 data-testid="heading"><Link to="/certifications">Certifications</Link></h2>
         </div>
       </header>
-      {data.map((badge) => (
-        <Badge
-          data={badge}
-          key={badge.label}
-        />
-      ))}
+      <div className="certifications-grid">
+        {data.map((badge) => (
+          <Badge
+            data={badge}
+            key={badge.label}
+          />
+        ))}
+      </div>
     </article>
   </Main>
 );

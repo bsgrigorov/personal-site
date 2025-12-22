@@ -41,7 +41,7 @@ const data = [
     subtitle: 'Website for OpenSSL AES256 encryption of data using passwords',
     image: '/images/projects/encrypt.png',
     date: '2021-09-01',
-    link: 'https://encrypt-decrypt.me',
+    link: 'https://bsgrigorov.github.io/text-encrypt/',
     desc:
       'Created a client-side secure password encryption website that implements OpenSSL aes256 standard. Used JavaScript, OpenSSL and encryption algorithms.',
   },

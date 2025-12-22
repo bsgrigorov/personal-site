@@ -44,6 +44,7 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			font-size: 1.2em;
 
 			li {
 				display: inline-block;
@@ -56,6 +57,12 @@
 				> * {
 					@include icon;
 					border: 0;
+					display: inline-block;
+					@include vendor('transition', 'transform #{_duration(transition)} ease-out');
+
+					&:hover {
+						@include vendor('transform', 'scale(1.5)');
+					}
 
 					.label {
 						display: none;

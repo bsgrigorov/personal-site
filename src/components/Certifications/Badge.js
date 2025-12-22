@@ -10,7 +10,7 @@ const Badge = ({ data }) => (
       </a>
       <header>
         <h3><a href={data.link}>{data.label}</a></h3>
-        <time className="published">Issued: {dayjs(data.date).format('MMMM, YYYY')}</time>
+        <time className="published">{dayjs(data.date).format('MMM YYYY')}</time>
       </header>
     </div>
   </div>

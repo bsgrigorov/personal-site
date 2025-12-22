@@ -6,6 +6,24 @@
 
 /* Badge */
 
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+
+  @include breakpoint(large) {
+    grid-template-columns: 1fr;
+  }
+
+  .cell-container {
+    margin: 0;
+  }
+
+  .badge {
+    margin: 0;
+  }
+}
+
 .badge {
 	@include vendor('display', 'flex');
 	@include vendor('flex-direction', 'row');
@@ -15,39 +33,47 @@
   background: _palette(bg);
   border: solid 1px _palette(border);
   margin: 0 0 1em;
-	padding: 0.8em 0.8em;
+	padding: 1em 1em;
+  height: 210px;
 
 
 
   .image {
-    overflow: hidden;
+    overflow: visible;
     width: 15%;
+    min-width: 170px;
+    flex-shrink: 0;
+    padding: 4px;
 
     img {
       @include vendor( 'transition', 'transform #{_duration(transition)} ease-out');
       width: 100%;
+      display: block;
     }
 
     &:hover {
       img {
-        @include vendor( 'transform', 'scale(1.02)');
+        @include vendor( 'transform', 'scale(1.15)');
       }
     }
   }
 
-	
+
   header {
     z-index: 2;
-    @include padding(1.25em, 1.25em, (0, 3em, 0, 0));
+    @include padding(1.25em, 1.25em, (0, 0, 0, 0));
     min-height: 4em;
     position: relative;
     @include vendor( 'flex-grow', '1');
 		font-family: "Raleway", Helvetica, sans-serif;
 
     h3 {
-			letter-spacing: 0.1em;
-      font-size: 1em;
+			letter-spacing: 0.05em;
+      font-size: 0.9em;
 			text-transform: none;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .published {
