@@ -40,7 +40,7 @@ const data = [
     icon: faXTwitter,
   },
   {
-    link: 'mailto:bsgrigorov+personal-website@gmail.com',
+    link: 'mailto:bobby+personal-website@synkube.com',
     label: 'Email',
     icon: faEnvelope,
   },
