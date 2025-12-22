@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SkillBar from './Skills/SkillBar';
+import SkillBar from './SkillBar';
 
 const Skills = ({ skills, colors, showFavourites }) => {
   const categories = Object.keys(skills);

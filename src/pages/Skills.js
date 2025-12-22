@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 
-import SkillsComponent from '../components/Resume/Skills';
-import { skills, categoryColors } from '../data/resume/skills';
+import SkillsComponent from '../components/Skills/Skills';
+import { skills, categoryColors } from '../data/skills';
 
 const Skills = () => {
   const [showFavourites, setShowFavourites] = useState(false);
