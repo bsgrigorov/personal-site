@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import SkillBar from './Skills/SkillBar';
 
-const Skills = ({ skills, colors }) => {
+const Skills = ({ skills, colors, showFavourites }) => {
   const categories = Object.keys(skills);
 
   return (
@@ -21,6 +21,7 @@ const Skills = ({ skills, colors }) => {
                   color={colors[category]}
                   data={skill}
                   key={skill.title}
+                  highlightFavourite={showFavourites && skill.favourite}
                 />
               ))}
             </div>
@@ -36,9 +37,15 @@ Skills.propTypes = {
     PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string,
       competency: PropTypes.number,
+      favourite: PropTypes.bool,
     })),
   ).isRequired,
   colors: PropTypes.objectOf(PropTypes.string).isRequired,
+  showFavourites: PropTypes.bool,
+};
+
+Skills.defaultProps = {
+  showFavourites: false,
 };
 
 export default Skills;

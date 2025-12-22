@@ -1,5 +1,39 @@
 /* Skills */
 
+/* Skills title with favourite button */
+.skills-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	h2 {
+		margin: 0;
+	}
+}
+
+/* Favourite toggle button */
+.favourite-toggle {
+	padding: 0 0.4em;
+	font-size: 0.5em;
+	font-weight: 500;
+	color: #999;
+	background: transparent;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: all 0.15s ease;
+
+	&:hover {
+		color: #b8860b;
+	}
+
+	&.active {
+		background: #f5f3ef;
+		border-color: #3e3111;
+		color: #b8860b;
+	}
+}
+
 /* Two-column masonry-style layout */
 .skills-columns {
 	column-count: 2;
@@ -42,16 +76,11 @@
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
-	-webkit-transition:0.4s linear;
-	-moz-transition:0.4s linear;
-	-ms-transition:0.4s linear;
-	-o-transition:0.4s linear;
-	transition:0.4s linear;
-	-webkit-transition-property:width, background-color;
-	-moz-transition-property:width, background-color;
-	-ms-transition-property:width, background-color;
-	-o-transition-property:width, background-color;
-	transition-property:width, background-color;
+	transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+	&:hover {
+		transform: translateX(-0.2em);
+	}
 }
 
 

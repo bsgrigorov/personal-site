@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SkillBar = ({ data, color = '#666' }) => {
+const GOLDEN = '#ffd700';
+
+const SkillBar = ({ data, color, highlightFavourite }) => {
   const { competency, title } = data;
+  const activeColor = highlightFavourite ? GOLDEN : color;
 
   const titleStyle = {
-    background: color,
+    background: activeColor,
   };
 
   const barStyle = {
-    background: color,
+    background: activeColor,
     width: `${Math.min(100, Math.max((competency / 5.0) * 100.0, 0))}%`,
   };
 
+  const className = `skillbar clearfix${highlightFavourite ? ' favourite' : ''}`;
+
   return (
-    <div className="skillbar clearfix">
+    <div className={className}>
       <div className="skillbar-title" style={titleStyle}><span>{title}</span></div>
       <div className="skillbar-bar" style={barStyle} />
       <div className="skill-bar-percent">{competency} / 5</div>
@@ -28,6 +33,11 @@ SkillBar.propTypes = {
     title: PropTypes.string.isRequired,
   }).isRequired,
   color: PropTypes.string.isRequired,
+  highlightFavourite: PropTypes.bool,
+};
+
+SkillBar.defaultProps = {
+  highlightFavourite: false,
 };
 
 export default SkillBar;
