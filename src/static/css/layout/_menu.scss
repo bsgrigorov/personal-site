@@ -10,12 +10,12 @@
   @include vendor('transform', 'translateX(#{_size(menu)})');
   @include vendor(
     'transition',
-    ('transform #{_duration(menu)} ease', 'visibility #{_duration(menu)}')
+    ('transform #{_duration(menu)} ease', 'visibility #{_duration(menu)}', 'box-shadow #{_duration(menu)} ease')
   );
   -webkit-overflow-scrolling: touch;
   background: _palette(bg);
-  border-left: solid 1px _palette(border);
-  box-shadow: none;
+  border-left: solid 1px _palette(accent-tertiary);
+  box-shadow: -5px 0 30px _palette(glow-purple);
   height: 100%;
   max-width: 80%;
   overflow-y: auto;

@@ -21,12 +21,16 @@
       border-radius: 50%;
       display: block;
       object-fit: cover;
-      @include vendor('transition', 'transform #{_duration(transition)} ease-out');
+      border: 2px solid _palette(accent-tertiary);
+      box-shadow: 0 0 20px _palette(glow-purple), 0 0 40px _palette(glow-purple);
+      @include vendor('transition', 'transform 0.3s ease-out, box-shadow 0.3s ease');
     }
 
     &:hover {
       img {
-        @include vendor('transform', 'scale(1.15)');
+        @include vendor('transform', 'scale(1.1)');
+        box-shadow: 0 0 25px _palette(glow-cyan), 0 0 50px _palette(glow-magenta);
+        border-color: _palette(accent);
       }
     }
   }

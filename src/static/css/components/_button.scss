@@ -15,9 +15,10 @@ button,
   @include vendor(
     'transition',
     (
-      'background-color #{_duration(transition)} ease',
-      'box-shadow #{_duration(transition)} ease',
-      'color #{_duration(transition)} ease'
+      'background-color 0.3s ease',
+      'box-shadow 0.3s ease',
+      'color 0.3s ease',
+      'text-shadow 0.3s ease'
     )
   );
   background-color: transparent;
@@ -39,11 +40,13 @@ button,
   white-space: nowrap;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px _palette(accent);
+    box-shadow: inset 0 0 0 1px _palette(accent), 0 0 15px _palette(glow-cyan);
     color: _palette(accent) !important;
+    text-shadow: 0 0 8px _palette(glow-cyan);
 
     &:active {
-      background-color: rgba(_palette(accent), 0.05);
+      background-color: rgba(_palette(accent), 0.1);
+      box-shadow: inset 0 0 0 2px _palette(accent), 0 0 20px _palette(glow-cyan);
     }
   }
 

@@ -16,21 +16,24 @@
   padding: 0 0.4em;
   font-size: 0.5em;
   font-weight: 500;
-  color: #999;
+  color: _palette(fg-light);
   background: transparent;
-  border: 1px solid #ddd;
+  border: 1px solid _palette(border);
   border-radius: 2px;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    color: #b8860b;
+    color: _palette(favourite);
+    border-color: _palette(favourite);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
   }
 
   &.active {
-    background: #f5f3ef;
-    border-color: #3e3111;
-    color: #b8860b;
+    background: rgba(250, 204, 21, 0.1);
+    border-color: _palette(favourite);
+    color: _palette(favourite);
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
   }
 }
 
@@ -56,7 +59,7 @@
   font-weight: 700;
   margin: 0 0 0.25em 0;
   padding-bottom: 0.15em;
-  border-bottom: 2px solid currentColor;
+  border-bottom: 2px solid _palette(accent);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -71,15 +74,17 @@
   position: relative;
   display: block;
   width: 100%;
-  background: #eee;
+  background: _palette(bg);
   height: 28px;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.2s ease;
+  border: 1px solid _palette(border);
 
   &:hover {
     transform: translateX(-0.2em);
+    box-shadow: 0 0 10px _palette(glow-cyan);
   }
 }
 
@@ -89,8 +94,8 @@
   left: 0;
   font-weight: bold;
   font-size: 12px;
-  color: #fff;
-  background: #6adcfa;
+  color: _palette(bg);
+  background: _palette(accent);
   -webkit-border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-topleft: 3px;
@@ -101,7 +106,7 @@
 
 .skillbar-title span {
   display: block;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.15);
   padding: 0 12px;
   height: 28px;
   line-height: 28px;
@@ -116,10 +121,11 @@
 .skillbar-bar {
   height: 28px;
   width: 0px;
-  background: #6adcfa;
+  background: _palette(accent);
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  box-shadow: 0 0 8px _palette(glow-cyan);
 }
 
 .skill-bar-percent {
@@ -129,17 +135,18 @@
   font-size: 10px;
   height: 28px;
   line-height: 28px;
-  color: #444;
-  color: rgba(0, 0, 0, 0.4);
+  color: _palette(fg-light);
 }
 
 /* Favourite skill highlight - overrides inline color styles */
 .skillbar.favourite {
   .skillbar-title {
     background: _palette(favourite) !important;
+    box-shadow: 0 0 8px rgba(250, 204, 21, 0.4);
   }
 
   .skillbar-bar {
     background: _palette(favourite) !important;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
   }
 }
