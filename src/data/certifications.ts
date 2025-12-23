@@ -34,7 +34,7 @@ const data: Certification[] = [
   {
     label: 'Microsoft Certified: Azure Fundamentals',
     link: 'https://www.credly.com/badges/bae555a4-a32f-446d-9b05-ac146614bf7f/public_url',
-    image: '/images/certifications/microsoft-certified-azure-fundamentals.png',
+    image: '/images/certifications/microsoft-certified-fundamentals-badge.svg',
     date: '2020-01-30',
   },
 ];
