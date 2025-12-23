@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "analyze": "ANALYZE=true next build --webpack",
     "start": "pnpm build && npx serve@latest out",
     "lint": "eslint app src",
     "lint:fix": "eslint app src --fix",
@@ -40,6 +41,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.1.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "^16.1.1",
