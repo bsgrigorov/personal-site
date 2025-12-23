@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next';
 
+import { siteConfig } from '@/data/config';
+
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://bgrigorov.com';
+  const baseUrl = siteConfig.siteUrl;
   const currentDate = new Date();
 
   return [

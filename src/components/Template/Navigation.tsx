@@ -1,12 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
 
 import routes from '../../data/routes';
 import Hamburger from './Hamburger';
 
-const Navigation: React.FC = () => (
+const Navigation = () => (
   <header id="header">
     <h1 className="index-link">
       {routes

@@ -1,4 +1,3 @@
-import React from 'react';
 import dayjs from 'dayjs';
 import Markdown from 'markdown-to-jsx';
 
@@ -16,9 +15,9 @@ interface JobProps {
   data: JobData;
 }
 
-const Job: React.FC<JobProps> = ({
+const Job = ({
   data: { name, position, url, startDate, endDate, summary, highlights },
-}) => (
+}: JobProps) => (
   <article className="jobs-container">
     <header>
       <h4>

@@ -3,11 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+
+import { siteConfig } from '@/data/config';
 
 import ContactIcons from '../Contact/ContactIcons';
 
-const SideBar: React.FC = () => {
+const SideBar = () => {
   const pathname = usePathname();
 
   return (
@@ -16,16 +17,16 @@ const SideBar: React.FC = () => {
         <Link href="/" className="logo">
           <Image
             src="/images/me.jpg"
-            alt="Borislav Grigorov"
+            alt={siteConfig.name}
             width={160}
             height={160}
             priority
           />
         </Link>
         <header>
-          <h2>Borislav Grigorov</h2>
+          <h2>{siteConfig.name}</h2>
           <p>
-            <a href="mailto:bobby+personal-website@synkube.com">bobby@synkube.com</a>
+            <a href={`mailto:${siteConfig.social.email}`}>{siteConfig.nickname.toLowerCase()}@synkube.com</a>
           </p>
         </header>
       </section>
@@ -33,10 +34,10 @@ const SideBar: React.FC = () => {
       <section className="blurb">
         <h2>About</h2>
         <p>
-          Hi, I&apos;m Bobby. I am a passionate and curious person. I studied CS and Physics at{' '}
+          Hi, I&apos;m {siteConfig.nickname}. I am a passionate and curious person. I studied CS and Physics at{' '}
           <a href="https://www.ubc.ca/">UBC</a>. I presently work at{' '}
-          <a href="https://consensys.io/">Consensys</a> as a Sr DevSecOps Engineer and live in
-          Seattle, WA.
+          <a href="https://consensys.io/">{siteConfig.company}</a> as a Sr {siteConfig.jobTitle} and live in
+          {siteConfig.location}.
         </p>
         <ul className="actions">
           <li>
@@ -56,7 +57,7 @@ const SideBar: React.FC = () => {
       <section id="footer">
         <ContactIcons />
         <p className="copyright">
-          &copy; Borislav Grigorov <Link href="/">bgrigorov.com</Link>.
+          &copy; {siteConfig.name} <Link href="/">bgrigorov.com</Link>.
         </p>
       </section>
     </section>

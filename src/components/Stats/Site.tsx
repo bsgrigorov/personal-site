@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+
+import { siteConfig } from '@/data/config';
 
 import Table from './Table';
 import initialData from '../../data/stats/site';
@@ -10,12 +12,12 @@ interface GitHubRepoData {
   [key: string]: string | number;
 }
 
-const Site: React.FC = () => {
+const Site = () => {
   const [data, setResponseData] = useState<StatData[]>(initialData);
 
   const fetchData = useCallback(async () => {
     try {
-      const res = await fetch('https://api.github.com/repos/bsgrigorov/personal-site');
+      const res = await fetch(`https://api.github.com/repos/${siteConfig.github.username}/${siteConfig.github.repoName}`);
       const resData: GitHubRepoData = await res.json();
       setResponseData(
         initialData.map((field) => ({

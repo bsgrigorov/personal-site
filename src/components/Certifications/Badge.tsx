@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import dayjs from 'dayjs';
 
 export interface Certification {
@@ -13,7 +12,7 @@ interface BadgeProps {
   data: Certification;
 }
 
-const Badge: React.FC<BadgeProps> = ({ data }) => (
+const Badge = ({ data }: BadgeProps) => (
   <div className="cell-container">
     <div className="badge">
       <a href={data.link} className="image">

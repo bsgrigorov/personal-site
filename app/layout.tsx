@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { Raleway, Source_Sans_3 } from 'next/font/google';
-import React from 'react';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import Navigation from '@/components/Template/Navigation';
+import { siteConfig } from '@/data/config';
 import '@/static/css/main.scss';
 
 // Next.js font optimization - these create CSS variables used in _vars.scss
@@ -23,35 +24,27 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Borislav Grigorov',
-    template: '%s | Borislav Grigorov',
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: 'Seattle based DevOps Engineer, UBC Alumni, and blockchain enthusiast.',
-  keywords: [
-    'Borislav Grigorov',
-    'DevOps',
-    'DevSecOps',
-    'Kubernetes',
-    'blockchain',
-    'MetaMask',
-    'Consensys',
-  ],
-  authors: [{ name: 'Borislav Grigorov' }],
-  creator: 'Borislav Grigorov',
-  metadataBase: new URL('https://bgrigorov.com'),
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  metadataBase: new URL(siteConfig.siteUrl),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://bgrigorov.com',
-    siteName: 'Borislav Grigorov',
-    title: 'Borislav Grigorov',
-    description: 'Seattle based DevOps Engineer, UBC Alumni, and blockchain enthusiast.',
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
     images: [
       {
         url: '/images/me.jpg',
         width: 1200,
         height: 630,
-        alt: 'Borislav Grigorov',
+        alt: siteConfig.name,
       },
     ],
   },
@@ -68,7 +61,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${sourceSans.variable} ${raleway.variable}`}>
       <body>

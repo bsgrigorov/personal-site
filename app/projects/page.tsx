@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 import Cell from '@/components/Projects/Cell';
 import projects from '@/data/projects';

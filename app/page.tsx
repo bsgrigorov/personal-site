@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import React from 'react';
+
+import { siteConfig } from '@/data/config';
 
 import PageWrapper from './components/PageWrapper';
 
 export const metadata: Metadata = {
-  description:
-    "Borislav Grigorov's personal website. Seattle based UBC Alumni and DevOps Engineer.",
+  description: `${siteConfig.name}'s personal website. ${siteConfig.city} based UBC Alumni and ${siteConfig.jobTitle}.`,
 };
 
 export default function HomePage() {
@@ -30,7 +30,7 @@ export default function HomePage() {
           <Link href="/contact">contact</Link> me.
         </p>
         <p>
-          Source available <a href="https://github.com/bsgrigorov/personal-site">here</a>.
+          Source available <a href={siteConfig.github.repoUrl}>here</a>.
         </p>
       </article>
     </PageWrapper>

@@ -6,6 +6,8 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons/faXTwitter';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 
+import { siteConfig } from './config';
+
 export interface ContactItem {
   link: string;
   label: string;
@@ -14,32 +16,32 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'https://github.com/bsgrigorov',
+    link: siteConfig.github.profileUrl,
     label: 'Github',
     icon: faGithub,
   },
   {
-    link: 'https://facebook.com/bsgrigorov',
+    link: `https://facebook.com/${siteConfig.social.facebook}`,
     label: 'Facebook',
     icon: faFacebookF,
   },
   {
-    link: 'https://www.instagram.com/bsgrigorov/',
+    link: `https://www.instagram.com/${siteConfig.social.instagram}/`,
     label: 'Instagram',
     icon: faInstagram,
   },
   {
-    link: 'https://www.linkedin.com/in/bgrigorov',
+    link: `https://www.linkedin.com/in/${siteConfig.social.linkedin}`,
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
   {
-    link: 'https://x.com/bsgrigorov',
+    link: `https://x.com/${siteConfig.social.twitter}`,
     label: 'X',
     icon: faXTwitter,
   },
   {
-    link: 'mailto:bobby+personal-website@synkube.com',
+    link: `mailto:${siteConfig.social.email}`,
     label: 'Email',
     icon: faEnvelope,
   },

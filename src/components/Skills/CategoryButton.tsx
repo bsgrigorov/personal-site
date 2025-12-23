@@ -1,12 +1,10 @@
-import React from 'react';
-
 interface CategoryButtonProps {
   label: string;
   handleClick: (label: string) => void;
   active: Record<string, boolean>;
 }
 
-const CategoryButton: React.FC<CategoryButtonProps> = ({ handleClick, active, label }) => (
+const CategoryButton = ({ handleClick, active, label }: CategoryButtonProps) => (
   <button
     className={`skillbutton ${active[label] ? 'skillbutton-active' : ''}`}
     type="button"

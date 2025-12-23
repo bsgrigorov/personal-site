@@ -1,4 +1,3 @@
-import React from 'react';
 import dayjs from 'dayjs';
 
 export interface Project {
@@ -13,7 +12,7 @@ interface CellProps {
   data: Project;
 }
 
-const Cell: React.FC<CellProps> = ({ data }) => (
+const Cell = ({ data }: CellProps) => (
   <div className="cell-container">
     <article className="mini-post">
       <header>

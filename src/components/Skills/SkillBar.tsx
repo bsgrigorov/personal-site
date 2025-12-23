@@ -1,7 +1,3 @@
-import React from 'react';
-
-const GOLDEN = '#ffd700';
-
 export interface SkillData {
   title: string;
   competency: number;
@@ -14,16 +10,15 @@ interface SkillBarProps {
   highlightFavourite?: boolean;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ data, color, highlightFavourite = false }) => {
+const SkillBar = ({ data, color, highlightFavourite = false }: SkillBarProps) => {
   const { competency, title } = data;
-  const activeColor = highlightFavourite ? GOLDEN : color;
 
   const titleStyle = {
-    background: activeColor,
+    background: color,
   };
 
   const barStyle = {
-    background: activeColor,
+    background: color,
     width: `${Math.min(100, Math.max((competency / 5.0) * 100.0, 0))}%`,
   };
 

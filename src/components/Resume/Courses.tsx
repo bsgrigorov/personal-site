@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Course, { CourseData } from './Courses/Course';
 
 interface CoursesProps {
@@ -20,7 +18,7 @@ const getRows = (courses: CourseData[]) =>
       <Course data={course} key={course.title} last={idx === courses.length - 1} />
     ));
 
-const Courses: React.FC<CoursesProps> = ({ data = [] }) => (
+const Courses = ({ data = [] }: CoursesProps) => (
   <div className="courses">
     <div className="link-to" id="courses" />
     <div className="title">

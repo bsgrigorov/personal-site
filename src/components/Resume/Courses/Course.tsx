@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface CourseData {
   title: string;
   number: string;
@@ -12,7 +10,7 @@ interface CourseProps {
   last?: boolean;
 }
 
-const Course: React.FC<CourseProps> = ({ data, last = false }) => (
+const Course = ({ data, last = false }: CourseProps) => (
   <li className="course-container">
     <p className="course-name">{data.title}</p>
     {!last && (

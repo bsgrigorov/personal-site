@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface DegreeData {
   school: string;
   degree: string;
@@ -13,7 +11,7 @@ interface DegreeProps {
   data: DegreeData;
 }
 
-const Degree: React.FC<DegreeProps> = ({ data }) => (
+const Degree = ({ data }: DegreeProps) => (
   <article className="degree-container">
     <header>
       <h4 className="school">

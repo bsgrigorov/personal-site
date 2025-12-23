@@ -1,12 +1,10 @@
-import React from 'react';
-
 import Job, { JobData } from './Experience/Job';
 
 interface ExperienceProps {
   data: JobData[];
 }
 
-const Experience: React.FC<ExperienceProps> = ({ data = [] }) => (
+const Experience = ({ data = [] }: ExperienceProps) => (
   <div className="experience">
     <div className="link-to" id="experience" />
     <div className="title">

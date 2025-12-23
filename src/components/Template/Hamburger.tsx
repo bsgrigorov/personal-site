@@ -1,14 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import React, { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 
 import routes from '../../data/routes';
 
 // @ts-expect-error - react-burger-menu doesn't have proper TypeScript definitions for lazy loading
 const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 
-const Hamburger: React.FC = () => {
+const Hamburger = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (

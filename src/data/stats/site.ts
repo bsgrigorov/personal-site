@@ -1,22 +1,25 @@
 import dayjs from 'dayjs';
 
 import { StatData } from '@/components/Stats/types';
+import { siteConfig } from '@/data/config';
+
+const { repoUrl } = siteConfig.github;
 
 const data: StatData[] = [
   {
     label: 'Stars this repository has on github',
     key: 'stargazers_count',
-    link: 'https://github.com/bsgrigorov/personal-site/stargazers',
+    link: `${repoUrl}/stargazers`,
   },
   {
     label: 'Number of people watching this repository',
     key: 'subscribers_count',
-    link: 'https://github.com/bsgrigorov/personal-site/stargazers',
+    link: `${repoUrl}/stargazers`,
   },
   {
     label: 'Number of forks',
     key: 'forks',
-    link: 'https://github.com/bsgrigorov/personal-site/network',
+    link: `${repoUrl}/network`,
   },
   {
     label: 'Number of spoons',
@@ -29,18 +32,18 @@ const data: StatData[] = [
   {
     label: 'Open github issues',
     key: 'open_issues_count',
-    link: 'https://github.com/bsgrigorov/personal-site/issues',
+    link: `${repoUrl}/issues`,
   },
   {
     label: 'Last updated at',
     key: 'pushed_at',
-    link: 'https://github.com/bsgrigorov/personal-site/commits',
+    link: `${repoUrl}/commits`,
     format: (x) => dayjs(x as string).format('MMMM DD, YYYY'),
   },
   {
     label: 'Lines of TypeScript powering this website',
     value: '2150',
-    link: 'https://github.com/bsgrigorov/personal-site/graphs/contributors',
+    link: `${repoUrl}/graphs/contributors`,
   },
 ];
 

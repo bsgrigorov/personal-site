@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { StatData } from '@/components/Stats/types';
+import { siteConfig } from '@/data/config';
 
-const Age: React.FC = () => {
+const Age = () => {
   const [age, setAge] = useState<string>();
 
   const tick = () => {
     const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1990-02-05T09:24:00');
+    const birthTime = siteConfig.birthday;
     setAge(((Date.now() - birthTime.getTime()) / divisor).toFixed(11));
   };
 
@@ -38,7 +39,7 @@ const data: StatData[] = [
   {
     key: 'location',
     label: 'Current city',
-    value: 'New York, NY',
+    value: siteConfig.location,
   },
 ];
 

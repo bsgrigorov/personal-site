@@ -1,3 +1,5 @@
+import { siteConfig } from './config';
+
 export interface Route {
   label: string;
   path: string;
@@ -7,7 +9,7 @@ export interface Route {
 const routes: Route[] = [
   {
     index: true,
-    label: 'Borislav Grigorov',
+    label: siteConfig.name,
     path: '/',
   },
   {

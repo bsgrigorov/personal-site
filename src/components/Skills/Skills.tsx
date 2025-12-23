@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SkillBar, { SkillData } from './SkillBar';
 
 interface SkillsProps {
@@ -8,7 +6,7 @@ interface SkillsProps {
   showFavourites?: boolean;
 }
 
-const Skills: React.FC<SkillsProps> = ({ skills, colors, showFavourites = false }) => {
+const Skills = ({ skills, colors, showFavourites = false }: SkillsProps) => {
   const categories = Object.keys(skills);
 
   return (

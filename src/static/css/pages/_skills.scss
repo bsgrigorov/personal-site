@@ -132,3 +132,14 @@
   color: #444;
   color: rgba(0, 0, 0, 0.4);
 }
+
+/* Favourite skill highlight - overrides inline color styles */
+.skillbar.favourite {
+  .skillbar-title {
+    background: _palette(favourite) !important;
+  }
+
+  .skillbar-bar {
+    background: _palette(favourite) !important;
+  }
+}

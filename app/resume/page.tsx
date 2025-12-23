@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 import Courses from '@/components/Resume/Courses';
 import Education from '@/components/Resume/Education';

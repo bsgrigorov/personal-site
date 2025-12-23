@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+import { siteConfig } from '@/data/config';
 
 // Validates the first half of an email address.
 const validateText = (text: string): boolean => {
@@ -45,7 +47,7 @@ const useInterval = (callback: () => void, delay: number | null) => {
   }, [delay]);
 };
 
-const EmailLink: React.FC = () => {
+const EmailLink = () => {
   const hold = 50; // ticks to wait after message is complete before rendering next message
   const delay = 50; // tick length in mS
 
@@ -80,7 +82,7 @@ const EmailLink: React.FC = () => {
       onMouseEnter={() => setIsActive(false)}
       onMouseLeave={() => idx < messages.length && setIsActive(true)}
     >
-      <a href="mailto:bobby@synkube.com">
+      <a href={`mailto:${siteConfig.social.email}`}>
         <span>{message}</span>
         <span>@synkube.com</span>
       </a>

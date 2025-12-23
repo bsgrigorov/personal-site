@@ -1,12 +1,13 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import SideBar from '@/components/Template/SideBar';
 
 interface PageWrapperProps {
-  children: React.ReactNode;
+  children: ReactNode;
   fullPage?: boolean;
 }
 
