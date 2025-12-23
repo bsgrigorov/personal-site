@@ -37,15 +37,6 @@
     }
   }
 
-  .jobs-container {
-    .points {
-      li {
-        margin: 0;
-        padding: 0;
-        font-size: 0.9em;
-      }
-    }
-  }
 
   .courses {
     padding-top: 1.6em;
@@ -87,42 +78,90 @@
       text-align: center;
     }
   }
+
+  .linkedin-recommendations {
+    margin: 2em 0;
+
+    .title {
+      text-align: center;
+    }
+  }
 }
 
-.daterange {
-  margin-bottom: 0.2em;
-}
+/* Unified resume entry styling (jobs & education) */
+.resume-entry {
+  margin-bottom: 1.5em;
 
-.degree-container {
-  h4 {
-    font-weight: bold;
+  .resume-entry-header {
+    margin-bottom: 0.4em;
   }
 
-  .school {
-    text-transform: none;
-    margin-bottom: 0.1em;
-    font-size: 0.85em;
+  .resume-entry-main-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 0.15em;
   }
 
-  .location {
-    text-transform: none;
-    padding-top: 0.3em;
-    margin-bottom: 0.5em;
-    font-size: 0.75em;
+  .resume-entry-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    flex-wrap: wrap;
   }
 
-  .degree {
-    margin-bottom: 0.1em;
-    text-transform: none;
-    letter-spacing: 0.16em;
-    font-size: 0.75em;
+  .resume-entry-title {
+    font-family: _font(family);
+    font-size: 1.1em;
+    font-weight: _font(weight-bold);
+    color: _palette(accent);
+
+    a {
+      border-bottom: none;
+      color: _palette(accent);
+
+      &:hover {
+        color: _palette(fg-bold) !important;
+      }
+    }
   }
 
-  .specialization {
-    margin-bottom: 0.1em;
-    text-transform: none;
-    letter-spacing: 0.16em;
-    font-size: 0.75em;
+  .resume-entry-location {
+    font-family: _font(family);
+    font-size: 0.9em;
+    color: _palette(fg-light);
+
+    &::before {
+      content: '•';
+      margin-right: 0.5em;
+    }
+  }
+
+  .resume-entry-date {
+    font-family: _font(family);
+    font-size: 0.9em;
+    color: _palette(fg-light);
+    white-space: nowrap;
+  }
+
+  .resume-entry-subtitle {
+    font-family: _font(family);
+    font-size: 0.95em;
+    font-weight: 500;
+    color: _palette(fg-bold);
+  }
+
+  .resume-entry-points {
+    margin: 0.5em 0 0 0;
+    padding-left: 1.2em;
+
+    li {
+      margin: 0.25em 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -132,13 +171,12 @@
 
 .courses .course-name {
   display: inline;
-  font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.7em;
+  font-family: _font(family);
+  font-size: 0.85em;
   font-weight: 400;
-  letter-spacing: 0.25em;
-  line-height: 2.5;
+  letter-spacing: 0.05em;
+  line-height: 2;
   margin-top: -1em;
-  text-transform: uppercase;
 }
 
 .courses ul li {

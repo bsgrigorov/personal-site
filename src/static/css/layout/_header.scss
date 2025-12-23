@@ -43,11 +43,26 @@ body {
   h1 {
     height: inherit;
     line-height: inherit;
-    padding: 0 0 0 1.5em;
+    padding: 0;
     white-space: nowrap;
 
     a {
       font-size: 0.7em;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 1.5em;
+      @include vendor('transition', 'color 0.3s ease, background-color 0.3s ease');
+
+      &:hover {
+        color: _palette(accent) !important;
+        background-color: rgba(255, 255, 255, 0.04);
+      }
+
+      &.active {
+        color: _palette(accent) !important;
+        background-color: rgba(255, 255, 255, 0.06);
+      }
     }
   }
 
@@ -56,21 +71,23 @@ body {
     border-left: solid 1px _palette(border);
     height: inherit;
     line-height: inherit;
-    margin-left: 1.5em;
+    margin-left: 0;
     overflow: hidden;
-    padding-left: 1.5em;
+    padding-left: 0;
 
     ul {
+      height: inherit;
+      display: flex;
+      align-items: center;
+
       li {
+        height: inherit;
+        display: flex;
+        align-items: center;
         border-left: solid 1px _palette(border);
-        line-height: 1;
-        margin-left: 1em;
-        padding-left: 1em;
 
         &:first-child {
           border-left: 0;
-          margin-left: 0;
-          padding-left: 0;
         }
 
         a {
@@ -80,6 +97,22 @@ body {
           font-weight: _font(weight-heading);
           letter-spacing: _font(kerning-heading);
           text-transform: uppercase;
+          display: inline-flex;
+          align-items: center;
+          height: 100%;
+          padding: 0 1.25em;
+          @include vendor('transition', 'color 0.3s ease, background-color 0.3s ease');
+
+          &:hover {
+            color: _palette(accent) !important;
+            background-color: rgba(255, 255, 255, 0.04);
+          }
+        }
+
+        // Active state
+        &.active a {
+          color: _palette(accent) !important;
+          background-color: rgba(255, 255, 255, 0.06);
         }
       }
     }

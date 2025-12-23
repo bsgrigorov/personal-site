@@ -12,14 +12,20 @@ interface DegreeProps {
 }
 
 const Degree = ({ data }: DegreeProps) => (
-  <article className="degree-container">
-    <header>
-      <h4 className="school">
-        <a href={data.link}>{data.school}</a>, {data.year}
-      </h4>
-      <p className="location">{data.location}</p>
-      <p className="degree">{data.degree}</p>
-      <p className="specialization">{data.specialization}</p>
+  <article className="resume-entry">
+    <header className="resume-entry-header">
+      <div className="resume-entry-main-line">
+        <div className="resume-entry-left">
+          <span className="resume-entry-title">
+            <a href={data.link}>{data.school}</a>
+          </span>
+          <span className="resume-entry-location">{data.location}</span>
+        </div>
+        <span className="resume-entry-date">{data.year}</span>
+      </div>
+      <div className="resume-entry-subtitle">
+        {data.degree}, {data.specialization}
+      </div>
     </header>
   </article>
 );

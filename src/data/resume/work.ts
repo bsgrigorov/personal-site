@@ -4,7 +4,8 @@ const work: JobData[] = [
   {
     name: 'Consensys (MetaMask)',
     position: 'Sr DevSecOps Engineer',
-    url: 'https://metamask.io/',
+    url: 'https://metamask.io',
+    location: 'Seattle, WA',
     startDate: '2024-08-01',
     highlights: [
       'Worked on MetaMask tooling team with focus on infra, SDLC, and security.',
@@ -18,7 +19,8 @@ const work: JobData[] = [
   {
     name: 'Synapse Protocol',
     position: 'Senior DevOps Engineer',
-    url: 'https://jobs.ashbyhq.com/protochain',
+    url: 'https://synapseprotocol.com',
+    location: 'New York, NY',
     startDate: '2023-02-01',
     endDate: '2024-03-01',
     highlights: [
@@ -33,7 +35,8 @@ const work: JobData[] = [
   {
     name: 'Coinbase',
     position: 'Senior Blockchain Engineer',
-    url: 'https://www.coinbase.com/',
+    url: 'https://www.coinbase.com',
+    location: 'Orange County, CA',
     startDate: '2022-06-01',
     endDate: '2023-02-01',
     highlights: [
@@ -47,6 +50,7 @@ const work: JobData[] = [
     name: 'SAP LLC',
     position: 'Senior Software Engineer',
     url: 'https://www.linkedin.com/company/eurekabysaps4hana/',
+    location: 'Newport Beach, CA',
     startDate: '2020-08-01',
     endDate: '2022-06-01',
     highlights: [
@@ -63,6 +67,7 @@ const work: JobData[] = [
     name: 'SAP Canada Inc',
     position: 'Senior Software Developer',
     url: 'https://www.sap.com/canada/index.html',
+    location: 'Vancouver, BC',
     startDate: '2019-04-01',
     endDate: '2020-07-01',
     highlights: [
@@ -76,6 +81,7 @@ const work: JobData[] = [
     name: 'SAP Canada Inc',
     position: 'Software Developer',
     url: 'https://www.sap.com/canada/index.html',
+    location: 'Vancouver, BC',
     startDate: '2016-07-01',
     endDate: '2019-03-01',
     highlights: [
@@ -88,6 +94,7 @@ const work: JobData[] = [
     name: 'Tetracom Interactive Solutions',
     position: 'Software Developer',
     url: 'https://www.tetracom.com/',
+    location: 'Sofia, Bulgaria',
     startDate: '2014-05-01',
     endDate: '2014-09-01',
     highlights: [
