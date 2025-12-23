@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -13,9 +14,13 @@ const SideBar: React.FC = () => {
     <section id="sidebar">
       <section id="intro">
         <Link href="/" className="logo">
-          {/* Using regular img to match original styling - static export doesn't benefit from next/image */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/me.jpg" alt="Borislav Grigorov" />
+          <Image
+            src="/images/me.jpg"
+            alt="Borislav Grigorov"
+            width={160}
+            height={160}
+            priority
+          />
         </Link>
         <header>
           <h2>Borislav Grigorov</h2>

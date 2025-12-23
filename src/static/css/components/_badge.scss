@@ -46,7 +46,9 @@
     img {
       @include vendor('transition', 'transform #{_duration(transition)} ease-out');
       width: 100%;
+      height: auto;
       display: block;
+      object-fit: contain;
     }
 
     &:hover {

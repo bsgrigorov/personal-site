@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import dayjs from 'dayjs';
 
@@ -16,7 +17,7 @@ const Badge: React.FC<BadgeProps> = ({ data }) => (
   <div className="cell-container">
     <div className="badge">
       <a href={data.link} className="image">
-        <img src={data.image} alt={data.label} />
+        <Image src={data.image} alt={data.label} width={200} height={200} />
       </a>
       <header>
         <h3>

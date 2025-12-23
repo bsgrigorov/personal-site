@@ -17,8 +17,10 @@
 
     img {
       width: 10em;
+      height: auto;
       border-radius: 50%;
       display: block;
+      object-fit: cover;
       @include vendor('transition', 'transform #{_duration(transition)} ease-out');
     }
 
