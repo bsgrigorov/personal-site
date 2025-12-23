@@ -15,6 +15,7 @@
   "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:network": "next dev -H 0.0.0.0",
     "build": "next build",
     "analyze": "ANALYZE=true next build --webpack",
     "start": "pnpm build && npx serve@latest out",

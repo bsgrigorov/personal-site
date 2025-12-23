@@ -1,2 +1,16 @@
+# Robots.txt for bgrigorov.com
+# https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow: /api
+Allow: /
+
+# Disallow API routes and private paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+
+# Sitemap
+Sitemap: https://bgrigorov.com/sitemap.xml
+
+# Crawl delay (optional - be nice to search engines)
+Crawl-delay: 1

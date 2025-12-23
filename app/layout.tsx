@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { Orbitron, Exo_2, JetBrains_Mono } from 'next/font/google';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
+import JsonLd from '@/components/Template/JsonLd';
 import Navigation from '@/components/Template/Navigation';
 import { siteConfig } from '@/data/config';
 import '@/static/css/main.scss';
@@ -29,32 +30,75 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
+// Viewport configuration (separated from metadata in Next.js 14+)
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#0a0a0f' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0f' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} - ${siteConfig.jobTitle}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  publisher: siteConfig.name,
   metadataBase: new URL(siteConfig.siteUrl),
+
+  // Favicon and icons - using bg-logo.png as primary icon
+  icons: {
+    icon: [
+      { url: '/images/favicon/bg-logo.png', type: 'image/png' },
+      { url: '/images/favicon/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/images/favicon/bg-logo.png',
+    apple: '/images/favicon/bg-logo.png',
+    other: [
+      { rel: 'mask-icon', url: '/images/favicon/bg-logo.png', color: '#00ffff' },
+    ],
+  },
+
+  // Web app manifest
+  manifest: '/manifest.webmanifest',
+
+  // Open Graph
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
-    title: siteConfig.name,
+    title: `${siteConfig.name} - ${siteConfig.jobTitle}`,
     description: siteConfig.description,
     images: [
       {
-        url: '/images/me.jpg',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${siteConfig.name} - ${siteConfig.jobTitle}`,
+        type: 'image/png',
       },
     ],
   },
+
+  // Twitter Card
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.name} - ${siteConfig.jobTitle}`,
+    description: siteConfig.description,
+    site: `@${siteConfig.social.twitter}`,
+    creator: `@${siteConfig.social.twitter}`,
+    images: ['/images/og-image.png'],
+  },
+
+  // Robots
   robots: {
     index: true,
     follow: true,
@@ -66,11 +110,29 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+
+  // Verification (add your verification codes here)
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    // yandex: 'your-yandex-verification-code',
+    // bing: 'your-bing-verification-code',
+  },
+
+  // Alternate languages (if you have multilingual content)
+  alternates: {
+    canonical: siteConfig.siteUrl,
+  },
+
+  // Category
+  category: 'technology',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${orbitron.variable} ${exo2.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <JsonLd />
+      </head>
       <body>
         <div id="wrapper">
           <Navigation />

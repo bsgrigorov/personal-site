@@ -53,13 +53,42 @@ export const siteConfig = {
 
   // SEO keywords
   keywords: [
+    // Name variations
     'Borislav Grigorov',
+    'Bobby Grigorov',
+
+    // Primary role
+    'DevOps Engineer',
     'DevOps',
     'DevSecOps',
+    'Platform Engineer',
+    'Site Reliability Engineer',
+    'SRE',
+
+    // Core technologies
     'Kubernetes',
+    'Docker',
+    'Terraform',
+    'AWS',
+    'GCP',
+    'Azure',
+    'CI/CD',
+    'Infrastructure as Code',
+    'IaC',
+
+    // Blockchain/Web3
     'blockchain',
+    'Web3',
     'MetaMask',
     'Consensys',
+    'Coinbase',
+    'Bitcoin',
+    'Solana',
+    'Ethereum',
+
+    // Location
+    'Seattle',
+    'UBC Alumni',
   ],
 } as const;
 
