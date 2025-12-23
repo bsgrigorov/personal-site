@@ -16,21 +16,19 @@ export default function HomePage() {
         <header>
           <div className="title">
             <h2>
-              <Link href="/">About this site</Link>
+              <Link href="/">Welcome</Link>
             </h2>
-            <p>
-              A beautiful, responsive, statically-generated, react application written with modern
-              TypeScript.
-            </p>
+            <p>Next.js • TypeScript • Vercel</p>
           </div>
         </header>
         <p>
-          Welcome to my website. Please feel free to read more <Link href="/about">about me</Link>,
-          or you can check out my <Link href="/resume">resume</Link>, or{' '}
-          <Link href="/contact">contact</Link> me.
+          This is my corner of the internet. Explore my <Link href="/about">story</Link>,
+          check out my <Link href="/resume">experience</Link>, browse my{' '}
+          <Link href="/projects">projects</Link>, or <Link href="/contact">get in touch</Link>.
         </p>
         <p>
-          Source available <a href={siteConfig.github.repoUrl}>here</a>.
+          Built with Next.js and deployed on Vercel. Source on{' '}
+          <a href={siteConfig.github.repoUrl}>GitHub</a>.
         </p>
       </article>
     </PageWrapper>

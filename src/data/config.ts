@@ -26,7 +26,7 @@ export const siteConfig = {
   },
 
   // Birthday (for age calculation)
-  birthday: new Date('1990-02-05T09:24:00'),
+  birthday: new Date('1993-07-21T09:24:00'),
 
   // URLs
   siteUrl: 'https://bgrigorov.com',

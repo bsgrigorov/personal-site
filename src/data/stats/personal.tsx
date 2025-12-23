@@ -33,8 +33,8 @@ const data: StatData[] = [
   {
     key: 'countries',
     label: 'Countries visited',
-    value: 53,
-    link: 'https://www.google.com/maps/d/embed?mid=1iBBTscqateQ93pWFVfHCUZXoDu8&z=2',
+    value: 34,
+    link: '/about',
   },
   {
     key: 'location',

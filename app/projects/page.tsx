@@ -17,9 +17,11 @@ export default function ProjectsPage() {
             <p>A selection of projects that I&apos;m not too ashamed of</p>
           </div>
         </header>
-        {projects.map((project) => (
-          <Cell data={project} key={project.title} />
-        ))}
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <Cell data={project} key={project.title} />
+          ))}
+        </div>
       </article>
     </PageWrapper>
   );
