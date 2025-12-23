@@ -40,7 +40,7 @@ textarea {
 a {
   @include vendor(
     'transition',
-    ('color #{_duration(transition)} ease', 'border-bottom-color #{_duration(transition)} ease')
+    ('color #{_duration(transition)} ease', 'border-bottom-color #{_duration(transition)} ease', 'text-shadow 0.3s ease')
   );
   border-bottom: dotted 1px _palette(border-alt);
   color: inherit;
@@ -53,6 +53,7 @@ a {
   &:hover {
     border-bottom-color: transparent;
     color: _palette(accent) !important;
+    text-shadow: 0 0 8px _palette(glow-cyan);
 
     &:before {
       color: _palette(accent) !important;
@@ -88,6 +89,7 @@ h6 {
   line-height: 1.65;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
   text-transform: uppercase;
+  text-shadow: 0 0 20px _palette(glow-purple);
 
   a {
     color: inherit;

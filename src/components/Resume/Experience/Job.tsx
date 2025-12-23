@@ -5,6 +5,7 @@ export interface JobData {
   name: string;
   position: string;
   url: string;
+  location?: string;
   startDate: string;
   endDate?: string;
   summary?: string;
@@ -16,17 +17,22 @@ interface JobProps {
 }
 
 const Job = ({
-  data: { name, position, url, startDate, endDate, summary, highlights },
+  data: { name, position, url, location, startDate, endDate, summary, highlights },
 }: JobProps) => (
-  <article className="jobs-container">
-    <header>
-      <h4>
-        <a href={url}>{name}</a> - {position}
-      </h4>
-      <p className="daterange">
-        {dayjs(startDate).format('MMMM YYYY')} -{' '}
-        {endDate ? dayjs(endDate).format('MMMM YYYY') : 'PRESENT'}
-      </p>
+  <article className="resume-entry">
+    <header className="resume-entry-header">
+      <div className="resume-entry-main-line">
+        <div className="resume-entry-left">
+          <span className="resume-entry-title">
+            <a href={url}>{name}</a>
+          </span>
+          {location && <span className="resume-entry-location">{location}</span>}
+        </div>
+        <span className="resume-entry-date">
+          {dayjs(startDate).format('MMM YYYY')} – {endDate ? dayjs(endDate).format('MMM YYYY') : 'Present'}
+        </span>
+      </div>
+      <div className="resume-entry-subtitle">{position}</div>
     </header>
     {summary ? (
       <Markdown
@@ -44,7 +50,7 @@ const Job = ({
       </Markdown>
     ) : null}
     {highlights ? (
-      <ul className="points">
+      <ul className="resume-entry-points">
         {highlights.map((highlight) => (
           <li key={highlight}>{highlight}</li>
         ))}

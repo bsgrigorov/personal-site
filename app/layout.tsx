@@ -1,24 +1,31 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Raleway, Source_Sans_3 } from 'next/font/google';
+import { Orbitron, Exo_2, JetBrains_Mono } from 'next/font/google';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import Navigation from '@/components/Template/Navigation';
 import { siteConfig } from '@/data/config';
 import '@/static/css/main.scss';
 
-// Next.js font optimization - these create CSS variables used in _vars.scss
-const sourceSans = Source_Sans_3({
-  weight: ['400', '700'],
+// Cyberpunk theme fonts
+const orbitron = Orbitron({
+  weight: ['400', '500', '700', '900'],
   subsets: ['latin'],
-  variable: '--font-source-sans',
+  variable: '--font-heading',
   display: 'swap',
 });
 
-const raleway = Raleway({
-  weight: ['400', '800', '900'],
+const exo2 = Exo_2({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-raleway',
+  variable: '--font-body',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  weight: ['400', '500'],
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -63,7 +70,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${sourceSans.variable} ${raleway.variable}`}>
+    <html lang="en" className={`${orbitron.variable} ${exo2.variable} ${jetbrainsMono.variable}`}>
       <body>
         <div id="wrapper">
           <Navigation />

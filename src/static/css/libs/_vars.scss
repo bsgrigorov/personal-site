@@ -21,39 +21,46 @@ $size: (
 // Font.
 $font: (
   family: (
-    var(--font-source-sans),
-    'Source Sans Pro',
-    Helvetica,
+    var(--font-body),
+    'Exo 2',
+    'Segoe UI',
     sans-serif,
   ),
   family-fixed: (
-    'Courier New',
+    var(--font-mono),
+    'JetBrains Mono',
+    'Fira Code',
     monospace,
   ),
   family-heading: (
-    var(--font-raleway),
-    'Raleway',
-    Helvetica,
+    var(--font-heading),
+    'Orbitron',
+    'Rajdhani',
     sans-serif,
   ),
   weight: 400,
-  weight-bold: 700,
-  weight-heading: 400,
-  weight-heading-bold: 800,
+  weight-bold: 600,
+  weight-heading: 500,
+  weight-heading-bold: 700,
   weight-heading-extrabold: 900,
-  kerning-heading: 0.25em,
+  kerning-heading: 0.15em,
 );
 
-// Palette.
+// Cyberpunk Palette - Subtle & Modern
 $palette: (
-  bg: #ffffff,
-  bg-alt: #f4f4f4,
-  fg: #646464,
-  fg-bold: #3c3b3b,
-  fg-light: #aaaaaa,
-  border: rgba(160, 160, 160, 0.3),
-  border-bg: rgba(160, 160, 160, 0.075),
-  border-alt: rgba(160, 160, 160, 0.65),
-  accent: #2e59ba,
-  favourite: #ffd700,
+  bg: #0d0d12,              // Deep dark with purple tint
+  bg-alt: #13131a,          // Slightly lighter dark
+  fg: #c0c0cc,              // Brighter lavender-gray text
+  fg-bold: #e0e0f0,         // Bright text for headings
+  fg-light: #6b6b7a,        // Subtle muted text
+  border: rgba(139, 92, 246, 0.2),     // Purple tinted borders
+  border-bg: rgba(139, 92, 246, 0.05), // Subtle purple bg
+  border-alt: rgba(139, 92, 246, 0.4), // Stronger purple border
+  accent: #06b6d4,          // Cyan - primary accent
+  accent-secondary: #c026d3, // Magenta - secondary
+  accent-tertiary: #8b5cf6, // Purple - tertiary
+  favourite: #facc15,       // Yellow/gold for highlights
+  glow-cyan: rgba(6, 182, 212, 0.4),
+  glow-magenta: rgba(192, 38, 211, 0.4),
+  glow-purple: rgba(139, 92, 246, 0.3),
 );

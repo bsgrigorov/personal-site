@@ -34,10 +34,10 @@ const SideBar = () => {
       <section className="blurb">
         <h2>About</h2>
         <p>
-          Hi, I&apos;m {siteConfig.nickname}. I am a passionate and curious person. I studied CS and Physics at{' '}
-          <a href="https://www.ubc.ca/">UBC</a>. I presently work at{' '}
-          <a href="https://consensys.io/">{siteConfig.company}</a> as a Sr {siteConfig.jobTitle} and live in
-          {siteConfig.location}.
+          Building the decentralized future one wallet/block/rpc at a time. Web3 infra DevOps engineer bootstrapping k8s clusters,
+          Terraform stacks, and GitOps pipelines. Currently powering{' '}
+          <a href="https://metamask.io/">MetaMask</a> at{' '}
+          <a href="https://consensys.io/">{siteConfig.company}</a>.
         </p>
         <ul className="actions">
           <li>

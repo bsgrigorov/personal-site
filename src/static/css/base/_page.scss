@@ -26,6 +26,11 @@ body {
 
 body {
   background: _palette(bg-alt);
+  // Subtle grid pattern overlay for cyberpunk feel
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 
   // Prevents animation/transition "flicker" on page load.
   // Automatically added/removed by js/main.js.

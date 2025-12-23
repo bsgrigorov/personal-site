@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Courses from '@/components/Resume/Courses';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
+import LinkedInRecommendations from '@/components/Resume/LinkedInRecommendations';
 import References from '@/components/Resume/References';
 import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
@@ -14,6 +15,7 @@ const sections = [
   { name: 'Education', id: 'education' },
   { name: 'Experience', id: 'experience' },
   { name: 'Courses', id: 'courses' },
+  { name: 'Recommendations', id: 'recommendations' },
   { name: 'References', id: 'references' },
 ];
 
@@ -49,6 +51,11 @@ export default function ResumePage() {
         <section id="courses" className="courses">
           <div className="link-to" />
           <Courses data={courses} />
+        </section>
+
+        <section id="recommendations" className="recommendations">
+          <div className="link-to" />
+          <LinkedInRecommendations />
         </section>
 
         <section id="references" className="references">

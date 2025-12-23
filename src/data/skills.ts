@@ -82,7 +82,7 @@ const colors = [
   '#37b1f5',
   '#40494e',
   '#e47272',
-  '#3896e2',
+  '#2a7bc4', // Cloud Providers - darker blue
   '#cc7b94',
   '#515dd4',
   '#c3423f',
