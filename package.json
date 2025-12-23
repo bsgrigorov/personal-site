@@ -10,7 +10,7 @@
     "url": "https://github.com/bsgrigorov/personal-site.git"
   },
   "engines": {
-    "node": ">=22"
+    "node": "22.x"
   },
   "packageManager": "pnpm@10.26.1",
   "scripts": {
