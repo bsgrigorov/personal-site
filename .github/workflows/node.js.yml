@@ -55,11 +55,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build and Statically Render
-        run: pnpm run predeploy
+        run: pnpm build
         env:
-          NODE_ENV: development
+          NODE_ENV: production
 
       - name: Test
         run: pnpm test
-        env:
-          NODE_ENV: development

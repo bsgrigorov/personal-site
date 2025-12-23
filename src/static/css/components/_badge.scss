@@ -25,18 +25,16 @@
 }
 
 .badge {
-	@include vendor('display', 'flex');
-	@include vendor('flex-direction', 'row');
-	@include vendor('align-items', 'center');
-	// @include vendor('justify-content', 'flex-end');
+  @include vendor('display', 'flex');
+  @include vendor('flex-direction', 'row');
+  @include vendor('align-items', 'center');
+  // @include vendor('justify-content', 'flex-end');
 
   background: _palette(bg);
   border: solid 1px _palette(border);
   margin: 0 0 1em;
-	padding: 1em 1em;
+  padding: 1em 1em;
   height: 210px;
-
-
 
   .image {
     overflow: visible;
@@ -46,31 +44,32 @@
     padding: 4px;
 
     img {
-      @include vendor( 'transition', 'transform #{_duration(transition)} ease-out');
+      @include vendor('transition', 'transform #{_duration(transition)} ease-out');
       width: 100%;
+      height: auto;
       display: block;
+      object-fit: contain;
     }
 
     &:hover {
       img {
-        @include vendor( 'transform', 'scale(1.15)');
+        @include vendor('transform', 'scale(1.15)');
       }
     }
   }
-
 
   header {
     z-index: 2;
     @include padding(1.25em, 1.25em, (0, 0, 0, 0));
     min-height: 4em;
     position: relative;
-    @include vendor( 'flex-grow', '1');
-		font-family: "Raleway", Helvetica, sans-serif;
+    @include vendor('flex-grow', '1');
+    font-family: 'Raleway', Helvetica, sans-serif;
 
     h3 {
-			letter-spacing: 0.05em;
+      letter-spacing: 0.05em;
       font-size: 0.9em;
-			text-transform: none;
+      text-transform: none;
       word-wrap: break-word;
       overflow-wrap: break-word;
       hyphens: auto;
@@ -87,4 +86,3 @@
     }
   }
 }
-
