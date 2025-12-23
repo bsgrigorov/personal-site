@@ -32,38 +32,24 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 # Countries I've Been To (~34)
 
-| Europe                 | North America | South America | Asia        |
-| ---------------------- | ------------- | ------------- | ----------- |
-| Albania                | USA           | Peru          | Indonesia   |
-| Austria                | Canada        |               | Japan       |
-| Belgium                | Mexico        |               | Philippines |
-| Bosnia and Herzegovina | Costa Rica    |               | Thailand    |
-| Bulgaria               | Cuba          |               | Singapore   |
-| Croatia                | Belize        |               | Malaysia    |
-| England                | Guatemala     |               |             |
-| France                 |               |               |             |
-| Germany                |               |               |             |
-| Greece                 |               |               |             |
-| Italy                  |               |               |             |
-| Macedonia              |               |               |             |
-| Montenegro             |               |               |             |
-| Netherlands            |               |               |             |
-| Norway                 |               |               |             |
-| Portugal               |               |               |             |
-| Serbia                 |               |               |             |
-| Spain                  |               |               |             |
-| Switzerland            |               |               |             |
-| Turkey                 |               |               |             |
+| Europe | North America | South America | Asia |
+| ------ | ------------- | ------------- | ---- |
+| Albania, Austria, Belgium | USA | Peru | Indonesia |
+| Bosnia, Bulgaria, Croatia | Canada | | Japan |
+| England, France, Germany | Mexico | | Philippines |
+| Greece, Italy, Macedonia | Costa Rica | | Thailand |
+| Montenegro, Netherlands, Norway | Cuba | | Singapore |
+| Portugal, Serbia, Spain | Belize | | Malaysia |
+| Switzerland, Turkey | Guatemala | | |
 
 # Countries I Want to Visit
 
-| Australia & Oceania | Asia     | Africa     | South America |
-| ------------------- | -------- | ---------- | ------------- |
-| Australia           | Vietnam  | Madagascar | Chile         |
-| New Zealand         | Jordan   | Kenya      | Argentina     |
-| Vanuatu             | China    | Tanzania   | Bolivia       |
-| Bora Bora           | Bhutan   | Egypt      | Ecuador       |
-|                     | Nepal    | Morocco    | Colombia      |
-|                     | Mongolia | Namibia    | Nicaragua     |
-|                     |          |            |               |
+| Australia & Oceania | Asia | Africa | South America |
+| ------------------- | ---- | ------ | ------------- |
+| Australia | Vietnam | Madagascar | Chile |
+| New Zealand | Jordan | Kenya | Argentina |
+| Vanuatu | China | Tanzania | Bolivia |
+| Bora Bora | Bhutan | Egypt | Ecuador |
+| | Nepal | Morocco | Colombia |
+| | Mongolia | Namibia | Nicaragua |
 `;

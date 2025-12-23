@@ -70,12 +70,15 @@
     min-height: 4em;
     position: relative;
     @include vendor('flex-grow', '1');
-    font-family: 'Raleway', Helvetica, sans-serif;
+    font-family: _font(family);
 
     h3 {
-      letter-spacing: 0.05em;
-      font-size: 0.9em;
+      font-family: _font(family);
+      letter-spacing: 0.02em;
+      font-size: 1em;
+      font-weight: _font(weight-bold);
       text-transform: none;
+      text-shadow: none;
       word-wrap: break-word;
       overflow-wrap: break-word;
       hyphens: auto;

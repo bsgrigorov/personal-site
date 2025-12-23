@@ -34,8 +34,9 @@
         _size(section-spacing);
 
       h2 {
+        font-family: _font(family-heading);
         font-weight: _font(weight-heading-extrabold);
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
 
       > :last-child {
