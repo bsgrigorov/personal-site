@@ -46,7 +46,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build and render
-        run: pnpm run predeploy
+        run: pnpm build
         env:
           NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
