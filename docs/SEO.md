@@ -82,20 +82,11 @@ npx png-to-ico public/images/favicon/bg-logo.png > public/images/favicon/favicon
 
 ---
 
-## Google Analytics
+## Google Analytics & Search Console
 
-Set in `.env.local`:
-```bash
-NEXT_PUBLIC_GA_TRACKING_ID=G-XXXXXXXXXX
-```
-
-## Google Search Console
-
-1. Add property at [search.google.com/search-console](https://search.google.com/search-console)
-2. Get verification code
-3. Add to `.env.local`:
-```bash
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-code
-```
-4. Submit sitemap: `https://bgrigorov.com/sitemap.xml`
+See [google-analytics.md](./google-analytics.md) for detailed setup instructions including:
+- GA4 Measurement ID setup
+- Search Console verification
+- Sitemap submission
+- Troubleshooting common issues
 
