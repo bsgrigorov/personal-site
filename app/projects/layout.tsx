@@ -5,7 +5,10 @@ import { siteConfig } from '@/data/config';
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: `Learn about ${siteConfig.name}'s projects.`,
+  description: `Explore ${siteConfig.name}'s portfolio of DevOps, blockchain, and infrastructure projects including open-source contributions.`,
+  alternates: {
+    canonical: '/projects/',
+  },
 };
 
 export default function ProjectsLayout({ children }: { children: ReactNode }) {

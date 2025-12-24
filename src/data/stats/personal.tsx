@@ -21,7 +21,7 @@ const Age = () => {
     };
   }, []);
 
-  return <>{age}</>;
+  return <span className="age-counter">{age}</span>;
 };
 
 const data: StatData[] = [

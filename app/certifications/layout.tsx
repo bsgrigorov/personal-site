@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
 
+import { siteConfig } from '@/data/config';
+
 export const metadata: Metadata = {
   title: 'Certifications',
-  description: "Learn about Borislav Grigorov's certifications.",
+  description: `${siteConfig.name}'s professional certifications - AWS, GCP, Azure, Kubernetes (CKAD), and cloud engineering credentials.`,
+  alternates: {
+    canonical: '/certifications/',
+  },
 };
 
 export default function CertificationsLayout({ children }: { children: React.ReactNode }) {

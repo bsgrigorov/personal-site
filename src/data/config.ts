@@ -16,6 +16,7 @@ export const siteConfig = {
   jobTitle: 'DevOps Engineer',
   company: 'Consensys',
   description: 'Seattle based DevOps Engineer, UBC Alumni, and blockchain enthusiast.',
+  description2: 'Building the decentralized future one wallet/block/rpc at a time.',
 
   // Location
   city: 'Seattle',

@@ -5,7 +5,10 @@ import { siteConfig } from '@/data/config';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: `Learn about ${siteConfig.name}`,
+  description: `Learn about ${siteConfig.name} - ${siteConfig.jobTitle} at ${siteConfig.company}. ${siteConfig.description}`,
+  alternates: {
+    canonical: '/about/',
+  },
 };
 
 export default function AboutLayout({ children }: { children: ReactNode }) {

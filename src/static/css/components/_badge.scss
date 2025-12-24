@@ -48,6 +48,9 @@
     min-width: 170px;
     flex-shrink: 0;
     padding: 4px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
 
     img {
       @include vendor('transition', 'transform #{_duration(transition)} ease-out');
@@ -58,6 +61,14 @@
     }
 
     &:hover {
+      img {
+        @include vendor('transform', 'scale(1.15)');
+      }
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px _palette(accent), 0 0 15px _palette(glow-cyan);
+
       img {
         @include vendor('transform', 'scale(1.15)');
       }

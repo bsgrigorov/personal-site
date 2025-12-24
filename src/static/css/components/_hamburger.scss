@@ -6,14 +6,36 @@
 
 .menu-hover {
   padding: 0 1em;
-}
+  outline: none;
+  border-radius: 4px;
+  @include vendor('transition', 'opacity 0.2s ease, box-shadow 0.2s ease');
 
-.menu-hover:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px _palette(accent), 0 0 12px _palette(glow-cyan);
+  }
 }
 
 .hamburger-ul {
   display: block;
+
+  li a {
+    display: block;
+    outline: none;
+    border-radius: 4px;
+    @include vendor('transition', 'background-color 0.2s ease');
+
+    &:focus-visible {
+      background-color: rgba(_palette(accent), 0.1);
+
+      h3 {
+        color: _palette(accent);
+      }
+    }
+  }
 
   li a h3 {
     border: 0;

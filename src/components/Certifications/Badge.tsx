@@ -15,12 +15,15 @@ interface BadgeProps {
 const Badge = ({ data }: BadgeProps) => (
   <div className="cell-container">
     <div className="badge">
-      <a href={data.link} className="image">
+      <a href={data.link} className="image" aria-label={data.label}>
         <Image src={data.image} alt={data.label} width={200} height={200} />
       </a>
       <header>
         <h3>
-          <a href={data.link}>{data.label}</a>
+          {/* Skip tab on text link - image link is the primary focusable element */}
+          <a href={data.link} tabIndex={-1}>
+            {data.label}
+          </a>
         </h3>
         <time className="published">{dayjs(data.date).format('MMM YYYY')}</time>
       </header>

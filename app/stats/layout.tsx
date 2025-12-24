@@ -5,7 +5,10 @@ import { siteConfig } from '@/data/config';
 
 export const metadata: Metadata = {
   title: 'Stats',
-  description: `Some statistics about ${siteConfig.name} and bgrigorov.com`,
+  description: `Fun statistics and facts about ${siteConfig.name} - site analytics, GitHub contributions, and personal metrics.`,
+  alternates: {
+    canonical: '/stats/',
+  },
 };
 
 export default function StatsLayout({ children }: { children: ReactNode }) {

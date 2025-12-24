@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: '/images/og-image.png',
+        url: `${siteConfig.siteUrl}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} - ${siteConfig.jobTitle}`,
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     site: `@${siteConfig.social.twitter}`,
     creator: `@${siteConfig.social.twitter}`,
-    images: ['/images/og-image.png'],
+    images: [`${siteConfig.siteUrl}/images/og-image.png`],
   },
 
   // Robots
@@ -129,7 +129,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${exo2.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${orbitron.variable} ${exo2.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <JsonLd />
       </head>

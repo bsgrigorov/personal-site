@@ -18,7 +18,9 @@ button,
       'background-color 0.3s ease',
       'box-shadow 0.3s ease',
       'color 0.3s ease',
-      'text-shadow 0.3s ease'
+      'text-shadow 0.3s ease',
+      'outline 0.15s ease',
+      'outline-offset 0.15s ease'
     )
   );
   background-color: transparent;
@@ -38,6 +40,8 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 
   &:hover {
     box-shadow: inset 0 0 0 1px _palette(accent), 0 0 15px _palette(glow-cyan);
@@ -48,6 +52,14 @@ button,
       background-color: rgba(_palette(accent), 0.1);
       box-shadow: inset 0 0 0 2px _palette(accent), 0 0 20px _palette(glow-cyan);
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid _palette(accent);
+    outline-offset: 3px;
+    box-shadow: inset 0 0 0 1px _palette(accent), 0 0 15px _palette(glow-cyan);
+    color: _palette(accent) !important;
+    text-shadow: 0 0 8px _palette(glow-cyan);
   }
 
   &:before,
