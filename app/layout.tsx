@@ -118,9 +118,9 @@ export const metadata: Metadata = {
     // bing: 'your-bing-verification-code',
   },
 
-  // Alternate languages (if you have multilingual content)
+  // Canonical URL for the homepage (with trailing slash for consistency)
   alternates: {
-    canonical: siteConfig.siteUrl,
+    canonical: `${siteConfig.siteUrl}/`,
   },
 
   // Category

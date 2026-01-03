@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: 'About',
   description: `Learn about ${siteConfig.name} - ${siteConfig.jobTitle} at ${siteConfig.company}. ${siteConfig.description}`,
   alternates: {
-    canonical: '/about/',
+    canonical: `${siteConfig.siteUrl}/about/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/about/`,
   },
 };
 

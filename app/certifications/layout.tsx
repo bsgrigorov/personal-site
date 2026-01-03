@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: 'Certifications',
   description: `${siteConfig.name}'s professional certifications - AWS, GCP, Azure, Kubernetes (CKAD), and cloud engineering credentials.`,
   alternates: {
-    canonical: '/certifications/',
+    canonical: `${siteConfig.siteUrl}/certifications/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/certifications/`,
   },
 };
 

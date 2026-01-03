@@ -7,6 +7,12 @@ import PageWrapper from './components/PageWrapper';
 
 export const metadata: Metadata = {
   description: `${siteConfig.name}'s personal website. ${siteConfig.city} based UBC Alumni and ${siteConfig.jobTitle}.`,
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/`,
+  },
 };
 
 export default function HomePage() {

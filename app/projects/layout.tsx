@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: 'Projects',
   description: `Explore ${siteConfig.name}'s portfolio of DevOps, blockchain, and infrastructure projects including open-source contributions.`,
   alternates: {
-    canonical: '/projects/',
+    canonical: `${siteConfig.siteUrl}/projects/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/projects/`,
   },
 };
 

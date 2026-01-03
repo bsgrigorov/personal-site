@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: 'Stats',
   description: `Fun statistics and facts about ${siteConfig.name} - site analytics, GitHub contributions, and personal metrics.`,
   alternates: {
-    canonical: '/stats/',
+    canonical: `${siteConfig.siteUrl}/stats/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/stats/`,
   },
 };
 

@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: 'Contact',
   description: `Get in touch with ${siteConfig.name} - ${siteConfig.jobTitle}. Connect via email, LinkedIn, GitHub, or social media.`,
   alternates: {
-    canonical: '/contact/',
+    canonical: `${siteConfig.siteUrl}/contact/`,
+  },
+  openGraph: {
+    url: `${siteConfig.siteUrl}/contact/`,
   },
 };
 
