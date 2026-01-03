@@ -223,37 +223,44 @@ body {
   }
 }
 
-/* Position and sizing of burger button */
+/* react-burger-menu overrides */
+
+// Speed up menu animation (default is 0.3s)
+.bm-menu-wrap {
+  transition: all _duration(menu) ease-in-out !important;
+}
+
+.bm-overlay {
+  transition: all _duration(menu) ease-in-out !important;
+}
+
 .bm-burger-button {
   display: none;
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   display: none;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   display: none;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   display: none;
 }
 
-/* General sidebar styles */
 .bm-menu {
   background: _palette(bg);
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  border-left: 1px solid _palette(accent-tertiary);
+  box-shadow: -5px 0 30px _palette(glow-purple);
+  padding: 4em 0 2em 0;
+  font-size: 1em;
 }
 
-/* Wrapper for item list */
 .bm-item-list {
   color: _palette(fg-bold);
-  padding: 0.8em;
+  padding: 0;
   font-family: _font(family);
 }
 

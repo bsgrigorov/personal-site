@@ -1,62 +1,79 @@
-// Not found page
+// Hamburger mobile menu styles
 
 .bm-item-list {
   margin-top: 0;
+  padding-top: 1em;
 }
 
 .menu-hover {
   padding: 0 1em;
   outline: none;
-  border-radius: 4px;
-  @include vendor('transition', 'opacity 0.2s ease, box-shadow 0.2s ease');
+  cursor: pointer;
+  @include vendor('transition', 'color 0.2s ease');
 
   &:hover {
-    opacity: 0.5;
+    color: _palette(accent);
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px _palette(accent), 0 0 12px _palette(glow-cyan);
+    color: _palette(accent);
   }
 }
 
 .hamburger-ul {
   display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: block !important;
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px _palette(border);
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
 
   li a {
     display: block;
     outline: none;
-    border-radius: 4px;
-    @include vendor('transition', 'background-color 0.2s ease');
+    padding: 1.1em 1.5em;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    @include vendor('transition', 'color 0.2s ease, background-color 0.2s ease');
 
-    &:focus-visible {
-      background-color: rgba(_palette(accent), 0.1);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.04);
 
       h3 {
         color: _palette(accent);
       }
     }
-  }
 
-  li a h3 {
-    border: 0;
-    border-top: dotted 1px _palette(border);
-    margin: 1.5em 0 0 0;
-    padding: 1.5em 0 0 0;
-  }
+    &:focus-visible {
+      background-color: rgba(255, 255, 255, 0.08);
 
-  li a h3:hover {
-    color: _palette(accent);
-  }
-
-  li {
-    display: block !important;
+      h3 {
+        color: _palette(fg-bold);
+      }
+    }
   }
 
   h3 {
+    font-family: _font(family-heading);
     font-size: 0.7em;
-  }
-
-  .index-li {
-    border-top: none;
+    font-weight: _font(weight-heading);
+    letter-spacing: _font(kerning-heading);
+    text-transform: uppercase;
+    color: _palette(fg-bold);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-shadow: none;
+    @include vendor('transition', 'color 0.2s ease');
   }
 }

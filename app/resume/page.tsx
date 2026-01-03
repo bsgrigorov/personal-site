@@ -14,7 +14,7 @@ import PageWrapper from '../components/PageWrapper';
 const sections = [
   { name: 'Education', id: 'education' },
   { name: 'Experience', id: 'experience' },
-  { name: 'Courses', id: 'courses' },
+  // { name: 'Courses', id: 'courses' },
   { name: 'Recommendations', id: 'recommendations' },
   { name: 'References', id: 'references' },
 ];
@@ -48,10 +48,10 @@ export default function ResumePage() {
           <Experience data={work} />
         </section>
 
-        <section id="courses" className="courses">
+        {/* <section id="courses" className="courses">
           <div className="link-to" />
           <Courses data={courses} />
-        </section>
+        </section> */}
 
         <section id="recommendations" className="recommendations">
           <div className="link-to" />
