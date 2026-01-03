@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.siteUrl}/resume/`,
   },
-  openGraph: {
-    url: `${siteConfig.siteUrl}/resume/`,
-  },
 };
 
 export default function ResumeLayout({ children }: { children: ReactNode }) {

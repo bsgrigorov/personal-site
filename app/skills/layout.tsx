@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.siteUrl}/skills/`,
   },
-  openGraph: {
-    url: `${siteConfig.siteUrl}/skills/`,
-  },
 };
 
 export default function SkillsLayout({ children }: { children: ReactNode }) {

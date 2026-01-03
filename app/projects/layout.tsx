@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.siteUrl}/projects/`,
   },
-  openGraph: {
-    url: `${siteConfig.siteUrl}/projects/`,
-  },
 };
 
 export default function ProjectsLayout({ children }: { children: ReactNode }) {

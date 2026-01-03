@@ -8,9 +8,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.siteUrl}/certifications/`,
   },
-  openGraph: {
-    url: `${siteConfig.siteUrl}/certifications/`,
-  },
 };
 
 export default function CertificationsLayout({ children }: { children: React.ReactNode }) {

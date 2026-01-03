@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.siteUrl}/`,
   },
-  openGraph: {
-    url: `${siteConfig.siteUrl}/`,
-  },
 };
 
 export default function HomePage() {
