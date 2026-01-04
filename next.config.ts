@@ -7,6 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   output: 'export', // Static export for GitHub Pages
+  allowedDevOrigins: ['3000.darkhold.dev'], // Cloudflare tunnel
   images: {
     unoptimized: true, // Required for static export
   },
