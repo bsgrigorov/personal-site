@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 
+import { withBasePath } from '@/utils/basePath';
+
 export interface Project {
   title: string;
   link?: string;
@@ -23,7 +25,7 @@ const Cell = ({ data, id }: CellProps) => (
         <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
       </header>
       <a href={data.link} className="image">
-        <img src={data.image} alt={data.title} />
+        <img src={withBasePath(data.image)} alt={data.title} />
       </a>
       <div className="description">
         <p>{data.desc}</p>

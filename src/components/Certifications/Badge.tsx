@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import dayjs from 'dayjs';
 
+import { withBasePath } from '@/utils/basePath';
+
 export interface Certification {
   label: string;
   link: string;
@@ -17,7 +19,7 @@ const Badge = ({ data, id }: BadgeProps) => (
   <div className="cell-container" id={id}>
     <div className="badge">
       <a href={data.link} className="image" aria-label={data.label}>
-        <Image src={data.image} alt={data.label} width={200} height={200} />
+        <Image src={withBasePath(data.image)} alt={data.label} width={200} height={200} />
       </a>
       <header>
         <h3>

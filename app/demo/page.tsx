@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import PageWrapper from '../components/PageWrapper';
+import { withBasePath } from '@/utils/basePath';
 
 export default function DemoPage() {
   if (process.env.NODE_ENV !== 'development') {
@@ -27,7 +28,7 @@ export default function DemoPage() {
           <a href="#" className="author">
             <span className="name">Borislav Grigorov</span>
             <Image
-              src="/images/me.jpg"
+              src={withBasePath('/images/me.jpg')}
               alt="Author"
               width={64}
               height={64}
@@ -94,7 +95,7 @@ export default function DemoPage() {
                 <time className="published">January 2025</time>
               </header>
               <a href="#" className="image">
-                <img src="/images/projects/synkube.png" alt="Sample" />
+                <img src={withBasePath('/images/projects/synkube.png')} alt="Sample" />
               </a>
             </article>
             <article className="mini-post">
@@ -105,7 +106,7 @@ export default function DemoPage() {
                 <time className="published">December 2024</time>
               </header>
               <a href="#" className="image">
-                <img src="/images/projects/zsh.png" alt="Sample" />
+                <img src={withBasePath('/images/projects/zsh.png')} alt="Sample" />
               </a>
             </article>
             <article className="mini-post">
@@ -116,7 +117,7 @@ export default function DemoPage() {
                 <time className="published">November 2024</time>
               </header>
               <a href="#" className="image">
-                <img src="/images/projects/encrypt.png" alt="Sample" />
+                <img src={withBasePath('/images/projects/encrypt.png')} alt="Sample" />
               </a>
             </article>
           </div>
@@ -132,7 +133,7 @@ export default function DemoPage() {
           <h4>Image Left</h4>
           <p>
             <span className="image left">
-              <img src="/images/me.jpg" alt="Left" width={100} />
+              <img src={withBasePath('/images/me.jpg')} alt="Left" width={100} />
             </span>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -144,7 +145,7 @@ export default function DemoPage() {
           <h4>Image Right</h4>
           <p>
             <span className="image right">
-              <img src="/images/me.jpg" alt="Right" width={100} />
+              <img src={withBasePath('/images/me.jpg')} alt="Right" width={100} />
             </span>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -155,7 +156,7 @@ export default function DemoPage() {
 
           <h4>Image Fit (Full Width)</h4>
           <span className="image fit">
-            <img src="/images/projects/synkube.png" alt="Fit" />
+            <img src={withBasePath('/images/projects/synkube.png')} alt="Fit" />
           </span>
         </section>
 

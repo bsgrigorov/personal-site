@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { siteConfig } from '@/data/config';
+import { withBasePath } from '@/utils/basePath';
 
 import ContactIcons from '../Contact/ContactIcons';
 
@@ -16,7 +17,7 @@ const SideBar = () => {
       <section id="intro">
         <Link href="/" className="logo">
           <Image
-            src="/images/me.jpg"
+            src={withBasePath('/images/me.jpg')}
             alt={siteConfig.name}
             width={160}
             height={160}

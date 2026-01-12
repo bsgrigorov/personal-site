@@ -5,6 +5,9 @@ import { Orbitron, Exo_2, JetBrains_Mono } from 'next/font/google';
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import { Analytics } from '@vercel/analytics/react';
 import JsonLd from '@/components/Template/JsonLd';
+
+// Vercel sets VERCEL=1 automatically during builds
+const isVercel = process.env.VERCEL === '1';
 import Navigation from '@/components/Template/Navigation';
 import { siteConfig } from '@/data/config';
 import '@/static/css/main.scss';
@@ -149,7 +152,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
         <GoogleAnalytics />
-        <Analytics />
+        {isVercel && <Analytics />}
       </body>
     </html>
   );
