@@ -27,7 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -49,16 +49,16 @@ jobs:
         run: pnpm build
         env:
           NODE_ENV: production
-          # Remove this line if you would like to skip using google analytics
-          REACT_APP_GA_TRACKING_ID: UA-68649021-1
+          # Set NEXT_PUBLIC_GA_TRACKING_ID in GitHub repo secrets (Settings → Secrets → Actions)
+          NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: "build"
+          path: "out"
 
       - name: Deploy to GitHub Pages
         id: deployment
