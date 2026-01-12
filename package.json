@@ -27,7 +27,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "cloudflared:tunnel:run": "cloudflared tunnel run local",
-    "prepare": "husky"
+    "prepare": "test \"$CI\" = true || husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
