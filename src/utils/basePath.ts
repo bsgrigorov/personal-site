@@ -1,7 +1,8 @@
 // Get basePath for GitHub Pages deployment
 // On GitHub Pages: /personal-site, On Vercel: ''
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-const repoName = process.env.GITHUB_REPOSITORY_NAME || '';
+// Using NEXT_PUBLIC_ prefix so it's available in client-side JS
+const isGitHubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true';
+const repoName = process.env.NEXT_PUBLIC_GITHUB_REPOSITORY_NAME || '';
 
 export const basePath = isGitHubPages ? `/${repoName}` : '';
 

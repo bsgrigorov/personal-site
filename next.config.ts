@@ -6,8 +6,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 // GitHub Pages requires basePath when not using custom domain
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-const repoName = process.env.GITHUB_REPOSITORY_NAME || '';
+// Using NEXT_PUBLIC_ prefix so values are available in client-side JS too
+const isGitHubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true';
+const repoName = process.env.NEXT_PUBLIC_GITHUB_REPOSITORY_NAME || '';
 
 const nextConfig: NextConfig = {
   output: 'export', // Static export for GitHub Pages
