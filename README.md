@@ -2,7 +2,7 @@
 
 See: [bgrigorov.com](https://bgrigorov.com).
 
-My personal website. An [MIT](https://github.com/bsgrigorov/personal-site/blob/main/LICENSE) licensed, simple, easily modifiable, statically-exportable [Next.js](https://nextjs.org/) application built with TypeScript. Deploys automatically using [Vercel](https://vercel.com/) or [GitHub Pages](https://pages.github.com/).
+My personal website. An [MIT](https://github.com/bsgrigorov/personal-site/blob/main/LICENSE) licensed, simple, easily modifiable, statically-exportable [Next.js](https://nextjs.org/) application built with TypeScript. Deploys automatically using [Vercel](https://vercel.com/), [GitHub Pages](https://pages.github.com/), or [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## ✨ Tech Stack
 
@@ -112,10 +112,27 @@ Set environment variables in Vercel dashboard:
 
 ### Cloudflare Pages
 
+This site supports deployment to Cloudflare Pages as a static HTML export.
+
+**Via Git Integration:**
+
 1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create**
-2. Connect your GitHub repository
-3. Set build command: `pnpm build` and output directory: `out`
-4. Deploy!
+2. Select **Pages** → **Connect to Git**
+3. Authorize and select your repository
+4. Configure build settings:
+   - **Framework preset**: Next.js (Static HTML Export)
+   - **Build command**: `pnpm build`
+5. Deploy!
+
+The `wrangler.toml` file in the repo root configures the output directory (`out`) automatically.
+
+**Via CLI (manual deploy):**
+
+```bash
+pnpm pages:deploy
+```
+
+This builds and deploys to Cloudflare Pages using Wrangler. Requires `wrangler login` first.
 
 ### Static Export
 
