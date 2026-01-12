@@ -1,6 +1,31 @@
-# Google Analytics & Search Console
+# Analytics & Performance Monitoring
 
-## Environment Variables
+## Overview
+
+| Tool | Purpose |
+|------|---------|
+| **Google Analytics (GA4)** | User traffic, behavior, acquisition |
+| **Vercel Analytics** | Core Web Vitals, real user monitoring |
+| **Google Search Console** | SEO, indexing, search performance |
+
+---
+
+## Vercel Analytics (Web Vitals)
+
+Tracks Core Web Vitals (LCP, FID, CLS) with real user data.
+
+> **Free tier** includes Core Web Vitals tracking. Paid tier adds more detailed analytics.
+
+### View Metrics
+
+- **Vercel Dashboard** → Your Project → **Analytics**
+- Shows: LCP, FID, CLS scores over time, by page, by device
+
+---
+
+## Google Analytics (GA4)
+
+### Environment Variables
 
 Add these to your `.env.local` (local dev) and **Vercel Environment Variables** (production):
 

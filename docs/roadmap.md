@@ -50,11 +50,25 @@ This site has been a work in progress since 2014. It was originally forked from 
 - [ ] Better issue templates
 - [ ] Dependabot for automated dependency updates
 
-## 📊 Metrics to Track
+## 📊 Metrics & Monitoring
 
-- Lighthouse scores (Performance, Accessibility, Best Practices, SEO)
-- Bundle size trends
-- Core Web Vitals (LCP, FID, CLS)
+### How to Track
+
+| Metric | Tool |
+|--------|------|
+| **Lighthouse scores** | [web.dev/measure](https://web.dev/measure/) or Chrome DevTools |
+| **Core Web Vitals** | [Vercel Analytics](https://vercel.com/analytics) (free tier) or GA4 |
+| **Bundle size** | `pnpm analyze` (uses `@next/bundle-analyzer`) |
+
+### CI Integration (Future)
+
+- [ ] Add [bundlewatch](https://bundlewatch.io/) or [size-limit](https://github.com/ai/size-limit) to fail builds if bundles exceed thresholds
+- [ ] Add Lighthouse CI to GitHub Actions for automated performance audits
+
+### Known Issues
+
+- Mobile performance is slower than desktop (common with JS-heavy sites)
+- Consider lazy loading, reduced animations on mobile
 
 ## References
 

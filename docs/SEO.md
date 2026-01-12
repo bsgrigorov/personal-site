@@ -4,6 +4,8 @@
 
 | Tool | URL |
 |------|-----|
+| **PageSpeed Insights** | [pagespeed.web.dev](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fbgrigorov.com) |
+| **Web.dev Measure** | [web.dev/measure](https://web.dev/measure/) |
 | **Open Graph** | [opengraph.xyz](https://www.opengraph.xyz/url/https%3A%2F%2Fbgrigorov.com) |
 | **Security Headers** | [securityheaders.com](https://securityheaders.com/?q=bgrigorov.com) |
 | **Twitter Card** | [cards-dev.twitter.com](https://cards-dev.twitter.com/validator) |
@@ -82,11 +84,19 @@ npx png-to-ico public/images/favicon/bg-logo.png > public/images/favicon/favicon
 
 ---
 
-## Google Analytics & Search Console
+## Analytics & Performance
 
-See [google-analytics.md](./google-analytics.md) for detailed setup instructions including:
-- GA4 Measurement ID setup
-- Search Console verification
-- Sitemap submission
-- Troubleshooting common issues
+See [google-analytics.md](./google-analytics.md) for:
+- **Vercel Analytics** - Core Web Vitals monitoring
+- **GA4** - User traffic and behavior
+- **Search Console** - SEO and indexing
+
+### Bundle Analysis
+
+Analyze JavaScript bundle sizes:
+```bash
+pnpm analyze
+```
+
+Opens a visual treemap showing what's in each bundle.
 

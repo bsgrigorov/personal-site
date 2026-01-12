@@ -12,9 +12,9 @@ My personal website. An [MIT](https://github.com/bsgrigorov/personal-site/blob/m
 | **Language** | [TypeScript](https://www.typescriptlang.org/) |
 | **Styling** | SCSS with CSS Modules |
 | **Package Manager** | [pnpm](https://pnpm.io/) |
-| **Hosting** | [Vercel](https://vercel.com/) (primary), [GitHub Pages](https://pages.github.com/) |
+| **Hosting** | [Vercel](https://vercel.com/), [GitHub Pages](https://pages.github.com/), [Cloudflare Pages](https://pages.cloudflare.com/) |
 | **CDN/DNS** | [Cloudflare](https://www.cloudflare.com/) |
-| **Analytics** | [Google Analytics 4](https://analytics.google.com/) via `@next/third-parties` |
+| **Analytics** | [Google Analytics 4](https://analytics.google.com/) + [Vercel Analytics](https://vercel.com/analytics) (optional) |
 | **Search** | [Fuse.js](https://fusejs.io/) for fuzzy search across experience, skills, projects |
 | **Icons** | [Font Awesome](https://fontawesome.com/) via `@fortawesome/react-fontawesome` |
 | **Markdown** | [markdown-to-jsx](https://github.com/quantizor/markdown-to-jsx) |

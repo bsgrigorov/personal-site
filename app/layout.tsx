@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { Orbitron, Exo_2, JetBrains_Mono } from 'next/font/google';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
+import { Analytics } from '@vercel/analytics/react';
 import JsonLd from '@/components/Template/JsonLd';
 import Navigation from '@/components/Template/Navigation';
 import { siteConfig } from '@/data/config';
@@ -143,6 +144,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
         <GoogleAnalytics />
+        <Analytics />
       </body>
     </html>
   );
