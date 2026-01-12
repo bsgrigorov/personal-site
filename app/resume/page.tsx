@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 
-import Courses from '@/components/Resume/Courses';
+// import Courses from '@/components/Resume/Courses';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import LinkedInRecommendations from '@/components/Resume/LinkedInRecommendations';
 import References from '@/components/Resume/References';
 import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
-import courses from '@/data/resume/courses';
+// import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
 import work from '@/data/resume/work';
 
