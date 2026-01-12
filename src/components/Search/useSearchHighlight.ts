@@ -1,71 +1,70 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 
+// Constants
+const HEADER_OFFSET = 120;
+const VIEWPORT_BOTTOM_PADDING = 100;
+const DOM_READY_DELAY = 100;
+const SCROLL_DURATION = 400;
+const ANIMATION_DURATION = 4000;
+const HIGHLIGHT_CLASS = 'search-highlight';
+
 /**
- * Check if an element is visible in the viewport (with some padding for header)
+ * Check if an element is visible in the viewport (with padding for header)
  */
 function isElementInViewport(el: HTMLElement): boolean {
   const rect = el.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const headerOffset = 120; // Account for fixed header
-
-  // Check if element is visible below header and above bottom
-  return rect.top >= headerOffset && rect.top < windowHeight - 100;
+  return rect.top >= HEADER_OFFSET && rect.top < windowHeight - VIEWPORT_BOTTOM_PADDING;
 }
 
 /**
  * Hook to highlight an element when navigating from search results.
  * Uses query parameter (?highlight=id) instead of hash to avoid browser auto-scroll.
- * The highlight fades out after 4 seconds (controlled by CSS animation).
  * Only scrolls if the element is not already visible.
  */
 export function useSearchHighlight() {
   const searchParams = useSearchParams();
   const highlightId = searchParams.get('highlight');
+  const elementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!highlightId) return;
 
+    const timeouts: NodeJS.Timeout[] = [];
+
     // Small delay to ensure DOM is ready
-    const initTimeout = setTimeout(() => {
-      const element = document.getElementById(highlightId);
-      if (!element) return;
+    timeouts.push(
+      setTimeout(() => {
+        const element = document.getElementById(highlightId);
+        if (!element) return;
 
-      // Check if element is already nicely visible
-      if (isElementInViewport(element)) {
-        // Already visible, just highlight immediately
-        element.classList.add('search-highlight');
-      } else {
-        // Need to scroll - calculate position with header offset
-        const yOffset = -120;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+        elementRef.current = element;
 
-        // Add highlight after scroll completes
-        setTimeout(() => {
-          element.classList.add('search-highlight');
-        }, 400);
-      }
-    }, 100);
+        const applyHighlight = () => element.classList.add(HIGHLIGHT_CLASS);
 
-    // Clean up after animation (4s animation + buffer)
-    const cleanupTimeout = setTimeout(() => {
-      const element = document.getElementById(highlightId);
-      if (element) {
-        element.classList.remove('search-highlight');
-      }
-      // Clean up URL - remove query param
-      if (window.history.replaceState) {
+        if (isElementInViewport(element)) {
+          applyHighlight();
+        } else {
+          // Scroll to element with header offset
+          const y = element.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          timeouts.push(setTimeout(applyHighlight, SCROLL_DURATION));
+        }
+      }, DOM_READY_DELAY),
+    );
+
+    // Clean up after animation
+    timeouts.push(
+      setTimeout(() => {
+        elementRef.current?.classList.remove(HIGHLIGHT_CLASS);
         window.history.replaceState(null, '', window.location.pathname);
-      }
-    }, 4500);
+      }, ANIMATION_DURATION + DOM_READY_DELAY + SCROLL_DURATION),
+    );
 
-    return () => {
-      clearTimeout(initTimeout);
-      clearTimeout(cleanupTimeout);
-    };
+    return () => timeouts.forEach(clearTimeout);
   }, [highlightId]);
 }
 

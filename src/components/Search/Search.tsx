@@ -1,9 +1,15 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import Fuse from 'fuse.js';
+import { useRouter } from 'next/navigation';
+import Fuse, { FuseResult, FuseResultMatch } from 'fuse.js';
 import Link from 'next/link';
 import { searchIndex, SearchItem } from '@/data/search';
+
+// Constants
+const DEBOUNCE_MS = 50;
+const MIN_QUERY_LENGTH = 2;
+const MAX_RESULTS = 8;
 
 // Configure Fuse.js
 const fuse = new Fuse(searchIndex, {
@@ -14,7 +20,7 @@ const fuse = new Fuse(searchIndex, {
   ],
   threshold: 0.3,
   includeMatches: true,
-  minMatchCharLength: 2,
+  minMatchCharLength: MIN_QUERY_LENGTH,
 });
 
 // Icon mapping for result types
@@ -36,23 +42,48 @@ const typeLabels: Record<SearchItem['type'], string> = {
   about: 'About',
 };
 
+// Highlight function
+const highlightMatch = (text: string, matches?: readonly FuseResultMatch[]): string => {
+  if (!matches || matches.length === 0) return text;
+
+  const match = matches.find((m) => m.key === 'title' || m.key === 'content');
+  if (!match || !match.indices || match.value !== text) return text;
+
+  let result = '';
+  let lastIndex = 0;
+
+  match.indices.forEach(([start, end]: readonly [number, number]) => {
+    result += text.slice(lastIndex, start);
+    result += `<mark>${text.slice(start, end + 1)}</mark>`;
+    lastIndex = end + 1;
+  });
+  result += text.slice(lastIndex);
+
+  return result;
+};
+
 export default function Search() {
+  const router = useRouter();
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<Fuse.FuseResult<SearchItem>[]>([]);
+  const [results, setResults] = useState<FuseResult<SearchItem>[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Search when query changes
+  // Debounced search when query changes
   useEffect(() => {
-    if (query.trim().length >= 2) {
-      const searchResults = fuse.search(query).slice(0, 8);
-      setResults(searchResults);
-      setSelectedIndex(0);
-    } else {
-      setResults([]);
-    }
+    const timer = setTimeout(() => {
+      if (query.trim().length >= MIN_QUERY_LENGTH) {
+        const searchResults = fuse.search(query).slice(0, MAX_RESULTS);
+        setResults(searchResults);
+        setSelectedIndex(0);
+      } else {
+        setResults([]);
+      }
+    }, DEBOUNCE_MS);
+
+    return () => clearTimeout(timer);
   }, [query]);
 
   // Keyboard shortcut (Cmd/Ctrl + K)
@@ -94,31 +125,13 @@ export default function Search() {
         setSelectedIndex((prev) => Math.max(prev - 1, 0));
       } else if (e.key === 'Enter' && results[selectedIndex]) {
         e.preventDefault();
-        // Navigate programmatically
-        window.location.href = results[selectedIndex].item.link;
+        setIsOpen(false);
+        setQuery('');
+        router.push(results[selectedIndex].item.link);
       }
     },
-    [results, selectedIndex],
+    [results, selectedIndex, router],
   );
-
-  const highlightMatch = (text: string, matches?: readonly Fuse.FuseResultMatch[]) => {
-    if (!matches || matches.length === 0) return text;
-
-    const match = matches.find((m) => m.key === 'title' || m.key === 'content');
-    if (!match || !match.indices || match.value !== text) return text;
-
-    let result = '';
-    let lastIndex = 0;
-
-    match.indices.forEach(([start, end]) => {
-      result += text.slice(lastIndex, start);
-      result += `<mark>${text.slice(start, end + 1)}</mark>`;
-      lastIndex = end + 1;
-    });
-    result += text.slice(lastIndex);
-
-    return result;
-  };
 
   return (
     <div className="search-container" ref={containerRef}>
@@ -178,7 +191,7 @@ export default function Search() {
           </div>
         )}
 
-        {isOpen && query.length >= 2 && results.length === 0 && (
+        {isOpen && query.length >= MIN_QUERY_LENGTH && results.length === 0 && (
           <div className="search-results">
             <div className="search-no-results">No results found for &ldquo;{query}&rdquo;</div>
           </div>
