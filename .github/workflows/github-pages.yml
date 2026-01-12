@@ -49,6 +49,8 @@ jobs:
         run: pnpm build
         env:
           NODE_ENV: production
+          GITHUB_PAGES: "true"
+          GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
           # Set NEXT_PUBLIC_GA_TRACKING_ID in GitHub repo secrets (Settings → Secrets → Actions)
           NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
 

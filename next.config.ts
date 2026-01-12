@@ -5,8 +5,14 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+// GitHub Pages requires basePath when not using custom domain
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const repoName = process.env.GITHUB_REPOSITORY_NAME || '';
+
 const nextConfig: NextConfig = {
   output: 'export', // Static export for GitHub Pages
+  basePath: isGitHubPages ? `/${repoName}` : '',
+  assetPrefix: isGitHubPages ? `/${repoName}/` : '',
   allowedDevOrigins: ['3000.darkhold.dev'], // Cloudflare tunnel
   images: {
     unoptimized: true, // Required for static export
