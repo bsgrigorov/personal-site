@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
 // Constants
 const HEADER_OFFSET = 120;
@@ -24,11 +23,17 @@ function isElementInViewport(el: HTMLElement): boolean {
  * Hook to highlight an element when navigating from search results.
  * Uses query parameter (?highlight=id) instead of hash to avoid browser auto-scroll.
  * Only scrolls if the element is not already visible.
+ * Reads from window.location directly to avoid Suspense boundary requirement.
  */
 export function useSearchHighlight() {
-  const searchParams = useSearchParams();
-  const highlightId = searchParams.get('highlight');
+  const [highlightId, setHighlightId] = useState<string | null>(null);
   const elementRef = useRef<HTMLElement | null>(null);
+
+  // Read highlight param from URL on mount (client-side only)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setHighlightId(params.get('highlight'));
+  }, []);
 
   useEffect(() => {
     if (!highlightId) return;
