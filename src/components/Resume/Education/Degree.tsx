@@ -9,10 +9,11 @@ export interface DegreeData {
 
 interface DegreeProps {
   data: DegreeData;
+  id?: string;
 }
 
-const Degree = ({ data }: DegreeProps) => (
-  <article className="resume-entry">
+const Degree = ({ data, id }: DegreeProps) => (
+  <article className="resume-entry" id={id}>
     <header className="resume-entry-header">
       <div className="resume-entry-main-line">
         <div className="resume-entry-left">

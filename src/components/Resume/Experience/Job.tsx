@@ -14,12 +14,14 @@ export interface JobData {
 
 interface JobProps {
   data: JobData;
+  id?: string;
 }
 
 const Job = ({
   data: { name, position, url, location, startDate, endDate, summary, highlights },
+  id,
 }: JobProps) => (
-  <article className="resume-entry">
+  <article className="resume-entry" id={id}>
     <header className="resume-entry-header">
       <div className="resume-entry-main-line">
         <div className="resume-entry-left">

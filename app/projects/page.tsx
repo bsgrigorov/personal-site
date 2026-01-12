@@ -1,11 +1,16 @@
+'use client';
+
 import Link from 'next/link';
 
 import Cell from '@/components/Projects/Cell';
+import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
 import projects from '@/data/projects';
 
 import PageWrapper from '../components/PageWrapper';
 
 export default function ProjectsPage() {
+  useSearchHighlight();
+
   return (
     <PageWrapper>
       <article className="post" id="projects">
@@ -18,8 +23,8 @@ export default function ProjectsPage() {
           </div>
         </header>
         <div className="projects-grid">
-          {projects.map((project) => (
-            <Cell data={project} key={project.title} />
+          {projects.map((project, idx) => (
+            <Cell data={project} key={project.title} id={`project-${idx}`} />
           ))}
         </div>
       </article>

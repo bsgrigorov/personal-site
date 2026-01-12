@@ -10,10 +10,11 @@ export interface Certification {
 
 interface BadgeProps {
   data: Certification;
+  id?: string;
 }
 
-const Badge = ({ data }: BadgeProps) => (
-  <div className="cell-container">
+const Badge = ({ data, id }: BadgeProps) => (
+  <div className="cell-container" id={id}>
     <div className="badge">
       <a href={data.link} className="image" aria-label={data.label}>
         <Image src={data.image} alt={data.label} width={200} height={200} />

@@ -10,10 +10,11 @@ export interface Project {
 
 interface CellProps {
   data: Project;
+  id?: string;
 }
 
-const Cell = ({ data }: CellProps) => (
-  <div className="cell-container">
+const Cell = ({ data, id }: CellProps) => (
+  <div className="cell-container" id={id}>
     <article className="mini-post">
       <header>
         <h3>

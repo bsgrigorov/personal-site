@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { siteConfig } from '@/data/config';
+import Search from '@/components/Search/Search';
 
 import PageWrapper from './components/PageWrapper';
 
@@ -33,6 +34,7 @@ export default function HomePage() {
           Built with Next.js and deployed on Vercel. Source on{' '}
           <a href={siteConfig.github.repoUrl}>GitHub</a>.
         </p>
+        <Search />
       </article>
     </PageWrapper>
   );

@@ -8,9 +8,10 @@ interface SkillBarProps {
   data: SkillData;
   color: string;
   highlightFavourite?: boolean;
+  id?: string;
 }
 
-const SkillBar = ({ data, color, highlightFavourite = false }: SkillBarProps) => {
+const SkillBar = ({ data, color, highlightFavourite = false, id }: SkillBarProps) => {
   const { competency, title } = data;
 
   const titleStyle = {
@@ -25,7 +26,7 @@ const SkillBar = ({ data, color, highlightFavourite = false }: SkillBarProps) =>
   const className = `skillbar clearfix${highlightFavourite ? ' favourite' : ''}`;
 
   return (
-    <div className={className}>
+    <div className={className} id={id}>
       <div className="skillbar-title" style={titleStyle}>
         <span>{title}</span>
       </div>

@@ -1,4 +1,5 @@
 import SkillBar, { SkillData } from './SkillBar';
+import { slugify } from '@/utils/slugify';
 
 interface SkillsProps {
   skills: Record<string, SkillData[]>;
@@ -19,11 +20,12 @@ const Skills = ({ skills, colors, showFavourites = false }: SkillsProps) => {
               {category}
             </h3>
             <div className="skill-section-items">
-              {skills[category].map((skill) => (
+              {skills[category].map((skill, idx) => (
                 <SkillBar
                   color={colors[category]}
                   data={skill}
                   key={skill.title}
+                  id={`skill-${slugify(category)}-${idx}`}
                   highlightFavourite={showFavourites && skill.favourite}
                 />
               ))}

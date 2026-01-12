@@ -4,12 +4,14 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 import SkillsComponent from '@/components/Skills/Skills';
+import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
 import { skills, categoryColors } from '@/data/skills';
 
 import PageWrapper from '../components/PageWrapper';
 
 export default function SkillsPage() {
   const [showFavourites, setShowFavourites] = useState(false);
+  useSearchHighlight();
 
   return (
     <PageWrapper>

@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 import Courses from '@/components/Resume/Courses';
@@ -5,6 +7,7 @@ import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import LinkedInRecommendations from '@/components/Resume/LinkedInRecommendations';
 import References from '@/components/Resume/References';
+import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
 import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
 import work from '@/data/resume/work';
@@ -20,6 +23,7 @@ const sections = [
 ];
 
 export default function ResumePage() {
+  useSearchHighlight();
   return (
     <PageWrapper>
       <article className="post" id="resume">
