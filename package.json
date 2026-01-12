@@ -26,8 +26,7 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "cloudflared:tunnel:run": "cloudflared tunnel run local",
-    "prepare": "test \"$CI\" = true || husky"
+    "cloudflared:tunnel:run": "cloudflared tunnel run local"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

@@ -61,10 +61,28 @@ pnpm type-check   # TypeScript check
 - Static export enabled (`output: 'export'` in next.config.ts)
 - CNAME configured for custom domain
 
+## Static Export Constraints
+
+This site uses `output: 'export'` for static generation. **Do NOT use**:
+
+- `getServerSideProps` or server-side data fetching
+- API routes (`app/api/`)
+- Dynamic routes without `generateStaticParams`
+- `useSearchParams()` without handling (causes Suspense boundary errors)
+- `cookies()`, `headers()`, or other server-only functions
+- Image optimization (uses `unoptimized: true`)
+- ISR (Incremental Static Regeneration)
+
+**Instead use**:
+- Static data imports from `src/data/`
+- Client-side state with `'use client'` components
+- `window.location` for URL params (client-side only in useEffect)
+
 ## Important Notes
 
 1. Always use `pnpm` - this project uses pnpm as package manager
 2. Run `source /Users/bsgrigorov/dev/repos/home/zsh-env/shell/cursor-entrypoint-extended.sh` if pnpm is not available
 3. Check lints after making changes to TypeScript/React files
 4. The site uses a cyberpunk aesthetic - maintain dark theme with neon accents
+5. Run `pnpm build` locally before pushing to catch SSG errors
 
