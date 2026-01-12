@@ -118,8 +118,6 @@ export const metadata: Metadata = {
   // Verification (add your verification codes here)
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
   },
 
   // Canonical URL for the homepage (with trailing slash for consistency)
