@@ -1,52 +1,86 @@
 # Design Goals
 
-This projects attempts to follow these design principles. Feedback and discussion around these are encouraged. Please feel free to submit an issue or get in touch.
+This project follows these design principles. Feedback and discussion are encouraged. Please feel free to submit an issue or get in touch.
 
 ## Simple
 
 1. Someone learning web development should be able to clone this repo and start making it their own within a few minutes.
-2. Does not require reading a large amount of documentation.
+2. Does not require reading extensive documentation to get started.
+3. Clear project structure with intuitive file organization.
 
 ## Fast
 
-1. Follows [JAMStack best practices](https://jamstack.org/best-practices/). Everything that can be pre-rendered should be pre-rendered.
-1. Time to interact should be very fast (< 250 ms). Optimized for small bundle sizes.
+1. Follows [JAMStack best practices](https://jamstack.org/best-practices/). Everything that can be pre-rendered is pre-rendered via static export.
+2. Time to interact should be very fast (< 250 ms). Optimized for small bundle sizes.
+3. Uses Next.js built-in optimizations (font loading, code splitting, static generation).
+4. Turbopack for instant development feedback.
 
 ## Good Developer Experience
 
-1. Modular
-    - It should be relatively straight forward to replace the content in this repository or to add a new feature.
-    - Good separation of concerns. Components keep track of their own state. Props are not over-utilized.
-    - Limited vertical depth (changes should be relatively self encapsulated).
-    - Correct abstractions. - Webpack is complex, but developers don't need to understand how exactly webpack works to use this project.
-1. Good Documentation
-    - Comments exist and have an appropriate level of detail.
-    - Code should be readable.
-1. Lean
-    - Projects bloat over time. Actively prune for old and dead code.
-    - New features that affect the entire project should be carefully considered.
-    - Buy, don't build. Don't reinvent the wheel. Use popular npm libraries when possible.
-1. Limited horizontal fragmentation
-    - Linter to prevent easy PR nits & to prevent developers from wasting time thinking about code style.
-    - Preferred React Style - ie (functional components & proptypes).
-    - Consistent file structure based on current best practices.
-    - Similar features are built similarly. Code reads like an assembly line, not a layer cake.
+1. **Modular**
+   - Relatively straightforward to replace content or add new features
+   - Good separation of concerns - components manage their own state
+   - Limited vertical depth (changes are self-encapsulated)
+   - Correct abstractions - Next.js handles complexity, developers focus on content
+
+2. **Type-Safe**
+   - Full TypeScript throughout the codebase
+   - Interfaces define data shapes clearly
+   - Catch errors at compile time, not runtime
+
+3. **Good Documentation**
+   - Comments exist where appropriate
+   - Code is readable and self-documenting
+   - Comprehensive docs in `/docs` folder
+
+4. **Lean**
+   - Actively prune old and dead code
+   - New features affecting the entire project are carefully considered
+   - Buy, don't build - use popular npm libraries when possible
+
+5. **Consistent**
+   - ESLint + Prettier for consistent code style
+   - Husky pre-commit hooks prevent style violations
+   - Path aliases (`@/`) for clean imports
+   - Functional components with hooks
 
 ## Stable
 
-1. Use *Boring* technologies
-    - Javascript over reason or typescript. Limited ecmascript experimental features.
-    - Prefer popular and well maintained npm packages.
-1. Maintainable
-    - Easy setup.
-    - It should be easy to deploy any version of this site.
-    - Limited external dependencies (ie no missing headers for external libraries).
-    - Dependencies are kept up to date (currently uses dependabot).
-1. Good tests.
-1. Stable API - This project has been forked > 100 times. It should be easy for those forks adopt changes in main.
+1. **Modern but Boring**
+   - TypeScript over experimental language features
+   - Prefer popular, well-maintained npm packages
+   - Next.js App Router (stable since Next.js 13.4)
+
+2. **Maintainable**
+   - Easy setup with pnpm
+   - Static export works anywhere
+   - Limited external dependencies
+   - Dependencies kept up-to-date
+
+3. **Well Tested**
+   - Jest + React Testing Library
+   - Type checking as first line of defense
+   - Linting catches common issues
+
+4. **Stable API**
+   - Easy for forks to adopt changes from main
+   - Data files are clearly structured
+   - Breaking changes are documented
+
+## Technology Choices
+
+| Choice | Rationale |
+|--------|-----------|
+| **Next.js** | Industry standard React framework, excellent static export |
+| **TypeScript** | Type safety, better IDE support, self-documenting |
+| **pnpm** | Fast, disk-efficient, strict by default |
+| **SCSS** | Familiar CSS syntax with variables, nesting, mixins |
+| **Fuse.js** | Lightweight fuzzy search, works with static export |
+| **Vercel** | Zero-config Next.js deployment |
+| **Husky** | Enforce quality before commits reach the repo |
 
 ## References
 
-For further reading, please review
-
-- React's [Design Principles](https://reactjs.org/docs/design-principles.html).
+- [Next.js Design Principles](https://nextjs.org/docs)
+- [React Design Principles](https://legacy.reactjs.org/docs/design-principles.html)
+- [The Twelve-Factor App](https://12factor.net/)

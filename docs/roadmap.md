@@ -1,48 +1,63 @@
 # Roadmap
 
-This site has been a work in progress since 2014. I have tried to make updates to reflect a) my knowledge of web development and b) current best practices. It will continue to evolve a as a WIP guided by the following design goals.
+This site has been a work in progress since 2014. It was originally forked from [mldangelo/personal-site](https://github.com/mldangelo/personal-site) and has since been modernized with Next.js 16, TypeScript, and current best practices. It will continue to evolve as a WIP guided by the following goals.
 
-## Future Direction
+## ✅ Completed
+
+- **Next.js Migration** - Migrated from Create React App to Next.js 16 with App Router
+- **TypeScript** - Full TypeScript conversion for type safety
+- **Turbopack** - Using Turbopack for fast development builds
+- **Static Export** - Built-in static export replacing react-snap
+- **ESLint 9** - Modern flat config ESLint setup
+- **Prettier** - Consistent code formatting
+- **Husky** - Git hooks for pre-commit linting and formatting
+- **Fuse.js Search** - Fuzzy search across all site content (experience, skills, projects)
+- **Font Optimization** - Next.js font loading for optimal performance
+- **SEO Improvements** - Structured data (JSON-LD), Open Graph, Twitter Cards
+- **Security Headers** - Configured via `vercel.json`
+- **pnpm** - Modern, fast package manager
+- **Path Aliases** - Clean imports with `@/` prefix
+
+## 🔄 In Progress
+
+- Better test coverage (Jest + React Testing Library)
+- Performance optimization (bundle analysis, code splitting)
+
+## 🎯 Future Direction
 
 ### Improvements
 
-- use JSON resume instead of reinventing the wheel (perform literature search for wiki data resume standard).
-- Fix navbar (use nav provided by template) -> Reduce Bundle size.
-- Separate concerns better in src/data. Some files are data, others are template variables.
-- Get better at redefining duplicate types. They are especially prevalent in resume components.
-- Make code splitting better - some bundles are under 1KB.
-- Make styles more modular.
-- Make FA integration less terrible (consider building FA library).
-- Simplify Favicon. See: https://news.ycombinator.com/item?id=25520655
-- Better tests
-  - one test per component.
-  - test using puppeteer again.
-  - test cross browser compatibility.
-  - Use google lighthouse.
-- Introduce a spell checker.
+- [ ] Use [JSON Resume](https://jsonresume.org/) standard for resume data
+- [ ] Improve code splitting - some bundles are very small
+- [ ] Make styles more modular (CSS Modules or Tailwind consideration)
+- [ ] Build Font Awesome icon library to reduce bundle size
+- [ ] Simplify favicon setup - see [minimal favicon approach](https://news.ycombinator.com/item?id=25520655)
+- [ ] Add Puppeteer/Playwright for E2E testing
+- [ ] Google Lighthouse CI integration
 
 ### New Features
 
-- Completely gut and redo server integration, use JWT
-  - auto deploy backend, keep frontend on CDN.
-- revisit posts/blog
-  - put one or two examples up from my knowledge base.
+- [ ] Blog/posts section with MDX support
+- [ ] Dark mode toggle
+- [ ] i18n/internationalization support
+- [ ] PDF resume generation
+- [ ] Reading list / bookmarks section
 
-### Repository Cleanup
+### Repository
 
-- Don't allow pushes to main.
-- Generate releases using github action (increment version in package.json too) using semantic versioning.
-- Add contributing guidelines.
-- encourage more PRs that support this roadmap / pay bug bounties.
-- Build something that allows people to propose changes.
-- Make main / server distinction cleaner -> make sure PRs to main also land in server.
+- [ ] Branch protection rules for `main`
+- [ ] Automated releases with semantic versioning
+- [ ] Better issue templates
+- [ ] Dependabot for automated dependency updates
 
-- Implement better analytics
-- Capture information about the community of people that have cloned this site.
+## 📊 Metrics to Track
 
-### Under Consideration
+- Lighthouse scores (Performance, Accessibility, Best Practices, SEO)
+- Bundle size trends
+- Core Web Vitals (LCP, FID, CLS)
 
-- Use typescript everywhere instead of Vanilla JS/JSX - will this hinder new developer experience?
-- Add support for more exotic integrations (reason, webassembly).
-- hydrate all unique content on the site from one location -> deploy as npm package + json.
-- Use husky for git pre-commit hooks.
+## References
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Vercel Platform](https://vercel.com/)
+- [JAMstack Best Practices](https://jamstack.org/best-practices/)

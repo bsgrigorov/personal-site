@@ -1,90 +1,222 @@
 # Adapting this Website
 
-Many people have contacted me about adapting this website. I have tried to make things as simple as possible. There are still bugs. I am sorry. If you find a bug, please email me (help@mldangelo.com), submit a pull request (I'll buy you a coffee as a thank you), or submit an issue.
+This guide will help you customize this website for your own personal use. The project is built with Next.js 16, TypeScript, and modern web technologies, making it easy to modify.
 
-You may wish to fork this repository or remove my remote origin and add your own. Go [here](https://help.github.com/articles/changing-a-remote-s-url/) for more information on how to change remotes.
+## Before You Start
 
-## Before you start
-
-1. Make sure you have a good text editor. I recommend [Visual Studio Code](https://code.visualstudio.com/).
-1. Review `src/App.js`. This file contains all of our route definitions. If you wish to add or remove a page, you should do so here.
+1. Make sure you have a good text editor. [Visual Studio Code](https://code.visualstudio.com/) or [Cursor](https://cursor.sh/) are recommended.
+2. Familiarize yourself with the project structure - see [NEXTJS_MIGRATION.md](./NEXTJS_MIGRATION.md) for details.
+3. Review `app/layout.tsx` for the root layout and `src/data/routes.ts` for navigation routes.
 
 ## Checklist
 
 ### Setup
 
-1. Run the project before making any modifications by following the set up and running instructions in the main [README.md](https://github.com/mldangelo/personal-site#set-up).
-1. Change `homepage` in `package.json` to reflect where you plan to host the site. This is important for static exporting via react-snap. This also changes your path when developing locally. For example, a homepage of `mldangelo.com` places the site at `localhost:3000` and a homepage of `https://mldangelo.github.io/personal-site/` places the site at `localhost:3000/personal-site/`. If you plan to host at on a path such as `https://[your-github-username].github.io/[your-repo-name]`, you should set this now so that your development environment mirrors your production environment.
-1. Create a `.env` file. To do this, run:
+1. Run the project before making any modifications by following the setup instructions in the main [README.md](../README.md#-setup-and-running).
+
+2. Ensure you have the correct Node version and pnpm installed:
 
     ```bash
-    cp sample.env .env
+    node --version   # Should be v22.x
+    pnpm --version   # Should be v10.x+
     ```
 
-    and set values as appropriate. Most people will not need to modify this file.
+3. Create a `.env.local` file for local development:
+
+    ```bash
+    cp sample.env .env.local
+    ```
+
+    Set your Google Analytics ID if you have one:
+    ```
+    NEXT_PUBLIC_GA_TRACKING_ID=G-XXXXXXXXXX
+    ```
 
 ### Adapt Content
 
-I recommend keeping the project running as you go (with `npm start`) to help correct mistakes quickly.
+Keep the project running as you edit (`pnpm dev`) to see changes in real-time with hot reload.
 
-1. Start by changing text in the sidebar. This file is located at `src/components/Template/SideBar.js`.
-1. Add an image of yourself in `public/images/me.jpg`. Your image should be approximately 256 x 256 pixels. Larger and smaller is ok, but avoid very large images to save bandwidth. If you need help resizing your image, Adobe makes a great online tool [here](https://www.adobe.com/photoshop/online/resize-image.html).
-1. Modify the text on the homepage. This file is located at `src/pages/Index.js`.
-1. Modify the files in `src/data/resume/` next.
-1. Modify all of the other files in the `src/data/` directory.
-1. You've finished modifying >95% of the pages. Search through the rest of the files for references to `Michael` or `Angelo` and change values to your name.
-1. Change or remove the favicon in `public/index.html`. [This](https://realfavicongenerator.net/) website may be helpful.
+1. **Update site configuration** - Start with `src/data/config.ts`:
+   - Change `name`, `nickname`, `jobTitle`, `company`, `location`
+   - Update social links and contact information
+
+2. **Update the sidebar** - Modify `src/components/Template/SideBar.tsx`:
+   - Change the profile description
+   - Update social links
+
+3. **Add your photo** - Replace `public/images/me.jpg`:
+   - Recommended size: approximately 256 x 256 pixels
+   - Keep file size small for bandwidth
+   - Use [Adobe's online tool](https://www.adobe.com/photoshop/online/resize-image.html) if you need to resize
+
+4. **Modify resume data** - Update files in `src/data/resume/`:
+   - `work.ts` - Work experience
+   - `degrees.ts` - Education
+   - `courses.ts` - Courses and certifications (optional)
+
+5. **Modify other content** - Update remaining data files in `src/data/`:
+   - `about.ts` - About page content (Markdown)
+   - `skills.ts` - Skills and competencies
+   - `projects.ts` - Portfolio projects
+   - `certifications.ts` - Professional certifications
+   - `contact.ts` - Contact information
+
+6. **Update metadata** - Modify `app/layout.tsx`:
+   - Change `metadata.title` to your name
+   - Update `metadata.description`
+   - Update Open Graph and Twitter card info
+   - Change the canonical URL in `metadataBase`
+
+7. **Update favicon** - Replace files in `public/images/favicon/`:
+   - `bg-logo.png` - Main icon (512x512)
+   - `favicon.ico` - Legacy browsers
+   - Use [realfavicongenerator.net](https://realfavicongenerator.net/) for generating favicons
+
+8. **Search for remaining references** - Look for any remaining placeholders:
+   ```bash
+   grep -r "Borislav" src/ app/
+   grep -r "Grigorov" src/ app/
+   grep -r "bgrigorov" src/ app/
+   ```
 
 ### Deploy
 
-See deployment instructions [here](https://github.com/bsgrigorov/personal-site#deploying-to-github-pages). If you plan to use a custom url, modify `public/CNAME` and enter your URL. You can run:
+The site generates a static export in the `out/` directory, which can be hosted on any static hosting provider.
 
 ```bash
-echo "[your-custom-domain][.com]" > public/CNAME
+pnpm build  # Generates static files in out/
 ```
 
-as a shortcut.
+#### Option 1: Vercel (Recommended)
 
-I recommend purchasing your own domain name from [Google Domains](https://domains.google). The project is pre-configured to automatically deploy to github pages via the deploy github action. Go to `https://github.com/[your-github-username]/[your-repo-name]/settings` and configure accordingly:
+The easiest option with zero configuration:
 
-<center><img src="images/gh-pages.png"></center>
+1. Push your repository to GitHub
+2. Import the project at [vercel.com/new](https://vercel.com/new)
+3. Vercel auto-detects Next.js and deploys automatically
+4. Set environment variables in **Settings → Environment Variables**:
+   - `NEXT_PUBLIC_GA_TRACKING_ID` (if using Google Analytics)
 
-Next, configure your domains DNS record. See [here](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for more information. After a few minutes, your website should be live on your domain.
+**Custom domain:** Settings → Domains → Add your domain
 
-That's it. Thank you for reading. If you go through this guide and run into issues or areas you find unclear, please consider submitting a PR to help others like you.
+#### Option 2: GitHub Pages
+
+Free hosting directly from your GitHub repository:
+
+1. Update `.github/workflows/github-pages.yml` with your repo details
+2. Update `homepage` in `package.json` to match your GitHub Pages URL:
+   - For `username.github.io`: `"homepage": "https://username.github.io/"`
+   - For project page: `"homepage": "https://username.github.io/repo-name/"`
+3. For custom domains, update `public/CNAME`:
+    ```bash
+    echo "yourdomain.com" > public/CNAME
+    ```
+4. Push to `main` - deployment is automatic via GitHub Actions
+5. In repo **Settings → Pages**, select "GitHub Actions" as the source
+
+**Custom domain:** Follow [GitHub's custom domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+
+<center><img src="images/gh-pages.png" alt="GitHub Pages settings"></center>
+
+#### Option 3: Cloudflare Pages
+
+Great performance with Cloudflare's global CDN:
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create**
+2. Connect your GitHub repository
+3. Configure build settings:
+   - **Framework preset:** Next.js (Static HTML Export)
+   - **Build command:** `pnpm build`
+   - **Build output directory:** `out`
+4. Add environment variables if needed
+5. Deploy!
+
+**Custom domain:** In project settings, add your domain (works great if already using Cloudflare DNS)
+
+#### Custom Domain DNS Setup
+
+| Provider | DNS Configuration |
+|----------|-------------------|
+| **Vercel** | Add CNAME pointing to `cname.vercel-dns.com` |
+| **GitHub Pages** | Add CNAME pointing to `username.github.io` |
+| **Cloudflare Pages** | Add CNAME pointing to `your-project.pages.dev` |
+
+If using **Cloudflare for DNS** with another host:
+- Enable "Proxied" (orange cloud) for CDN benefits
+- See [cloudflared.md](./cloudflared.md) for local tunnel setup (optional)
 
 ## Common Pitfalls
 
-Here are answers to questions I've been asked at least twice. I've attempted to simplify development and improve documentation throughout the project to address them. This section is updated frequently.
+### 1. CSS not rendering / 404 errors
 
-1. My CSS isn't rendering, or I see a 404 instead of my site:
+- Check that `homepage` in `package.json` points to where you're hosting
+- Ensure `public/CNAME` matches your domain (or remove it if not using a custom domain)
+- Verify `next.config.ts` has correct `basePath` if hosting in a subdirectory
 
-    Make sure the `homepage` field of `package.json` points to where you plan to host your site index. Also, double check that you created a `CNAME` file (see deployment instructions above). If neither of these work, please open an issue or send me an [email](mailto:help@mldangelo.com).
+### 2. Build errors with TypeScript
 
-2. LF / CRLF issues with eslint.
+- Run `pnpm type-check` to see all type errors
+- Fix any missing types in your data files
+- Ensure all data follows the interfaces defined in the components
 
-    This is a common Windows development pitfall. See @[FrozenFury](https://github.com/FrozenFury)'s [comment](https://github.com/mldangelo/personal-site/issues/263#issuecomment-759216299) for how to update your eslint config to resolve this issue.
+### 3. Images not loading
 
-3. master / main
+- Place images in `public/images/`
+- Reference them as `/images/yourimage.jpg` (without `public` prefix)
+- For projects: put images in `public/images/projects/`
 
-    Github decided to rename the default branch of all of their repositories from master to main, and so did I. See their reasoning [here](https://github.com/github/renaming). If you're trying to pull in recent changes, consider renaming your own branch, or just create a merge commit from my main.
+### 4. Environment variables not working
 
-4. Google Analytics Warnings when exporting.
+- Local dev: use `.env.local`
+- Vercel: set in dashboard under Settings → Environment Variables
+- Remember to redeploy after changing env vars (static export bakes values at build time)
 
-    Either set up Google Analytics or disable the `Analytics.js` component. Read more about [react-ga](https://github.com/react-ga/react-ga).
+### 5. ESLint / Prettier issues
 
-5. How do I configure git? What is nano?
+To auto-fix most issues:
+```bash
+pnpm lint:fix
+pnpm format
+```
 
-    Read through [git-scm](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)'s excellent documentation. I recommend setting your default text editor to something you're comfortable with.I like to use vim for writing commit messages.
+### 6. CRLF / LF line ending issues (Windows)
 
-6. Can I host at [username.github.io]?
+Configure Git to use LF:
+```bash
+git config core.autocrlf false
+```
 
-    Sure, see github's documentation [here](https://pages.github.com/).
+Or update ESLint to ignore line endings in `eslint.config.mjs`.
 
-7. How do I disable eslint?
+### 7. Search not finding content
 
-    `echo "*\n" > .eslintignore` Although I really don't recommend it. Linters are good. They help prevent errors, enforce uniform style so that you can spend less time thinking about formatting and more time reading code, and eliminate easy nits for code reviews. If the rules aren't working for you, you should change them. See eslint's documentation [here](https://eslint.org/docs/about/) for more information.
+The search index is built from `src/data/search.ts`. If you add new data types:
+1. Update `buildSearchIndex()` in `src/data/search.ts`
+2. Add appropriate type to `SearchItem` interface
+3. Rebuild the site
 
-8. Why is my website rendering the readme file?
+## File Reference
 
-    See 1. above and make sure that `.nojekyll` still exists in `public`. This file directs github to not attempt to render the website with Jekyll.
+| What to Change | File Location |
+|----------------|---------------|
+| Site metadata (title, description) | `app/layout.tsx` |
+| Navigation routes | `src/data/routes.ts` |
+| Site config (name, job, company) | `src/data/config.ts` |
+| Sidebar content | `src/components/Template/SideBar.tsx` |
+| Work experience | `src/data/resume/work.ts` |
+| Education | `src/data/resume/degrees.ts` |
+| Skills | `src/data/skills.ts` |
+| Projects | `src/data/projects.ts` |
+| Certifications | `src/data/certifications.ts` |
+| About page content | `src/data/about.ts` |
+| Contact info | `src/data/contact.ts` |
+| Profile photo | `public/images/me.jpg` |
+| Favicon | `public/images/favicon/` |
+| OG image | `public/images/og-image.png` |
+
+## Need Help?
+
+If you run into issues:
+1. Check the [existing issues](https://github.com/bsgrigorov/personal-site/issues) on GitHub
+2. Open a new issue with details about your problem
+3. Submit a PR if you find a fix!
