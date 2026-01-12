@@ -21,7 +21,7 @@ export default function PageWrapper({ children, fullPage = false }: PageWrapperP
 
   return (
     <>
-      <div id="main">{children}</div>
+      <main id="main">{children}</main>
       {!fullPage && <SideBar />}
     </>
   );

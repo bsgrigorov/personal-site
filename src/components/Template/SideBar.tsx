@@ -43,7 +43,7 @@ const SideBar = () => {
           <li>
             {pathname && !pathname.includes('/resume') ? (
               <Link href="/resume" className="button">
-                Learn More
+                View My Resume
               </Link>
             ) : (
               <Link href="/about" className="button">

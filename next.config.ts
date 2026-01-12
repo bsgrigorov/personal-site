@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
     resolveExtensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
 
+  // Compiler optimizations - target modern browsers, reduce polyfills
+  compiler: {
+    // Remove console.log in production
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+
   // Experimental features
   experimental: {
     optimizePackageImports: [
