@@ -4,6 +4,7 @@ import { Orbitron, Exo_2, JetBrains_Mono } from 'next/font/google';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import JsonLd from '@/components/Template/JsonLd';
 
 // Vercel sets VERCEL=1 automatically during builds
@@ -150,7 +151,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
         <GoogleAnalytics />
-        {isVercel && <Analytics />}
+        {isVercel && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );
