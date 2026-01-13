@@ -153,7 +153,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <GoogleAnalytics />
         {isVercel && (
           <>
-            <Analytics />
+            <Analytics
+              // diabel analytics for personal use
+              beforeSend={(() => {
+                // Cache the exclusion flag once on initial load
+                const isExcluded =
+                  typeof window !== 'undefined' &&
+                  localStorage.getItem('excludeAnalytics') === 'true';
+
+                return (event) => (isExcluded ? null : event);
+              })()}
+            />
             <SpeedInsights />
           </>
         )}
