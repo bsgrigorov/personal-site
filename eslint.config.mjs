@@ -37,7 +37,7 @@ export default tseslint.config(
 
       // Next.js rules
       '@next/next/no-html-link-for-pages': 'error',
-      '@next/next/no-img-element': 'warn',
+      '@next/next/no-img-element': 'off',
 
       // TypeScript rules
       '@typescript-eslint/no-unused-vars': [
