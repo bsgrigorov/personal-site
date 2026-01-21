@@ -1,4 +1,7 @@
-# Personal Site Development Rules
+---
+title: Personal Site Development Rules
+alwaysApply: true
+---
 
 ## Project Overview
 
@@ -80,9 +83,10 @@ This site uses `output: 'export'` for static generation. **Do NOT use**:
 
 ## Important Notes
 
-1. Always use `pnpm` - this project uses pnpm as package manager
-2. Run `source /Users/bsgrigorov/dev/repos/home/zsh-env/shell/cursor-entrypoint-extended.sh` if pnpm is not available
-3. Check lints after making changes to TypeScript/React files
-4. The site uses a cyberpunk aesthetic - maintain dark theme with neon accents
-5. Run `pnpm build` locally before pushing to catch SSG errors
+1. Always use `pnpm` - this project uses pnpm as package manager.
+2. Never use npm or yarn - use pnpm instead.
+3. Run `source /Users/bsgrigorov/dev/repos/home/zsh-env/shell/cursor-entrypoint-extended.sh` if pnpm is not available
+4. Check lints after making changes to TypeScript/React files
+5. The site uses a cyberpunk aesthetic - maintain dark theme with neon accents
+6. Run `pnpm build` locally before pushing to catch SSG errors
 

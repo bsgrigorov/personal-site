@@ -20,7 +20,6 @@ const getRows = (courses: CourseData[]) =>
 
 const Courses = ({ data = [] }: CoursesProps) => (
   <div className="courses">
-    <div className="link-to" id="courses" />
     <div className="title">
       <h3>Selected Courses</h3>
     </div>

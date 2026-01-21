@@ -1,0 +1,60 @@
+/* Scroll Navigation - Minimap indicator */
+
+.scroll-nav {
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .scroll-nav-line {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 1.25rem;
+    height: 2px;
+    background: rgba(_palette(fg-light), 0.3);
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 4px 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    // Expand clickable area without affecting visual
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover {
+      width: 1.5rem;
+      background: rgba(_palette(accent), 0.6);
+    }
+
+    &.is-active {
+      width: 1.5rem;
+      background: _palette(accent);
+      box-shadow: 0 0 4px _palette(glow-cyan);
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}

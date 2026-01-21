@@ -1,9 +1,10 @@
 /* Resume */
 
 #resume {
-  .link-to {
-    position: relative;
-    top: -4.5em;
+
+  /* Scroll offset for anchor navigation */
+  .resume-section {
+    scroll-margin-top: 5rem;
   }
 
   .link-container h4 {

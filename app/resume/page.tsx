@@ -7,6 +7,7 @@ import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import LinkedInRecommendations from '@/components/Resume/LinkedInRecommendations';
 import References from '@/components/Resume/References';
+import ScrollNav from '@/components/ScrollNav/ScrollNav';
 import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
 // import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
@@ -24,8 +25,10 @@ const sections = [
 
 export default function ResumePage() {
   useSearchHighlight();
+
   return (
     <PageWrapper>
+      <ScrollNav sections={sections} />
       <article className="post" id="resume">
         <header>
           <div className="title">
@@ -42,28 +45,23 @@ export default function ResumePage() {
           </div>
         </header>
 
-        <section id="education" className="education">
-          <div className="link-to" />
+        <section id="education" className="resume-section education">
           <Education data={degrees} />
         </section>
 
-        <section id="experience" className="experience">
-          <div className="link-to" />
+        <section id="experience" className="resume-section experience">
           <Experience data={work} />
         </section>
 
-        {/* <section id="courses" className="courses">
-          <div className="link-to" />
+        {/* <section id="courses" className="resume-section courses">
           <Courses data={courses} />
         </section> */}
 
-        <section id="recommendations" className="recommendations">
-          <div className="link-to" />
+        <section id="recommendations" className="resume-section recommendations">
           <LinkedInRecommendations />
         </section>
 
-        <section id="references" className="references">
-          <div className="link-to" />
+        <section id="references" className="resume-section references">
           <References />
         </section>
       </article>
