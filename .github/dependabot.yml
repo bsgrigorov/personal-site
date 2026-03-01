@@ -1,9 +1,48 @@
-# Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
+# Dependabot: dependency update PRs. No repo-level "enable" needed for public repos;
+# add this file and Dependabot runs. For org/private repos ensure Dependabot is
+# allowed in org/repo Security & analysis settings.
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# Groups: one PR per ecosystem (all deps bundled). GitHub Actions PRs run CI
+# when .github/workflows or .github/actions are changed.
+#
+# Many packages: grouped config works; you get one PR with all updates. Dependabot
+# has no "max packages per PR" option. To get smaller PRs (one package each), remove
+# the "groups" block and set open-pull-requests-limit to e.g. 5 (up to 5 PRs at a time).
+# Optional: use update-types: [minor, patch] so only minor+patch are grouped;
+# major updates then open as separate PRs (increase open-pull-requests-limit if you want both).
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/" # Location of package manifest
+  # pnpm/Node packages: one grouped PR for all dependencies.
+  - package-ecosystem: npm
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: monthly
+      day: monday
+    open-pull-requests-limit: 1
+    groups:
+      npm-deps:
+        patterns:
+          - '*'
+        # Optional: only group minor+patch; major updates get separate PRs (need higher limit)
+        update-types: [minor, patch]
+    labels:
+      - dependencies
+    commit-message:
+      prefix: build(deps)
+  # GitHub Actions: one grouped PR; CI runs when workflow files change.
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: monthly
+      day: monday
+    open-pull-requests-limit: 1
+    groups:
+      github-actions:
+        patterns:
+          - '*'
+    labels:
+      - dependencies
+      - workflows
+    commit-message:
+      prefix: build(deps)
