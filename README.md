@@ -209,3 +209,4 @@ See [SEO.md](./docs/SEO.md) and [google-analytics.md](./docs/google-analytics.md
 
 - Initial template from [Future Imperfect](https://html5up.net/future-imperfect) by [@ajlkn](https://github.com/ajlkn) for [HTML5 UP](https://html5up.net).
 - Originally forked from [mldangelo/personal-site](https://github.com/mldangelo/personal-site).
+
