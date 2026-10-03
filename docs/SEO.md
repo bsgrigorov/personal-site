@@ -43,7 +43,7 @@ X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
 Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
-Content-Security-Policy: (see vercel.json — includes GA + Vercel Analytics connect/script hosts)
+Content-Security-Policy: (see vercel.json — GA, Vercel Analytics, SociableKIT LinkedIn recommendations iframe/widget)
 ```
 
 ### Test locally:
