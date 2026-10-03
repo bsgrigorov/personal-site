@@ -30,17 +30,17 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 - I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
 
-# Countries I've Been To (~34)
+# Countries I've Been To (~38)
 
 | Europe | North America | South America | Asia |
 | ------ | ------------- | ------------- | ---- |
 | Albania, Austria, Belgium | USA | Peru | Indonesia |
 | Bosnia, Bulgaria, Croatia | Canada | | Japan |
 | England, France, Germany | Mexico | | Philippines |
-| Greece, Italy, Macedonia | Costa Rica | | Thailand |
+| Greece, Hungary, Italy, Macedonia | Costa Rica | | Thailand |
 | Montenegro, Netherlands, Norway | Cuba | | Singapore |
-| Portugal, Serbia, Spain | Belize | | Malaysia |
-| Switzerland, Turkey | Guatemala | | |
+| Portugal, Scotland, Serbia, Slovenia, Spain | Belize | | Malaysia |
+| Switzerland, Turkey, Vatican | Guatemala | | |
 
 # Countries I Want to Visit
 

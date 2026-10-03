@@ -33,7 +33,7 @@ const data: StatData[] = [
   {
     key: 'countries',
     label: 'Countries visited',
-    value: 34,
+    value: 38,
     link: '/about',
   },
   {
