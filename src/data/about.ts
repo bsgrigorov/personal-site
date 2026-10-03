@@ -32,24 +32,77 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 
 # Countries I've Been To (~38)
 
-| Europe | North America | South America | Asia |
-| ------ | ------------- | ------------- | ---- |
-| Albania, Austria, Belgium | USA | Peru | Indonesia |
-| Bosnia, Bulgaria, Croatia | Canada | | Japan |
-| England, France, Germany | Mexico | | Philippines |
-| Greece, Hungary, Italy, Macedonia | Costa Rica | | Thailand |
-| Montenegro, Netherlands, Norway | Cuba | | Singapore |
-| Portugal, Scotland, Serbia, Slovenia, Spain | Belize | | Malaysia |
-| Switzerland, Turkey, Vatican | Guatemala | | |
+<div class="table-wrapper">
+<table class="countries-visited">
+<thead>
+<tr>
+<th colspan="3">Europe</th>
+<th>North America</th>
+<th>South America</th>
+<th>Asia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Albania</td><td>Austria</td><td>Belgium</td><td>USA</td><td>Peru</td><td>Indonesia</td>
+</tr>
+<tr>
+<td>Bosnia</td><td>Bulgaria</td><td>Croatia</td><td>Canada</td><td></td><td>Japan</td>
+</tr>
+<tr>
+<td>England</td><td>France</td><td>Germany</td><td>Mexico</td><td></td><td>Philippines</td>
+</tr>
+<tr>
+<td>Greece</td><td>Hungary</td><td>Italy</td><td>Costa Rica</td><td></td><td>Thailand</td>
+</tr>
+<tr>
+<td>Macedonia</td><td>Montenegro</td><td>Netherlands</td><td>Cuba</td><td></td><td>Singapore</td>
+</tr>
+<tr>
+<td>Norway</td><td>Portugal</td><td>Scotland</td><td>Belize</td><td></td><td>Malaysia</td>
+</tr>
+<tr>
+<td>Serbia</td><td>Slovenia</td><td>Spain</td><td>Guatemala</td><td></td><td></td>
+</tr>
+<tr>
+<td>Switzerland</td><td>Turkey</td><td>Vatican</td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 # Countries I Want to Visit
 
-| Australia & Oceania | Asia | Africa | South America |
-| ------------------- | ---- | ------ | ------------- |
-| Australia | Vietnam | Madagascar | Chile |
-| New Zealand | Jordan | Kenya | Argentina |
-| Vanuatu | China | Tanzania | Bolivia |
-| Bora Bora | Bhutan | Egypt | Ecuador |
-| | Nepal | Morocco | Colombia |
-| | Mongolia | Namibia | Nicaragua |
+<div class="table-wrapper">
+<table class="countries-want-to-visit">
+<thead>
+<tr>
+<th>Australia &amp; Oceania</th>
+<th>Asia</th>
+<th>Africa</th>
+<th>South America</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Australia</td><td>Vietnam</td><td>Madagascar</td><td>Chile</td>
+</tr>
+<tr>
+<td>New Zealand</td><td>Jordan</td><td>Kenya</td><td>Argentina</td>
+</tr>
+<tr>
+<td>Vanuatu</td><td>China</td><td>Tanzania</td><td>Bolivia</td>
+</tr>
+<tr>
+<td>Bora Bora</td><td>Bhutan</td><td>Egypt</td><td>Ecuador</td>
+</tr>
+<tr>
+<td></td><td>Nepal</td><td>Morocco</td><td>Colombia</td>
+</tr>
+<tr>
+<td></td><td>Mongolia</td><td>Namibia</td><td>Nicaragua</td>
+</tr>
+</tbody>
+</table>
+</div>
 `;
