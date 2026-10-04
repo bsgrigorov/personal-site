@@ -2,58 +2,89 @@ import { Project } from '@/components/Projects/Cell';
 
 const data: Project[] = [
   {
-    title: 'SynKube - Kubernetes on GCP',
-    image: '/images/projects/synkube.png',
+    title: 'SynKube — secure cloud platform',
+    image: '/images/projects/synkube.jpg',
+    date: '2024-06-01',
+    link: 'https://synkube.com',
+    desc:
+      'Multi-cloud Kubernetes platform: infrastructure as code, GitOps delivery, and security built in from CI through production.',
+  },
+  {
+    title: 'Agent Platform',
+    image: '/images/projects/agent-platform.jpg',
+    date: '2026-01-01',
+    link: 'https://synkube.com/agents',
+    desc:
+      'Hermes AI agents platform with context, skills, bootstrap, and memory management. GitHub auth broker and identity broker for ephemeral GitHub and cloud IAM access.',
+  },
+  {
+    title: 'Algorand Global x402 Challenge',
+    image: '/images/projects/x402.jpg',
+    date: '2026-01-01',
+    link: 'https://x402.darkhold.dev',
+    desc:
+      'News aggregation API with x402 agentic payments via USDC. Deployed on Cloudflare Workers, D1, and Algorand Mainnet.',
+  },
+  {
+    title: 'Agent knowledge base & skills registry',
+    image: '/images/projects/agent-kb.jpg',
     date: '2025-06-01',
-    link: 'https://github.com/synkube',
-    desc: 'Created a complete k8s platform on GCP and DigitalOcean with Terraform, ArgoCD, helmfile, Teleport, and GH Actions. Developed starter repos and pipelines that build, test, dockerize and deploy Golang, Node.js and Python apps.',
+    desc:
+      'Personal knowledge base and curated agent skills for multi-agent delivery and engineering velocity.',
+  },
+  {
+    title: 'EVM Blockchain Indexer',
+    image: '/images/projects/evm-indexer.jpg',
+    date: '2024-06-01',
+    link: 'https://github.com/synkube/app/tree/main/golang/evm-indexer',
+    desc:
+      'Concurrent EVM indexer in Go with PostgreSQL and ClickHouse storage, GraphQL API, and GoReleaser packaging.',
   },
   {
     title: 'ICP Tokens',
     image: '/images/projects/icptokens.png',
     date: '2024-11-01',
     link: 'https://icptokens.net',
-    desc: 'Website for trade analysis of tokens on ICP blockchain. Deployed kubernetes infra on DigitalOcean including TimescaleDB and Node.js apps.',
-  },
-  {
-    title: 'EVM Blockchain Indexer',
-    image: '/images/projects/evm-indexer.png',
-    date: '2024-06-01',
-    link: 'https://github.com/synkube/app',
-    desc: 'Developed a concurrent blockchain indexer (EVM) in Golang. Used Postgres and Clickhouse for storage and GraphQL to expose the data. Packaged with goreleaser.',
+    desc:
+      'Trade analysis site for tokens on the ICP blockchain. Kubernetes on DigitalOcean with TimescaleDB and Node.js apps.',
   },
   {
     title: 'Zsh Environment Config',
-    image: '/images/projects/zsh.png',
+    image: '/images/projects/zsh.jpg',
     date: '2022-02-01',
     link: 'https://github.com/bsgrigorov/zsh-env',
-    desc: 'Generated a reproducible zsh environment with shell optimizations, aliasing, autocompletion, and custom functions for increasing terminal productivity.',
+    desc:
+      'Reproducible zsh setup with shell optimizations, aliasing, autocompletion, and custom functions for terminal productivity.',
   },
   {
     title: 'encrypt-decrypt.me',
-    image: '/images/projects/encrypt.png',
+    image: '/images/projects/encrypt.jpg',
     date: '2021-09-01',
     link: 'https://bsgrigorov.github.io/text-encrypt/',
-    desc: 'Created a client-side secure password encryption website that implements OpenSSL aes256 standard. Used JavaScript, OpenSSL and encryption algorithms.',
+    desc:
+      'Client-side password encryption in the browser using OpenSSL AES-256. JavaScript and Web Crypto; data never leaves the device.',
   },
   {
     title: 'Pingdom Python Config',
-    image: '/images/projects/pingdom.png',
+    image: '/images/projects/pingdom.jpg',
     date: '2021-07-01',
     link: 'https://github.com/bsgrigorov/pingdom-python-config',
-    desc: 'Built a python application that configures Pingdom using Pingdom API 3.1. The application uses a declarative approach to check creation.',
+    desc:
+      'Declarative Pingdom check management via API 3.1. Python tooling to define monitors as config instead of click-ops.',
   },
   {
     title: 'Read Easy',
-    image: '/images/projects/readeasy.jpeg',
+    image: '/images/projects/readeasy.jpg',
     date: '2017-11-20',
-    desc: 'Created a cross platform mobile application using Ionic, AngularJS and NodeJS that teaches users English by suggesting texts based on their proficiency. Used personalized word models from thesis project for selecting texts.',
+    desc:
+      'Cross-platform mobile app (Ionic, AngularJS, Node.js) for graded English reading. Personalized word models from thesis work to match texts to proficiency.',
   },
   {
     title: 'Language Learning',
     image: '/images/projects/language-learning.jpeg',
     date: '2016-04-20',
-    desc: 'Constructed language learning desktop application that estimates the level of proficiency of users and recommends suitable articles to read. Utilized Python, NLP, JavaFX, data analysis, data modelling and statistics. Wrote honours dissertation on it.',
+    desc:
+      'Desktop app estimating reading proficiency and recommending articles. Python, NLP, JavaFX, and statistics; honours dissertation topic.',
   },
 ];
 

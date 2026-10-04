@@ -20,13 +20,19 @@ const Cell = ({ data, id }: CellProps) => (
     <article className="mini-post">
       <header>
         <h3>
-          <a href={data.link}>{data.title}</a>
+          {data.link ? <a href={data.link}>{data.title}</a> : data.title}
         </h3>
         <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
       </header>
-      <a href={data.link} className="image">
-        <img src={withBasePath(data.image)} alt={data.title} />
-      </a>
+      {data.link ? (
+        <a href={data.link} className="image">
+          <img src={withBasePath(data.image)} alt={data.title} />
+        </a>
+      ) : (
+        <div className="image">
+          <img src={withBasePath(data.image)} alt={data.title} />
+        </div>
+      )}
       <div className="description">
         <p>{data.desc}</p>
       </div>

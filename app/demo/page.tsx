@@ -95,7 +95,7 @@ export default function DemoPage() {
                 <time className="published">January 2025</time>
               </header>
               <a href="#" className="image">
-                <img src={withBasePath('/images/projects/synkube.png')} alt="Sample" />
+                <img src={withBasePath('/images/projects/synkube.jpg')} alt="Sample" />
               </a>
             </article>
             <article className="mini-post">
@@ -106,7 +106,7 @@ export default function DemoPage() {
                 <time className="published">December 2024</time>
               </header>
               <a href="#" className="image">
-                <img src={withBasePath('/images/projects/zsh.png')} alt="Sample" />
+                <img src={withBasePath('/images/projects/zsh.jpg')} alt="Sample" />
               </a>
             </article>
             <article className="mini-post">
@@ -117,7 +117,7 @@ export default function DemoPage() {
                 <time className="published">November 2024</time>
               </header>
               <a href="#" className="image">
-                <img src={withBasePath('/images/projects/encrypt.png')} alt="Sample" />
+                <img src={withBasePath('/images/projects/encrypt.jpg')} alt="Sample" />
               </a>
             </article>
           </div>
@@ -156,7 +156,7 @@ export default function DemoPage() {
 
           <h4>Image Fit (Full Width)</h4>
           <span className="image fit">
-            <img src={withBasePath('/images/projects/synkube.png')} alt="Fit" />
+            <img src={withBasePath('/images/projects/synkube.jpg')} alt="Fit" />
           </span>
         </section>
 
