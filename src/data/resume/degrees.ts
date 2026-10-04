@@ -9,6 +9,14 @@ const degrees: DegreeData[] = [
     link: 'https://ubc.ca',
     year: 2016,
   },
+  {
+    school: 'ETH Zürich',
+    degree: 'Erasmus',
+    specialization: 'Exchange program',
+    location: 'Zürich, Switzerland',
+    link: 'https://ethz.ch',
+    year: 2015,
+  },
 ];
 
 export default degrees;

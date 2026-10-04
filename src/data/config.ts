@@ -14,9 +14,11 @@ export const siteConfig = {
 
   // Professional
   jobTitle: 'DevOps Engineer',
-  company: 'Consensys',
-  description: 'Seattle based DevOps Engineer, UBC Alumni, and blockchain enthusiast.',
-  description2: 'Building the decentralized future one wallet/block/rpc at a time.',
+  company: 'SynKube',
+  description:
+    'Seattle-based DevOps & software engineer and UBC alum. Cloud, Kubernetes, security; Web3 as domain experience.',
+  description2:
+    'Building secure multi-cloud platforms and shipping production software with Go, TypeScript, Kubernetes, and AI-assisted delivery.',
 
   // Location
   city: 'Seattle',
@@ -60,7 +62,10 @@ export const siteConfig = {
 
     // Primary role
     'DevOps Engineer',
+    'Software Engineer',
     'DevOps',
+    'TypeScript',
+    'Go',
     'DevSecOps',
     'Platform Engineer',
     'Site Reliability Engineer',

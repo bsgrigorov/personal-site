@@ -1,10 +1,10 @@
 export const aboutMarkdown = `# Intro
 
-I am a software engineer with a focus on infrastructure and blockchain and a love for cloud-native technologies like Kubernetes and Helm. I did my B.Sc. at the University of British Columbia specializing in Honours Computer Science and Physics. I love the outdoors and nature, and spend my free time surrounded by it. That is when I am not looking at a screen.
+Hey, I'm Bobby. I am a DevOps/Software engineer who ships production code and cloud infrastructure with focus on security. I did my B.Sc. at the University of British Columbia specializing in Honours Computer Science and Physics. I love the outdoors and nature, and spend my free time surrounded by it. That is when I am not looking at a screen.
 
 # Currently
 
-I currently work for Consensys on the team behind the popular wallet MetaMask. MetaMask has 30 million monthly active users and the infrastructure requirements are quite high. I work on the DevSecOps team and support internal tooling, infra, security and monitoring. My expertise is in building infrastructure using Kubernetes for large workloads like blockchains and ERP.
+I am building [SynKube](https://synkube.com), a secure multi-cloud platform (Terraform, Kubernetes, GitOps, shift-left security), and an [agent platform](https://synkube.com/agents) for delivery automation. Through October 2026 I was on MetaMask’s DevSecOps team at Consensys — a wallet with tens of millions of monthly active users — working on AWS/EKS, extension release security, and service onboarding automation. I am open to senior platform, DevSecOps, and software engineering roles in Seattle or remote.
 
 # Some history
 
@@ -14,6 +14,8 @@ I currently work for Consensys on the team behind the popular wallet MetaMask. M
 - I didn't expect to spend 5 years at SAP, but I have constantly found new opportunities and challenges and enjoyed my work.
 - Moving to Coinbase was a calculated risk during a down market for Crypto, but it turned out alright.
 - After joining Synapse I was the only DevOps engineer and got to setup our blockchain infrastructure the way I saw fit and learned a lot doing it.
+- At Consensys I moved from pure infra into DevSecOps for MetaMask — threat modeling, shift-left pipelines, and cutting onboarding time from weeks to under a day.
+- These days I am heads-down on SynKube and agent tooling when I am not outdoors.
 - Two months after meeting my girlfriend, we went backpacking in Southeast Asia for 3 months. It was a great experience and we are still together.
 
 Ask me in person for other stories that I'm afraid to share with the internet.
@@ -24,11 +26,11 @@ Ask me in person for other stories that I'm afraid to share with the internet.
 - Travelling, Politics, Economics, Investing
 - Science, Physics, Chemistry
 - Drum and Bass, EDM, Dubstep
-- Blockchain, DeFi
+- Blockchain, AI
 
 # Travel / Geography
 
-- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York and Los Angeles.
+- I finished high school in Sofia, Bulgaria. I have since lived in Vancouver, Calgary, Zurich, New York, Los Angeles, and Seattle.
 
 # Countries I've Been To (~38)
 

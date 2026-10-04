@@ -35,10 +35,9 @@ const SideBar = () => {
       <section className="blurb">
         <h2>About</h2>
         <p>
-          Building the decentralized future one wallet/block/rpc at a time. Web3 infra DevOps engineer bootstrapping k8s clusters,
-          Terraform stacks, and GitOps pipelines. Currently powering{' '}
-          <a href="https://metamask.io/">MetaMask</a> at{' '}
-          <a href="https://consensys.io/">{siteConfig.company}</a>.
+          {siteConfig.description2} Previously DevOps for{' '}
+          <a href="https://metamask.io/">MetaMask</a>. Now focused on{' '}
+          <a href="https://synkube.com/">{siteConfig.company}</a>.
         </p>
         <ul className="actions">
           <li>

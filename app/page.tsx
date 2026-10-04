@@ -7,7 +7,7 @@ import Search from '@/components/Search/Search';
 import PageWrapper from './components/PageWrapper';
 
 export const metadata: Metadata = {
-  description: `${siteConfig.name}'s personal website. ${siteConfig.city} based UBC Alumni and ${siteConfig.jobTitle}.`,
+  description: `${siteConfig.name} — ${siteConfig.jobTitle} in ${siteConfig.location}. ${siteConfig.description}`,
   alternates: {
     canonical: `${siteConfig.siteUrl}/`,
   },
@@ -26,9 +26,9 @@ export default function HomePage() {
           </div>
         </header>
         <p>
-          This is my corner of the internet. Explore my <Link href="/about">story</Link>,
-          check out my <Link href="/resume">experience</Link>, browse my{' '}
-          <Link href="/projects">projects</Link>, or <Link href="/contact">get in touch</Link>.
+          This is my corner of the internet. Explore my <Link href="/about">story</Link>, check out my{' '}
+          <Link href="/resume">experience</Link>, browse my <Link href="/projects">projects</Link>, or{' '}
+          <Link href="/contact">get in touch</Link>.
         </p>
         <p>
           Built with Next.js and deployed on Vercel. Source on{' '}
