@@ -17,7 +17,7 @@ This guide will help you customize this website for your own personal use. The p
 2. Ensure you have the correct Node version and pnpm installed:
 
     ```bash
-    node --version   # Should be v22.x
+    node --version   # Should match engines in package.json (v24.x)
     pnpm --version   # Should be v10.x+
     ```
 

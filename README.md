@@ -34,17 +34,17 @@ Your contributions are warmly welcomed! Please review the [design goals](./docs/
 ## 🔧 Dependencies
 
 Ensure you have:
-- [Node.js](https://nodejs.org/) v22.x (see `engines` in `package.json`)
-- [pnpm](https://pnpm.io/) v10.x or later
+- [Node.js](https://nodejs.org/) v24.x (see `engines` in `package.json`)
+- [pnpm](https://pnpm.io/) v10.x or later (see `packageManager` in `package.json`)
 
 Optionally, use [nvm](https://github.com/nvm-sh/nvm) to manage Node versions.
 
 ## 🚀 Setup and Running
 
-1. Ensure you're on Node v22:
+1. Ensure you're on Node v24:
 
     ```bash
-    nvm install 22
+    nvm install 24
     node --version
     ```
 
