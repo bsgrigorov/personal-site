@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/config';
 
 export const metadata: Metadata = {
   title: 'Stats',
-  description: `Fun statistics and facts about ${siteConfig.name} - site analytics, GitHub contributions, and personal metrics.`,
+  description: `Fun statistics about ${siteConfig.name} — personal trivia and how this site is built.`,
   alternates: {
     canonical: `${siteConfig.siteUrl}/stats/`,
   },
