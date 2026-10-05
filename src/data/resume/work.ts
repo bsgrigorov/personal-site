@@ -40,7 +40,7 @@ const work: JobData[] = [
     endDate: '2023-02-01',
     highlights: [
       'Supported Web3 by building world class Blockchain infrastructure.',
-      'Operated Bitcoin, Dogecoin, Zcash, Cosmos, Avalanche, Helium, and Flow blockchain RPC nodes and validators.',
+      'Provisioned, upgraded and monitored blockchain RPC nodes and validators for Bitcoin, Dogecoin, Zcash, Cosmos, Avalanche, Helium, and Flow in Kubernetes (EKS, GKE).',
       'Onboarded new blockchains Aptos and Sui to the Cloud platform.',
       'Participated in on-call rotation support and handled multiple large-scale production incidents.',
     ],
@@ -50,7 +50,7 @@ const work: JobData[] = [
     position: 'Sr Software Engineer',
     url: 'https://www.linkedin.com/company/eurekabysaps4hana/',
     location: 'Newport Beach, CA',
-    startDate: '2020-08-01',
+    startDate: '2020-07-01',
     endDate: '2022-06-01',
     highlights: [
       'Worked on SAP Eureka, an S/4HANA incubation unit building cloud-native ERP on Kubernetes across GKE and EKS.',
@@ -68,7 +68,7 @@ const work: JobData[] = [
     url: 'https://www.sap.com/canada/index.html',
     location: 'Vancouver, BC',
     startDate: '2016-07-01',
-    endDate: '2020-08-01',
+    endDate: '2020-07-01',
     highlights: [
       'Developed enterprise software with focus on design, implementation and testing in an Agile team.',
       'Delivered monitoring, usage tracking, infrastructure, quality and frontend features for SAP Analytics Cloud.',
