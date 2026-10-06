@@ -38,6 +38,12 @@ public/                 # Static assets
 - `useSearchParams()` without Suspense handling
 - `cookies()`, `headers()`, ISR, default Image optimization (`unoptimized: true`)
 
+## Resume PDF (site download)
+
+- Edit `BorislavGrigorov2026-website.pdf` outside the repo (e.g. Google Drive `Work Search/`).
+- Refresh the site copy read-only: `cp -p "<source>/BorislavGrigorov2026-website.pdf" public/resume/Borislav-Grigorov-Resume.pdf`
+- Never write to Drive paths from automation.
+
 ## Commands
 
 ```bash

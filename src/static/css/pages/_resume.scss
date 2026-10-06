@@ -7,6 +7,16 @@
     scroll-margin-top: 5rem;
   }
 
+  > header .resume-download-meta {
+    @include vendor('display', 'flex');
+    @include vendor('align-items', 'flex-start');
+    @include vendor('justify-content', 'flex-end');
+    border-left: none;
+    min-width: 11em;
+    padding-top: (_size(section-spacing) * 0.85);
+    width: auto;
+  }
+
   .link-container h4 {
     text-decoration: none;
     border-bottom: none;

@@ -4,8 +4,6 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons/faXTwitter';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
-
 import { siteConfig } from './config';
 
 export interface ContactItem {
@@ -39,11 +37,6 @@ const data: ContactItem[] = [
     link: `https://x.com/${siteConfig.social.twitter}`,
     label: 'X',
     icon: faXTwitter,
-  },
-  {
-    link: `mailto:${siteConfig.social.email}`,
-    label: 'Email',
-    icon: faEnvelope,
   },
 ];
 

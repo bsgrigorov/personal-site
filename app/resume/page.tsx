@@ -13,6 +13,9 @@ import { useSearchHighlight } from '@/components/Search/useSearchHighlight';
 import degrees from '@/data/resume/degrees';
 import work from '@/data/resume/work';
 
+import { siteConfig } from '@/data/config';
+import { withBasePath } from '@/utils/basePath';
+
 import PageWrapper from '../components/PageWrapper';
 
 const sections = [
@@ -42,6 +45,15 @@ export default function ResumePage() {
                 </h4>
               ))}
             </div>
+          </div>
+          <div className="meta resume-download-meta">
+            <a
+              href={withBasePath(siteConfig.resumePdfPath)}
+              className="button small"
+              download={siteConfig.resumePdfFilename}
+            >
+              Download PDF
+            </a>
           </div>
         </header>
 

@@ -26,9 +26,6 @@ const SideBar = () => {
         </Link>
         <header>
           <h2>{siteConfig.name}</h2>
-          <p>
-            <a href={`mailto:${siteConfig.social.email}`}>{siteConfig.nickname.toLowerCase()}@synkube.com</a>
-          </p>
         </header>
       </section>
 

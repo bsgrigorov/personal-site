@@ -33,6 +33,8 @@ export const siteConfig = {
 
   // URLs
   siteUrl: 'https://bgrigorov.com',
+  resumePdfPath: '/resume/Borislav-Grigorov-Resume.pdf',
+  resumePdfFilename: 'Borislav-Grigorov-Resume.pdf',
 
   // Social / GitHub
   github: {
