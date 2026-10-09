@@ -16,7 +16,7 @@ export const siteConfig = {
   jobTitle: 'DevOps Engineer',
   company: 'SynKube',
   description:
-    'Seattle-based DevOps & software engineer and UBC alum. Cloud, Kubernetes, security; Web3 as domain experience.',
+    'Seattle-based engineer focused on AI, Cloud, Kubernetes, and Security.',
   description2:
     'Building secure multi-cloud platforms and shipping production software with Go, TypeScript, Kubernetes, and AI-assisted delivery.',
 
