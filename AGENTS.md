@@ -53,6 +53,7 @@ pnpm lint
 pnpm lint:fix
 pnpm format
 pnpm type-check
+pnpm test:e2e   # Playwright smoke (static export via serve)
 ```
 
 Deploy: Vercel / GitHub Pages / Cloudflare Pages (see README).

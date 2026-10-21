@@ -28,6 +28,12 @@ pids
 *.pid
 *.seed
 
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # Coverage
 coverage
 lib-cov

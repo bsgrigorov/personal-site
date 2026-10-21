@@ -88,6 +88,7 @@ The application will be available at [http://localhost:3000/](http://localhost:3
 | `pnpm format:check` | Check formatting |
 | `pnpm type-check` | Run TypeScript type checking |
 | `pnpm test` | Run Jest tests |
+| `pnpm test:e2e` | Playwright smoke tests (builds static `out/` first) |
 | `pnpm analyze` | Analyze bundle size |
 
 ## 🚢 Deploying

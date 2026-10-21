@@ -58,6 +58,7 @@ const config: Config = {
     '<rootDir>/node_modules/',
     '<rootDir>/build/',
     '<rootDir>/out/',
+    '<rootDir>/e2e/',
   ],
 
   // Module file extensions
